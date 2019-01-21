@@ -1,2 +1,0 @@
-# puzzlePaper
-paper for puzzlepot
