@@ -12,7 +12,7 @@ SAMPLES = \
 	jocchPuzzlePaper.tex
 
 
-PDF = $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf} acmguide.pdf
+PDF = $(PACKAGE).pdf #${SAMPLES:%.tex=%.pdf} acmguide.pdf
 
 all:  ${PDF}
 
