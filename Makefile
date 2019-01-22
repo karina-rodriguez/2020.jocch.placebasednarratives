@@ -12,7 +12,7 @@ SAMPLES = \
 	jocchPuzzlePaper.tex
 
 
-PDF = $(PACKAGE).pdf #${SAMPLES:%.tex=%.pdf} acmguide.pdf
+PDF = ${SAMPLES:%.tex=%.pdf} #  $(PACKAGE).pdf acmguide.pdf
 
 all:  ${PDF}
 
@@ -27,18 +27,8 @@ all:  ${PDF}
 	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $*.log) \
 	do pdflatex $<; done
 
-
-acmguide.pdf: $(PACKAGE).dtx $(PACKAGE).cls
-	pdflatex -jobname acmguide $(PACKAGE).dtx
-	- bibtex acmguide
-	pdflatex -jobname acmguide $(PACKAGE).dtx
-	while ( grep -q '^LaTeX Warning: Label(s) may have changed' acmguide.log) \
-	do pdflatex -jobname acmguide $(PACKAGE).dtx; done
-
 %.cls:   %.ins %.dtx
 	pdflatex $<
-
-
 
 jocchPuzzlePaper: jocchPuzzlePaper.tex
 	sed 's/documentclass\[manuscript,screen\]{acmart}/documentclass[acmlarge,screen]{acmart}/' $< > $@
@@ -55,18 +45,7 @@ ACM-Reference-Format.bst: ACM-Reference-Format.bst
 	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $(basename $<).log) \
 	  do cd $(dir $@) && pdflatex $(notdir $<); done
 
-sample-xelatex.pdf:  sample-xelatex.tex   $(PACKAGE).cls ACM-Reference-Format.bst
-	cd $(dir $@) && xelatex $(notdir $<)
-	- cd $(dir $@) && bibtex $(notdir $(basename $<))
-	cd $(dir $@) && xelatex $(notdir $<)
-	cd $(dir $@) && xelatex $(notdir $<)
-	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $(basename $<).log) \
-	  do cd $(dir $@) && xelatex $(notdir $<); done
-
-
-
 .PRECIOUS:  $(PACKAGE).cfg $(PACKAGE).cls
-
 
 clean:
 	$(RM)  $(PACKAGE).cls *.log *.aux \
