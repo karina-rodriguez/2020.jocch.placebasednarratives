@@ -23,6 +23,6 @@ all:  ${PDF}
 
 clean:
 	latexmk -C -jobname=${PDF:%.pdf=%} $(SOURCE)
-	-$(RM)  *.bbl *.glo *.ist
+	-$(RM)  *.bbl *.glo *.ist *~
 
 distclean: clean
