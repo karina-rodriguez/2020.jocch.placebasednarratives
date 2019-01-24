@@ -16,7 +16,7 @@ all:  ${PDF}
 #jocchPuzzlePaper: jocchPuzzlePaper.tex
 #	sed 's/documentclass\[manuscript,screen\]{acmart}/documentclass[acmlarge,screen]{acmart}/' $< > $@
 
-%.pdf:	%.tex
+%.pdf:	%.tex twmacros.tex
 	latexmk -xelatex -jobname=${@:%.pdf=%} $<
 
 .PRECIOUS:  acmart.cfg acmart.cls
