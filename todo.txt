@@ -15,18 +15,28 @@
 (M) Related work: update to include fracture simulation (maybe three
     references or so...); incl. brief literature reserach [KARINA]
 
+    ----> I have done some of this, but you might know better of some specific work which we need to mention. This paragraph is in line 343.
+
 (M) Find bits that are needlessly specific to the given pot and generalise them.
     - it's still okay to say that the project was born from the desire
       to exhibit this particular pot as a puzzle  [KARINA -- at least highlight them]
 
+   ----> Fixed most, but there is one left in the abstract and there is a results section to allow for generalisations of the approach.
+
+
 (M) Update section "Post-processing all puzzle pieces and core" (with
     the pieces in the gallery) [KARINA]
+
+    ----> DOne
 
 (M) New section describing fracture approaches [TIM]
 
 (M) Evaluation: add section in the end to demonstrate how approach
     generalises to wider range of shapes: here show the elephant [?; at
     any rate, KARINA will move figure there]
+
+    ----> Do we add this to evaluation? I inserted another section meanwhile. I am wondering reviewers might be curious as to how long the whole process takes for different shapes, etc. Not sure whether all of this should go in evaluation.
+
 
 (M) Update conclusion accordingly
 
