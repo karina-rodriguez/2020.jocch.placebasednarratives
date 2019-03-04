@@ -52,12 +52,13 @@
 % The "title" command has an optional parameter, allowing the author to define a "short title" to be used in page headers.
 \title[Digital workflow for creating 3D puzzles]%
       {\KR{let's change title to have a different name from the previous publication}Digital workflow for creating 3D puzzles to engage audiences in the interpretation of archaeological artefacts}
+      {\MS{Could it be something like: Workflow and fabrication of 3D puzzles to support interpretation of archeaological artefacts}
 %
 % The "author" command and its associated commands are used to define the authors and their affiliations.
 % Of note is the shared affiliation of the first two authors, and the "authornote" and "authornotemark" commands
 % used to denote shared contribution to the research.
 \author{Karina Rodriguez Echavarria}
-\email{K.Rodriguez@brighto.ac.uk}
+\email{K.Rodriguez@brighton.ac.uk}
 \orcid{0000-0002-8679-1602}
 \affiliation{%
   \institution{Centre for Secure, Intelligent and Usable Systems, University of Brighton}
@@ -91,22 +92,22 @@
 % of the document, and typically spans the page. 
 \begin{teaserfigure}
 \centering
-\subcaptionbox{3D scanned model of archaeological artefact\label{step1}}
+\subcaptionbox{3D scanned urn model\label{step1}}
  {\raisebox{0.3\height}{\includegraphics[width=.23\linewidth]{images/potscanned}}}
- \subcaptionbox{Generate puzzle pieces and core\label{step2}}
+ \subcaptionbox{Generated puzzle pieces and core\label{step2}}
  {\includegraphics[width=.40\linewidth]{images/allpieces}}
- \subcaptionbox{Fabricated puzzle for museum exhibit\label{step3}}
+ \subcaptionbox{Fabricated puzzle in museum exhibition\label{step3}}
   {\includegraphics[width=.35\linewidth]{images/exhibitmuseum}}
-  \caption{Workflow for the development of physical puzzle of pottery archaeological artefacts}
+  \caption{Workflow for the development of physical puzzles of pottery archaeological artefacts}
   \label{fig:teaser}
 \end{teaserfigure}
 %
 % The abstract is a short summary of the work to be presented in the article.
 \begin{abstract}
 3D physical puzzles are typically used to engage audiences in the
-interpretation of archaeological artefacts in a museum \KRedit[exhibition]{gallery}. The reason for this is that a puzzle can be seen as a game but also as a
-complex activity that archaeologists undertake to re-assemble
-fragments. The contribution of this paper is a novel \KRedit[digital]{} worfklow
+interpretation of archaeological artefacts in a museum \KRedit[exhibition]{gallery}. The reason for this is that a puzzle can be seen as \MSedit[a game]{an enjoyable educational activity in the form of a game} but also as a
+complex activity that archaeologists undertake \MSedit[to re-assemble]{when re-assembling}
+fragments \MSedit[]{of broken pottery}. The contribution of this paper is a novel \KRedit[digital]{} worfklow
 for the design and fabrication of \KRedit[3D]{physical} heritage puzzles. The input to
 the workflow is an authentic artefact from a heritage collection,
 which is then digitised using technologies such as 3D scanning and 3D
@@ -115,11 +116,11 @@ pieces using a cell fracture algorithm and generates a set of puzzle
 pieces (female) and a single core piece (male) for
 fabrication. Finally, the pieces are fabricated using 3D printing
 technology and post-processed to facilitate the puzzle assembly. \KR{The following is to specific and needs to be rephrased to be more generic while keeping the saltdean pot at the centre of the deployment of the full workflow} To
-demonstrate the workflow, we deploy the proposed method to create a 3D
-puzzle of an artefact, the Saltdean urn, for the Archaeological
-Gallery of the Brighton Museum and Art Gallery. The significance of
+demonstrate the workflow, we \MSedit[deploy]{deployed} the proposed method to create a 3D
+puzzle of \MSedit[an artefact,]{} the Saltdean urn, \MSedit[for]{which is exhibited at} the Archaeology
+Gallery of the Brighton Museum and Art Gallery. \MS{Karina I added the following to do it more generic as well} \MSedit[]{The workflow is also used with further artefacts in order to demonstrate its applicability to other shapes and types of artefacts.}The significance of
 this research is that it eases the task of creating puzzle-like
-activities and maintaining them within a busy museum gallery.
+activities and maintaining them \MSedit[]{in the long term} within a busy museum gallery.
 \end{abstract}
 
 %
@@ -161,7 +162,7 @@ activities and maintaining them within a busy museum gallery.
 %
 % Keywords. The author(s) should pick words that accurately describe the work being
 % presented. Separate the keywords with commas.
-\keywords{cultural heritage, 3D printing, galery design}
+\keywords{cultural heritage, 3D printing, gallery design, \MSedit[]{hands-on activities, educational puzzles}}
 
 
   %\caption{a) 3D scanned model of pottery urn artefact; b) 3D model of puzzle pieces of reconstructed urn; c) printed parts of the puzzle }
@@ -212,8 +213,8 @@ the main requirement which is to be easily assembled by a young person
 or child. The workflow is deployed with a late Iron Age burial urn
 from the area of Sussex (UK) - a significant object from the Brighton
 Museum and Art Gallery collection. The generated puzzle \KRedit[will be]{has been}
-incorporated into the archaeology \KRedit[exhibition at the museum and is
-targeted]{gallery in order} to enhance young audiences' visiting experience while
+incorporated into the Archaeology \KRedit[exhibition at the museum and is
+targeted]{Gallery in order} to enhance young audiences' visiting experience while
 engaging them in an educational activity.
 
 In addition\TW{describe that we explore different fracture patterns}
@@ -227,7 +228,7 @@ puzzle generating workflow and the audience of the
 application. Section~\ref{workflow} then presents the proposed
 workflow for the design and fabrication of the puzzle, including the
 3D scanning of the artefact, its reconstruction and an algorithm for
-generating the puzzle. Section~\ref{eva} discusses the evaluation of
+generating the puzzle. \MSedit[]{Section~\ref{res} presents further examples where the algorithms have been applied in order to showcase the applicability of the workflow to other shapes and types of artefacts.} Section~\ref{eva} discusses the evaluation of
 the application and the advantages of the adopted approach. Finally,
 section~\ref{conclusions} presents discussions and conclusions.
 
@@ -254,7 +255,7 @@ itself. Hence, these technologies are driving new trends for the
 mass-customisation of CH objects and experiences.
 
 The term ``smart'' replicas has also become popular over the recent
-years. This refer to the possibility of combining the physical object
+years. This refers to the possibility of combining the physical object
 with further layers of interpretative multimedia information
 \cite{Capurro2015,Marshall2016}.
 
@@ -319,6 +320,16 @@ ii) the potential of digital fabrication technology to support the
 interpretation of a CH object and engage audiences. The development of
 digitally fabricated puzzles for audiences is a novel contribution to
 the wider efforts in this area.
+
+\begin{figure}[H]
+  \centering
+  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
+  {\includegraphics[width=0.35\linewidth]{images/uk}}
+  \hspace{0.5in}
+  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
+  {\includegraphics[width=0.35\linewidth]{images/france}}
+  \caption{\label{fig:puz}Examples of pottery puzzles in museums}
+\end{figure}
  
 \subsection{Design challenges and relevant cases}
  
@@ -340,40 +351,26 @@ interlocking pieces for 3D printing
 present various algorithms for generating puzzles with interlocking
 pieces, known as burr puzzles, from a 3D model.
 
-\KRedit{Another relevant area of research is the simulation of fractures for 3D models. These fracturing effects are often used to display the breaking or destruction of objects or places in
-computer games, virtual reality and the film industry. In this area, pre-defined fracture patterns are often computed, while more novel solutions focus on creating fast approximations which are computational efficienct and offer flexible control of fragment generation \cite{Schvartzman:2014:FAB:2556700.2556713,Hahn:2016:FAB:2897824.2925902,Zhu:2015:SRB:2809654.2766942,Muller:2013:RTD:2461912.2461934}. Of relevance to the heritage field is the geometric analysis of a datset of fracture patterns observed in wall paintings excavated at Akrotiri, Greece \cite{Shin:2012:ASF:2362402.2362404}. This analysis suggests pottery framents in a hierarchical fracture pattern where fragments break into two pieces recursively along cracks nearly orthogonal to previous ones.}
+\KRedit{Another relevant area of research is the \MSedit[]{fracturing} simulation \MSedit[of fractures for]{of} 3D models. These fracturing effects are often used to display the breaking or destruction of objects or places in
+computer games, virtual reality and the film industry. In this area, predefined fracture patterns are often computed, while more novel solutions focus on creating fast approximations which are computational efficient and offer flexible control of fragment generation \cite{Schvartzman:2014:FAB:2556700.2556713,Hahn:2016:FAB:2897824.2925902,Zhu:2015:SRB:2809654.2766942,Muller:2013:RTD:2461912.2461934}. Of relevance to the heritage field is the geometric analysis of a dataset of fracture patterns observed in wall paintings excavated at Akrotiri, Greece \cite{Shin:2012:ASF:2362402.2362404}. This analysis suggests pottery fragments in a hierarchical fracture pattern, where fragments break into two pieces recursively along cracks nearly orthogonal to previous ones.}
 
 
-Most of the proposed solutions \KRedit{in the literature} aim to create puzzles consisting only
-of the required individual pieces. However, in our case we aim to
-create a permanent exhibit \KRedit[of a pottery vase]{} for a busy museum
-gallery. \KRedit{As pottery is a common finding of archaeologist at an excavation site, we focus on this type of artefact, and the shape of its fragments when broken into shards or pieces. This type of artefact is also interesting as its reconstruction from
+Most of the proposed solutions \KRedit{in literature} aim to create puzzles consisting only
+of the required individual pieces. \MS{As this really isn't an opposition to the previous sentence, I think that we should erase this "however"} \MSedit[However,]{In our case,} we aim to
+create a permanent \MSedit[]{hands-on} exhibit \KRedit[of a pottery vase]{} for a busy museum
+gallery. \KRedit{As pottery is a common archaeological finding at an excavation site, we focus on this type of artefact, and the shape of its fragments when broken into shards or pieces. This type of artefact is also interesting as its reconstruction from
 shards is a problem often faced by archaeologists.}. \KRedit[This means the puzzle should be easy to assemble by providing
 a clue of the overall shape, and the concave nature of the shape means
 that it can wrap around a static core element.]
 
-\begin{figure}[H]
-  \centering
-  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
-  {\includegraphics[width=0.35\linewidth]{images/uk}}
-  \hspace{0.5in}
-  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
-  {\includegraphics[width=0.35\linewidth]{images/france}}
-  \caption{\label{fig:puz}Example of pottery puzzles in museums.}
-\end{figure}
-
 Similar examples of pottery puzzles in other museums (though without
 deploying a fully digital workflow) are shown in
 Figure~\ref{fig:puz}. As shown in the images, these puzzles require a
-static element (the core) that provides a clue of the overall shape of
+static element (the core) that \MSedit[provides a clue of]{might provide clues about} the overall shape of
 the pot. Moreover, the core helps \KRedit[the user to assemble the puzzle]{to secure the pieces in place} with
-the use of magnets \KRedit{or other attachment mechanism which is placed both} on \KRedit[its]{the core's} surface and on each puzzle piece.
+the use of magnets \KRedit{or other attachment mechanisms which are placed both} on \KRedit[its]{the core's} surface and on each puzzle piece.
 
 %Also, both the core and puzzle pieces are 3D printed making the exhibit and activity ``future-proof''. 
-
-
-  
-
 %Lastly, away from the puzzle context,~\cite{Barreau2014} propose a workflow to reconstruct a broken pot in order to display the existing shards for exhibition purposes.
 
 \KRedit[The contribution of this paper is the proposed workflow to generate a
@@ -390,7 +387,7 @@ design of the experience.]
 \KRedit[A funerary urn, shown in Figure~\ref{fig:pot}, from the collection of
 the Brighton Museum and Art Gallery has been selected in order to
 design an experience that will engage young audiences in assembling a
-digitally fabricated 3D puzzle of the urn's replica.]{The motivation to develop the proposed workflow stemmed from the need to design an experience that will engage young audiences with the archaeological collection of the Brighton Museum and Art Gallery. Thus, the requirement was to design a 3D puzzle of a funerary urn, shown in Figure~\ref{fig:pot}.}
+digitally fabricated 3D puzzle of the urn's replica.]{The motivation to develop the proposed workflow stemmed from the need to design an \MSedit[experience]{experiential framework} that \MSedit[will]{would} engage young audiences with the archaeological collection of the Brighton Museum and Art Gallery. Thus, the requirement was to design a 3D puzzle of a funerary urn, shown in Figure~\ref{fig:pot}.}
  The urn comes
 from the cliff top at Saltdean, a coastal area near Brighton in
 Sussex, UK. The pot has curvilinear designs which are usual in Sussex
@@ -414,10 +411,9 @@ Britain~\cite{Harding1974,Cunliffe1978,Adkins1982,Cunliffe1995}.
 Archaeological Gallery of the Brighton Museum and Art Gallery. The
 puzzle will be placed along local findings of the Iron Age period and
 will be close to the original artefact.]{ The
-puzzle was designed to be placed as a hands-on activity along local findings of the Iron Age period and close to the original artefact in the new archaeology gallery.} The objective for the \KRedit[development of the puzzle]{hands-on activity} is to support young
-audiences, and especially children, in having an interactive
-experience with a heritage artefact in the form of an educational
-activity or game. It \KRedit[will] also allows wider audiences to experience the
+puzzle was designed to be placed as a hands-on activity along \MSedit[]{with} local findings of the Iron Age period and close to the original artefact in the new Archaeology Gallery.} The objective \MSedit[for]{of} the \KRedit[development of the puzzle]{hands-on activity} is to support young
+audiences, and especially children, in having an interactive experience with a heritage artefact in the form of an educational
+activity or game. \MSedit[It]{The puzzle} \KRedit[will] also allows wider audiences to experience the
 challenges linked to archaeological processes, such as reconstructing
 a shape from a given group of shards or pieces. By assembling the
 puzzle, audiences will engage with the exhibit, its physicality,
@@ -439,7 +435,7 @@ puzzles~\cite{Smith2002}. These requirements included:
 \item to have approximately 10-12 pieces to assemble the puzzle. Thus,
   pieces should measure at least 50.8 mm across, as 6-8 year olds can
   handle pieces of this size;
-\item to design a core piece which will be attached to a rotating
+\item to design a core piece which \MSedit[will]{would} be attached to a rotating
   wooden plate so that the user can easily spin the puzzle core to
   facilitate interaction (see Figure~\ref{fig:alexdesign});
 \item to enable attachment of the individual puzzle pieces to the core
@@ -448,7 +444,7 @@ puzzles~\cite{Smith2002}. These requirements included:
   predetermined matching positions both in the pieces and core;
 \item to cover each individual piece in a plaster-like finish and
   paint it to disguise the magnets, provide better texture feeling and
-  a more realistic appearance.
+  \MSedit[a more realistic appearance]{an appearance that would be as close as possible to the original one}.
 \end{enumerate} 
 
 \begin{figure}[H]
@@ -462,7 +458,7 @@ When discussing with the designer of the museum, it was acknowledged
 that such requirements could be addressed by using alternative
 mechanisms to digital fabrication technologies providing similar
 durability and quality. However, it was deemed that the digital
-workflow will enable to future-proof such exhibit for replacing parts
+workflow \MSedit[will]{would} enable to future-proof such exhibit for replacing parts
 in a cost-effective manner.
 
 \subsection{Audience}
@@ -501,7 +497,7 @@ puzzles.
 The proposed workflow involves the following steps:
 %
 \begin{enumerate}
-\item \KRedit[Acquiring]{Digtisation} and reconstructing the digital 3D model of the artefact and central core piece.
+\item \KRedit[Acquiring]{Digitisation} and \MSedit[reconstructing]{reconstruction of} the digital 3D model of the artefact and \MSedit[]{its} central core piece.
 \KRedit{\item Generation of fracture pattern.}
 \item Generation of the individual puzzle pieces.
 \item Generation of \KRedit[matching blind-holes]{attachment mechanisms, such as matching blind holes,} both in the core and puzzle pieces.
@@ -512,7 +508,7 @@ The proposed workflow involves the following steps:
 \end{enumerate}
 %
 
-\KRedit{The approach for generating solid surfaces for fabrication which underlies the proposed workshop combines algorithms for generating fracture patterns with constructive solid geometry (CSG) operations. CSG is a technique commonly used in solid modeling CAD systems. It allows to create a complex surface by using Boolean operators to combine simpler objects. 
+\KRedit{The approach for \MSedit[generating]{producing} solid surfaces for fabrication, which underlies the proposed \MSedit[workshop]{workflow}, combines algorithms generating fracture patterns with constructive solid geometry (CSG) operations. CSG is a technique commonly used in solid modeling CAD systems. It allows to create a complex surface by using Boolean operators to combine simpler objects. 
 
 The implementation of the workflow uses a mixture of tools and systems including modelling tools, C++ and OpenSCAD. OpenSCAD is a 
 CSG engine based on the Computational Geometry Algorithms Library.  OpenSCAD is a free Computer Aided
@@ -545,8 +541,8 @@ to have a 300 mm height according to the design requirements. \KRedit[Then,
 using the physics capabilities of Blender to simulate real-world
 phenomena, the 3D model of the urn (whose base is not completely
 straight) was placed on a plane in order to acquire a standing
-position (see Figure~\ref{fig:blender}). Then, the top of the urns rim was removed in order to isolate the external shell of the urn.]{The resulting  3D model which will be used as input for the puzzle is shown in
-  Figure~\ref{fig:reconstruction}-a.}
+position (see Figure~\ref{fig:blender}). Then, the top of the urns rim was removed in order to isolate the external shell of the urn.]{The resulting  3D model which \MSedit[will be]{has been} used as input for the puzzle is shown in
+  Figure~\ref{fig:reconstructiona}}.
 %
 % \begin{figure}[h]
 %   \centering
@@ -560,7 +556,7 @@ position (see Figure~\ref{fig:blender}). Then, the top of the urns rim was remov
 
 \KRedit[The urn without rim. The rim was later joined again with the urn and modeled to have a smooth feeling in order to produce the reconstructed 3D model of the pot (see  Figure~\ref{fig:reconstructiona}).]{}
 
-\KRedit[The internal shell of the pot which constitutes the core of the puzzle. Thus, the faces of the internal shell were inverted it Meshlab and a plane was added to the top of the shape to create a watertight core (see Figure~\ref{fig:reconstructionb}).]{Afterwards, the central core piece is produced. This can be generated for any type of pottery puzzle by using a boolean operation. The resulting watertight is shown in Figure~\ref{fig:reconstructionb}. The core requires also of a through-hole along its height in order to fit it to the revolving base, as shown in the design in figure~\ref{fig:alexdesign}.}
+\KRedit[The internal shell of the pot which constitutes the core of the puzzle. Thus, the faces of the internal shell were inverted it Meshlab and a plane was added to the top of the shape to create a watertight core (see Figure~\ref{fig:reconstructionb}).]{Afterwards, the central core piece \MSedit[is]{was} produced. This can be generated for any type of pottery puzzle by using a boolean operation. The resulting watertight model is shown in Figure~\ref{fig:reconstructionb}. The core \MSedit[requires]{required} also of a through-hole along its height in order to fit \MSedit[it to]{onto} the revolving base, as shown in the design in Figure~\ref{fig:alexdesign}.}
 
 \begin{figure}[h]
   \centering
@@ -636,7 +632,7 @@ allows to generate geometry using a functional approach.]{}
 \KRedit[The proposed approach takes as input the watertight 3D models of the
 reconstructed urn (Figure~\ref{fig:reconstruction}-a) and core
 (Figure~\ref{fig:reconstruction}-b), both generated in the previous
-steps. The generator then produces:]{Once the fracture pattern has been generated, this is used to generate the puzzle pieces.}
+steps. The generator then produces:]{Once the fracture pattern has been generated, \MSedit[this]{it} is used to \MSedit[generate]{produce} the puzzle pieces.}
 
 \begin{figure}[h]
   \centering
@@ -650,7 +646,7 @@ steps. The generator then produces:]{Once the fracture pattern has been generate
   {\includegraphics[width=0.30\linewidth]{images/puzzlepiece}}
     
     
-    \caption{\KR{Need a better caption}Process of generating each puzzle piece using fracture pattern.}
+    \caption{\KR{Need a better caption}\MS{Could it be: Puzzle fragment generation through fracture pattern?}Process of generating each puzzle piece using fracture pattern}
 \end{figure}
 
 %
@@ -664,7 +660,7 @@ geometries are constructed in CAD systems.]{}
 To generate each puzzle piece, the intersection operation is used. For
 this, the 3D model is firstly translated to the centre of the fractured
 sphere (see Figure~\ref{fig:spherea}). Thereafter, as shown in
-Figure~\ref{fig:sphereb}, each \KR{do I use the word "section" before, not sure this is correct}section of the fractured sphere
+Figure~\ref{fig:sphereb}, each \KR{do I use the word "section" before, not sure this is correct}\MS{Karina the word section hasn't been used, the word fracture is used above} \MSedit[section of the fractured sphere]{fracture of the sphere}
 is intersected with the 3D model of the reconstructed urn. The
 intersection region of these two objects is defined as the set of all
 points that are part of both objects. As a result, a puzzle piece is
@@ -678,8 +674,8 @@ automatically produce all puzzle pieces. This process is repeated to
 generate puzzle pieces at two different levels of detail so that they
 can be used in subsequent operations.
 
-\KRedit{For the Saltdean urn, we generated} 14 individual puzzle pieces. Six of these pieces are retained
-  to be used for the base of the puzzle. The user will use this base
+\KRedit{For the Saltdean urn, we generated} \MSedit[14]{16} individual puzzle pieces.\MS{In figure 11a we show 16 pieces, so I changed it to reflect that. The number of pieces for the base is actually 7, so I changed that as well} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
+  to be used for the base of the puzzle. The user \MSedit[will]{would be able to} use this base
   as a reference when assembling the rest of the puzzle pieces. \KRedit[The
   remaining 8 pieces are generated with up to 6 holes each for
   fitting the magnets. and up to 60
@@ -689,7 +685,7 @@ can be used in subsequent operations.
 
 \subsection{Generating \KRedit[matching blind-holes]{attachments} both in the core and puzzle pieces}
 
-Once all puzzle pieces have been produced, \KRedit[matching blind-holes]{it is necessary to generate attachments which will secure the puzzle pices to the core. Magnets are suitable attachments as they can be buried within the puzzle piece and core. However, other female/male attachments are possible as well. In this step, the attachments for the Saltdean urn} are
+Once all puzzle pieces \MSedit[have been]{were} produced, \KRedit[matching blind-holes]{it \MSedit[is]{was} necessary to generate attachments \MSedit[which will]{to} secure the puzzle pieces \MSedit[to]{onto} the core. Magnets are suitable attachments as they can be buried within the puzzle pieces and core. However, other female/male attachments are possible as well. In this step, the attachments for the Saltdean urn} are
 generated both for the individual puzzle pieces and the central core
 to fit the magnets in. The blind-holes have consistent width and depth
 which should be enough to hide the magnets in.
@@ -709,7 +705,7 @@ illustrated in Figure~\ref{fig:cylinders}.
   {\includegraphics[width=0.45\linewidth]{images/allcylinders.jpg}}
   \subcaptionbox{Core with blind-holes across the surface\label{fig:coreholes}}
   {\includegraphics[width=0.45\linewidth]{images/coreholes.jpg}}
- \caption{Generating of matching holes for fitting magnets which will be the attachment mechanism for the Saltdean urn}
+ \caption{Generating \MSedit[of]{} matching holes for \MSedit[fitting]{the} magnets which \MSedit[will be]{constitute} the attachment mechanism for the Saltdean urn puzzle}
 \end{figure}
 
 The algorithm to create the blind-holes is based on the intersection
@@ -743,12 +739,12 @@ The generated geometries are then used to produce the
 blind-holes. This is achieved by using the difference operation
 between the 3D puzzle piece and the generated geometry (see
 Figure~\ref{fig:holesc}). The same process is repeated for all
-the puzzle pieces \KRedit[. This step produces all puzzle pieces with]{to produce} the
-required blind holes (see Figure~\ref{fig:teaser}-c).
+\MSedit[the]{} puzzle pieces \KRedit[. This step produces all puzzle pieces with]{to produce} the
+required blind holes (see Figure~\ref{fig:teaser}-c). \MS{This figure is not relevant. Should we refer to 11a instead which shows all printed pieces?}
 %
 \begin{figure}[h]
   \centering
-    \subcaptionbox{Puzzle piece with cylinder for blind-holes\label{fig:holesa}}
+    \subcaptionbox{Puzzle piece with cylinders for blind-holes\label{fig:holesa}}
      {\includegraphics[width=0.33\linewidth]{images/holes1.jpg}}
   \hspace{0.3in}
     \subcaptionbox{Puzzle piece with geometry generated for the creation of each blind-hole\label{fig:holesb}}
@@ -771,9 +767,9 @@ hole for fixing it to the rotating base.]
 \begin{figure}[H]
   \centering
   \subcaptionbox{3D printed prototypes for validation\label{fig:test}}
-  {\includegraphics[width=0.45\linewidth]{images/coreANDpiece}}
+  {\includegraphics[width=0.445\linewidth]{images/coreANDpiece}}
   \subcaptionbox{Colour and texture for the puzzle pieces\label{fig:col}}
-   {\includegraphics[width=0.45\linewidth]{images/colour}}
+   {\includegraphics[width=0.446\linewidth]{images/colour}}
 
   \caption{
     Prototyping was performed before full fabrication of puzzle}
@@ -781,34 +777,36 @@ hole for fixing it to the rotating base.]
 
 
 \subsection{3D printing puzzle pieces and core}
-\KRedit[Before printing all puzzle pieces,]{Before proceeding to fabricate the whole 3D puzzle, we underook a prototyping phase. In this,} a sample set of pieces were 3D
+\KRedit[Before printing all puzzle pieces,]{Before proceeding to fabricate the whole 3D puzzle, we undertook a prototyping phase. \MSedit[]{This has proven to be crucial in the overall design and fabrication process}. \MSedit[In this]{Hence,}} a sample set of pieces were 3D
 printed to validate the dimensions of the \KRedit[holes]{design} as well as to check
-whether the overall dimensions and weight were suitable for the
-purposes of the activity (see Figure~\ref{fig:test}). \KRedit[Some minor]{Various}
+whether the overall \MSedit[dimensions]{measurements, infill density, material strength} and weight were suitable for the
+\MSedit[purposes of the]{puzzle pot} activity (see Figure~\ref{fig:test}). Colours and textures were also tested (see Figure~\ref{fig:col}). \KRedit[Some minor]{Various}
 adjustments were made to the dimensions of the \KRedit[holes]{design} to take into
-account \KRedit{tolerances caused by other parts and} the thickness of the printed layers for the print. This
-thickness usually depends on the nozzle size and the machine and will
-vary for different printing technologies.
+account \KRedit{tolerances caused by \MSedit[other parts]{attaching printed pieces together} and the \MSedit[]{layer} thickness \MSedit[printed layers for]{of} the print}. This
+thickness usually depends on the nozzle size and the machine and \MSedit[will
+vary]{varies} for different printing technologies.
 %
 
 
 Finally, all the puzzle pieces were 3D printed, as shown in
 Figure~\ref{fig:allprinted}. Although the core could be printed all at
-once, it was split into \KRedit{eight}[four] sections to achieve better printing
-quality (and less supporting material) by allowing each section to be
+once, it was split into \MSedit[eight]{four} \MS{Karina it was 4 pieces not 8} sections to achieve better printing
+quality (and less supporting material by allowing each section to be
 positioned flat on the printer's bed).
 
 \begin{figure}[h]
   \centering
 
   \centering
-  \subcaptionbox{Printed puzzle pieces and central core.\label{fig:allprinted}}
+  \subcaptionbox{Printed puzzle pieces and central core\label{fig:allprinted}}
   {\includegraphics[width=0.48\linewidth]{images/allprintedpieces}}
-  \subcaptionbox{Post-processed puzzle pieces and central core.\label{fig:assembled}}
-  {\includegraphics[width=0.41\linewidth]{images/allprintedpiecesassembled}}\\
-   \subcaptionbox{Painted and assembled puzzle at the museum gallery.\label{fig:allprintedassembled}}
-  {\includegraphics[width=0.48\linewidth]{images/exhibitmuseumassembled}}
-    \caption{Fabricated puzzle pieces and central core generated by proposed workflow.}
+  \subcaptionbox{Post-processed puzzle pieces and central core\label{fig:assembled}}
+  {\includegraphics[width=0.405\linewidth]{images/allprintedpiecesassembled}}\\
+   \subcaptionbox{Painting puzzle pieces and central core, photo courtesy of Russell Webb\label{fig:painti}}
+   {\includegraphics[width=0.4299\linewidth]{images/painting}}
+  \subcaptionbox{Painted and assembled puzzle at the museum gallery\label{fig:allprintedassembled}}
+  {\includegraphics[width=0.4508\linewidth]{images/exhibitmuseumassembled}}
+    \caption{Fabricated puzzle pieces and central core generated by proposed workflow \MSedit[]{and final hands-on exhibit}}
 \end{figure}
 
 All pieces were printed in PLA (Polylactic Acid) filament on a FDM
@@ -819,20 +817,21 @@ thickness.
 
 \subsection{Post-processing all puzzle pieces and core}
 
-Post-processing of the puzzle pieces and the core includes removing
+Post-processing of the puzzle pieces and the core \MSedit[includes]{included} removing
 the supporting material around the pieces and sanding any rough
-surfaces. Then, the magnets are inserted in holes at the back of each
-puzzle piece and on the core. The holes are covered afterwards with
-plaster and sanded accordingly.
+surfaces. Then, the magnets \MSedit[are]{were} inserted in holes at the back of each
+puzzle piece and on the core. \MSedit[]{The magnets that were considered as most suitable, after testing various types, were \o6mm x 4mm N52 high grade neodymium disk magnets with 1798g pull strength}. \MSedit[The holes are]{After placing the magnets in the core and puzzle pieces, the holes were} covered \MSedit[afterwards]{} with plaster and sanded accordingly.
 
-When the plaster has dried, a coating using a mixture of PVA
-(Polyvinyl acetate) glue, marble powder and water is applied on the
+When the plaster \MSedit[has]{} dried, a coating using a mixture of PVA
+(Polyvinyl acetate) glue, marble powder, \MSedit[]{white acrylic colour which worked as a primer} and water \MSedit[is]{was} applied on the
 puzzle pieces and core in order to provide a ceramic-like
-texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3D printed using PLA filaments in different colours. The sample on the top right of the image has been chosen for the puzzle pot. The sample has been coated with the described mixture and painted using acrylic colours. The pieces are currently being post-processed to achieve the same visual quality as the samples.]{demonstrates the 3D puzzle assembled once all the pieces and the core have been post-processed. Afterwards, an artist painted the pieces using the colours tested and the final interactive exhibit is then placed at the musuem gallery (see Figure~\ref{fig:allprintedassembled} ).}
+texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3D printed using PLA filaments in different colours. The sample on the top right of the image has been chosen for the puzzle pot. The sample has been coated with the described mixture and painted using acrylic colours. The pieces are currently being post-processed to achieve the same visual quality as the samples.]{demonstrates the 3D puzzle assembled \MSedit[once all the pieces and the core have been post-processed]{before the final post-processing steps}. \MSedit[Afterwards]{Finally}, an artist painted the pieces \MSedit[using the colours tested]{} to resemble the original pot and the core (see Figure~\ref{fig:painti}). \MSedit[]{Lines to provide clues about the shape of the puzzle pieces and facilitate assembly were also painted on the core.} The final interactive exhibit \MSedit[is]{was} then placed at the museum gallery (see Figure~\ref{fig:allprintedassembled} ).}
 
 
 \section{Results}
+\label{res}
 \KR{need to add something here about the generalisation of the results. Tim can you advice?}
+\MS{The text should also refer to figure 12 which demonstrates how the workflow can be deployed to accommodate additional shapes and types of artefacts in order to create further enjoyable educational museum experiences for young audiences without excluding other visitor groups.}
 \begin{figure}[h]
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle0}%
   \includegraphics[width=0.33\textwidth]{images/saltdeanpuzzle0}%
@@ -850,7 +849,7 @@ texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle6}%
   \includegraphics[width=0.33\textwidth]{images/saltdeanpuzzle4}%
   \includegraphics[width=0.33\textwidth]{images/elephantpuzzle4}
-  \caption{Examples of algorithm applied to scans of an Amber cup, Saltdean pot and
+  \caption{Examples of algorithm applied to scans of an amber cup, Saltdean pot and
     ceramic elephant figurine.}
 \end{figure}
 
@@ -869,26 +868,27 @@ texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3
 \section{Evaluation}
 \label{eva}
 
-The puzzle, its design and performance have been mainly tested with
-the design team and the curators of the museum. The functional testing
+The puzzle, its design and performance  \MSedit[have been mainly]{were initially} tested with
+the design team and the curators of the museum. \MSedit[The functional]{Functional} testing
 has been an iterative process throughout the digital fabrication
-workflow to see whether the requirements of the activity/exhibit have
-been met. The feedback from this process has informed design decisions
+workflow to see whether the requirements of the activity/exhibit  \MSedit[have
+been]{were} met. The feedback from this process \MSedit[has]{} informed design decisions
 at subsequent steps of the workflow.
 
-The evaluation of the puzzle pot activity and its performance in terms
+The \MSedit[]{detailed} evaluation of the puzzle pot activity and its performance in terms
 of enhancing the visiting experience for families of the
-Archaeological Gallery of the Brighton Museum and Art Gallery will
-take place \KRedit[once the Gallery is open to the public]{as part of a larger research project on digitally fabricated interpretation material}. A detailed method
-for the evaluation has already been set up and tested with another
-museum~\cite{Samaroudi2017}.
+Archaeological Gallery \MSedit[of the Brighton Museum and Art Gallery]{} will \MSedit[take place]{be presented in the future} \KRedit[once the Gallery is open to the public]{as part of a larger research project on digitally fabricated interpretation material}. A detailed method
+for the evaluation \MSedit[]{of the overall experience} has already been set up and tested with another artefact and museum~\cite{Samaroudi2017}.
 
-A final consideration is given to how this solution compares to other
+\MSedit[]{However, since the puzzle activity has already been installed and visitors are interacting with it at the Archaeology Gallery, some initial remarks have been made. These relate mostly to the access that people have to the exhibit and their motivation to spend time with it. Hence, we have found that the rotation of the core and base facilitates assembling the puzzle, nonetheless having full 360-degree physical access to the spot might allow groups of people to interact with it in a more easy and comfortable way. As for the space where the puzzle pieces rest, it is better to have a kind of tray or physical barrier in order to prevent pieces from falling down and possibly brake. Lastly, it has been noticed that visitors are more willing to try the activity when they find the puzzle unassembled and its pieces lying around the core, instead of seeing the fragmented pot already put together.}
+
+\MS{I believe that the following comparison to other methods should be placed in the discussion section or even in the results, but not in the evaluation}
+A final consideration is given to how \MSedit[this]{the proposed} solution compares to other
 fabrication methods of archaeological puzzles. For instance, a similar
 puzzle to the one produced could be made using a more traditional
 approach: by modeling a pot from a hard wearing clay, firing and
 glazing it. This pot could then be smashed, reassembled and a core
-could then be made. This process is not very expensive, as it would
+could \MSedit[then]{} be made \MSedit[]{(even though producing a core should be a rather demanding task)}. \MSedit[This]{The whole} process \MSedit[is not]{would not be} very expensive, as it would
 probably cost one third of the cost of our proposed approach, and also
 requires only access to clay and a kiln. However, the puzzle pieces
 would not have very good quality. For instance, the pieces would not
@@ -900,11 +900,10 @@ piece would be costly and complex.
 Alternatively, it is possible to make a pot using clay and produce a
 mould or negative using plaster of Paris or silicone. Tin would then
 be used to make the shard shapes in the mould. The puzzle pieces and
-core would then be casted in jesmonite. Holes for the magnets would
-then be drilled in the casted material. Although this process is
+core would then be casted in jesmonite. Holes for the magnets would \MSedit[then]{have to be} be drilled in the casted material. Although this process is
 slightly more expensive than the previous one, it would be possible to
 replace a piece if this was lost. However, the mould would require to
-be carefully guarded so it does not get lost, and it would suffer of
+be carefully guarded so it \MSedit[does not]{would not} get lost, and it would suffer of
 inevitable wear out. The latter issue would affect the reproduction of
 subsequent copies of puzzle pieces.
 
@@ -930,18 +929,21 @@ museums in case they wanted to replicate the physical experience.
 This paper presented a novel digital workflow for the generation of 3D
 puzzles for museum galleries. The workflow was deployed with a
 particular artefact, the Saltdean urn. The 3D puzzle activity \KRedit[will be
-exhibited]{is part of the archaeology gallery} at the Brighton Museum and Art Gallery.
+exhibited]{is part of the Archaeology Gallery} at the Brighton Museum and Art Gallery.
 
 The proposed workflow's input is an artefact which is digitised and
 converted into a digital format. A series of steps are then employed
 in order to produce a watertight model of the artefact and a core for
-the puzzle pieces to ``sit on''. \KRedit{We then explore alternative fracture patterns in order to generate different types of puzzle pieces}. An algorithm is then proposed to
-generate the puzzle fragments or shards and the \KRedit{attachments, such as} blind-holes for the
+the puzzle pieces to ``sit on''. \KRedit{We \MSedit[then]{also} explore alternative fracture patterns in order to generate different types of puzzle pieces}. An algorithm is then proposed to
+generate the puzzle fragments or shards and the \KRedit{attachments, such as the} blind-holes for the
 magnets on the pieces and core. \KRedit[These steps make use of a combination
 of cell fracture algorithms and the Boolean operations provided by CAD
 systems.]
 
-\KR{we need to rephrase this, as I don't think these really are the greatest challenges.... the challenge really is the fabrication.}One of the challenges of the workflow is producing the watertight 3D
+\KR{we need to rephrase this, as I don't think these really are the greatest challenges.... the challenge really is the fabrication.}
+\MS{Karina I have added the following, please rephrase it as you wish}
+
+\MSedit[One of the challenges of the workflow is producing the watertight 3D
 mesh suitable for the generation of the puzzle. This is because this
 3D mesh is not a straight-forward outcome from the digitisation
 processes. Due to these challenges, the urn's shape had to be
@@ -950,10 +952,9 @@ digitisation process did not capture, such as parts of the rim and the
 inner-surface. The shape was also slightly simplified to make it
 easier to handle in the modeling stage. The fabrication process also
 requires considering tolerances due to the layer size of the 3D
-printing technology.
+printing technology.]{Some of the challenges that we experienced and could be faced when creating similar puzzle activities are related to  the creation of a watertight mesh out of a partially scanned pottery artefact. Another challenge is the selection of the right fragmentation pattern in order to comply with the design requirements. However, the biggest challenge is related to the fabrication of the puzzle pieces and core as tolerances due to the layer size of the 3D printing technology as well as post-processing steps (e.g. pasting pieces together, using certain materials) might greatly affect the final appearance and functionality of the exhibit. That is why prototyping and iterative testing is crucial, in order to understand how measurements, settings and processes might need to change in order to successfully produce a satisfying result.}
 
-The significance of the proposed workflow is that it can provide a CH
-organisation with a cost-effective ``future-proof'' solution. Hence,
+\MSedit[]{To conclude, we argue that} the significance of the proposed workflow is that it can provide a CH organisation with a cost-effective ``future-proof'' solution. Hence,
 the process can be easily repeated either to replace lost pieces of
 the puzzle or replicate the whole exhibit with minor
 changes. Moreover, the presented process is relatively low cost in
@@ -969,7 +970,7 @@ audience's opinion about the physical characteristics of the puzzle.
 
 We thank the Brighton Museum and Art Gallery, and in particular Alex
 Hawkey and Andrew Maxted, for their input and support during the
-development of the research.
+development of the research. We would also like to thank Russell Webb, the artist who painted the puzzle pot to resemble the original artefact.
 
 %
 % The next two lines define the bibliography style to be used, and the bibliography file.
