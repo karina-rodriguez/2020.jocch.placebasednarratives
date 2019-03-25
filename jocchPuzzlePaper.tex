@@ -1,7 +1,11 @@
 %
 % The first command in your LaTeX source must be the \documentclass command.
 \documentclass[acmlarge,screen,dvipsnames]{acmart}
+%\usepackage{color}
+\usepackage{amsmath}
+\usepackage{pseudocode}
 \usepackage[]{algorithm2e}
+%\usepackage[ruled]{algorithm2e} % For algorithms
 \usepackage{subcaption}
 \usepackage{natbib}
 
@@ -586,6 +590,7 @@ position (see Figure~\ref{fig:blender}). Then, the top of the urns rim was remov
 \greenBegin
 
 \subsection{Generation of fracture patterns}
+\label{sec:fracture-patterns}
 
 Before creating individual ``puzzle pieces'' (pottery
 shards/fragments), we need to determine suitable fragment shapes, that
@@ -646,10 +651,10 @@ Table~\ref{tab:hierarchical-parameters}.
     \multicolumn{2}{|l|}{Fractal Generator}\\
     \hline
     $m$ & Initialises fracture fractal with $m$-sided spherical polygon along a great circle.\\
-    $R$ & Random jitter of polygon vertices along that great circle, as multiple of edge length.\\
-    $A$ & Amplitude (as multiple of edge length) by which that polygon is tangentially displaced away from the great circle.\\
+    $n$ & Number of recursive bisections of polygon edges.\\
+    $R$ & Random jitter of polygon vertices along the great circle, as multiples of edge length.\\
+    $A$ & Amplitude (as multiples of edge length) by which that polygon is tangentially displaced away from the great circle.\\
     % formally niter:
-    $n$ & Number of levels of recursion in bisecting polygon edges.\\
     % formally decay:
     $\rho$ & Fractal decay: $\rho=1$ creates fractal curves that are
     self-similar across all scales; values of $0 < \rho < 1$ attenuate both
@@ -1033,7 +1038,91 @@ development of the research. We would also like to thank Russell Webb, the artis
 \section{Fractal Hierarchical Fracture}
 \label{apx:hierarchical-algo}
 
-\TW{TODO}
+In the remainder, we provide a more formal description of the
+hierarchical fracture algorithm we use in
+Section~\ref{sec:fracture-patterns}.
+
+\TW{TODO: finish this very rough section; stratify terminology
+  (fracture polygon; fracture line; fracture; fragment; fractal;
+  \dots}
+
+The fractal generator is based on the 1-D random midpoint displacement
+method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}.
+
+\begin{algorithm}[tb]
+    %\normalsize
+		\small
+    \caption{Outer fracture loop.}
+    \label{alg:SolutionRefinement}
+    \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
+    \SetCommentSty{commentfont}
+    %\LinesNumbered
+    \KwIn{ \\
+        $N$: target number of fragments.\\
+        $r$: maximum area ratio between larger and smaller half of a split fragment.\\
+    }
+    \KwResult{ \\
+        $\mathcal{F}$: set of $N$ spherical polygons denoting fracture curves for producing fragments.\\
+    }
+    \Begin{
+        \tcp{Initialise output.}
+        $ \mathcal{F} = \varnothing $ \\
+
+        \tcp{Loop until $N$ fracture polygons have been reached.}
+        \While{$\|\mathcal{F}\| < N$}{
+          TODO\\
+        }
+    }
+\end{algorithm}
+
+
+%% CHEAT SHEET -- our algorithm from a different paper
+%%
+%% \begin{algorithm}[tb]
+%%     %\normalsize
+%% 		\small
+%%     \caption{Solution refinement (optimization core).
+%%     All the operations are applied on entire matrices (images), \ie separately for each channel and each vertical stack of voxels corresponding to a given surface pixel.}
+%%     \label{alg:SolutionRefinement}
+%%     \newcommand{\commentfont}[1]{\textit{\textcolor{darkgreen}{#1}}}
+%%     \SetCommentSty{commentfont}
+%%     %\LinesNumbered
+%%     \KwIn{ \\
+%%         $\volume{X}$: current working (proxy) volume $\in \spaceC$ \\
+%%         $\img{T}$: gamut-projected target image $\in \spaceC$ \\
+%%         $\img{P}$: current appearance prediction image $\in \spaceC$
+%%     }
+%%     \KwResult{ \\
+%%         $\volume{X}$: updated working volume $\in \spaceC$ \\
+%%     }
+%%     \Begin{
+%%         \tcp{Calculate positive and negative differences from target.}
+%%         $ \img{D} = \img{T} - \img{P} $ \\
+%%         $ \img{D}^{+} = \max(\img{D},0) $ \\
+%%         $ \img{D}^{+}_\mathrm{res} = 0 $ \\
+%% 				$ \img{D}^{-}_\mathrm{res} = \min(\img{D},0) $ \\
+
+%%         \tcp{Loop over all proxy volume layers, starting from the topmost one, down to the last layer $Z$.}
+%%         \For{$z=0..Z, \img{L}_z \in \volume{X}$}{
+%%             \tcp{Conservatively darken the layer proportionally to $\coef_\mathrm{p}$.}
+%%             $ \img{L}_z +\hspace{-1mm}= \coef_\mathrm{p} \cdot \img{D}^{-}_\mathrm{res} $ \\
+%%             \tcp{Lighten the layer in the full extent.}
+%%             $ \img{L}_z +\hspace{-1mm}= \img{D}^{+} $ \\
+%%             \tcp{Add any remaining residual energy from the above layers, diffusing it laterally with the 2D kernel $\kernel$.}
+%%             $ \img{L}_z +\hspace{-1mm}= \kernel(\img{D}^{+}_\mathrm{res},z) $ \\
+%%             \tcp{Calculate residuals for the next layer. $\img{D}^{-}_\mathrm{res}$ is the residual darkening energy from the current layer compensated for the absorbance of the above layers with $\coef_\mathrm{a}$.\newline
+%%             The lower bound for $\img{D}^{-}_\mathrm{res}$ is chosen to enable enough energy propagation while avoiding divergence.}
+%% 						$ \img{D}^{+}_\mathrm{res} = \max(\img{L}_z,1) - 1$ \\
+%%             $ \img{D}^{-}_\mathrm{res} = \mathrm{clamp}(\coef_\mathrm{a} \cdot \img{L}_z,-2,0) $ \\
+%%             \tcp{Ensure the layer stays in the gamut.}
+%%             $ \img{L}_z = \mathrm{clamp}(\img{L}_z,0,1) $
+%%         }
+%%     }
+%% \end{algorithm}
+
+
+
+
 
 %
 % The next two lines define the bibliography style to be used, and the bibliography file.
