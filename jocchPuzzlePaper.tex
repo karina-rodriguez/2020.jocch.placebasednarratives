@@ -1063,92 +1063,119 @@ Spherical polygons are represented as (ordered) sequence of unit
 vectors $p_i\in\IR^3$ (with $\|p_i\|=1$). Their edges are defined as
 great-circle segments connecting consecutive $P_i$ and $P_{i+1}$, and
 the geodesic distance between two points is the arc length of that
-segment. The area of an $m$-sided spherical polygon is $(\sum_{i=1}^m
-A_i) - (m-2)\pi$, with $A_i$ its $i$th interior angle.
+segment. The area of a simple (non-selfintersecting) $m$-sided
+spherical polygon is $(\sum_{i=1}^m A_i) - (m-2)\pi$, with $A_i$ its
+$i$th interior angle.
 
-\hrule
+Many geometric algorithms, such as inside/out tests for polygons, have
+straight-forward correspondences on the spherical domain; however,
+edge cases exist due to the antipodal ambiguity in spherical
+geometry. We eliminate these cases by discarding fracture attempts
+that would lead to polygons straddling more than one hemisphere of the
+domain.
 
-Inside/out point tests can be robustly determined based on winding number, provided the spherical polygon 
-
-
-
-\TW{TODO: finish this very rough section; stratify terminology
-  (fracture polygon; fracture line; fracture; fragment; fractal;
-  \dots}
-
-The fractal generator is based on the 1-D random midpoint displacement
-method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}.
+A pseudo-code summary of our hierarchical fracture approach can be
+found in Algorithm~\ref{alg:hierarchical-fracture}
+and~\ref{alg:random-spherical-polygon}.
 
 \begin{algorithm}[tb]
-    %\normalsize
-		\small
-    \caption{Outer fracture loop.}
-    \label{alg:SolutionRefinement}
-    \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
-    \SetCommentSty{commentfont}
-    %\LinesNumbered
-    \KwIn{ \\
-        $N$: target number of fragments.\\
-        $r$: maximum area ratio between larger and smaller half of a split fragment.\\
-    }
-    \KwResult{ \\
-        $\mathcal{F}$: set of $N$ spherical polygons denoting a fracture curve for each final fragment.\\
-    }
-    \Begin{
-        \tcp{Initialise active set of fracture curves.}
-        %$ \mathcal{F} := \varnothing $ \\
-        $ P := \textit{randSphericalPolygon}(\,) $ \\
-        $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
-        $ \mathcal{F} := \{ QP, \widebar{QP} \},\;\text{with $\widebar{P}$ denoting the reversed spherical polygon $P$.}$ \\
-
-        \tcp{Loop until $N$ fracture polygons have been reached.}
-        \While{$\|\mathcal{F}\| < N$} {
-          \tcp{Pick largest fragment outline and generate random fracture curve:}
-          $ P := \argmax_{P\in\mathcal{F}}{\textit{area}(P)} $ \\
-          $ C := \textit{randSphericalPolygon}(\,) $ \\
-          \tcp{Split $P$ with $C$:}
-          \tcp{Test whether resulting halves are well-formed:}
-          TODO\\
-          $ \mathcal{F} := (\mathcal{F} \backslash P) \cup \{ P_+, P_- \} $ \\
-        }
+  %\normalsize
+  \small
+  \caption{Hierarchical fracture.}
+  \label{alg:hierarchical-fracture}
+  \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
+  \SetCommentSty{commentfont}
+  %\LinesNumbered
+  \KwIn{ \\
+    $N$: target number of fragments.\\
+    $r$: maximum area ratio between larger and smaller half of a split fragment.\\
+  }
+  \KwResult{ \\
+    $\mathcal{F}$: set of $N$ spherical polygons denoting a fracture curve for each final fragment.\\
+  }
+  \Begin{
+    \tcp{Initialise active set of fracture curves.}
+    %$ \mathcal{F} := \varnothing $ \\
+    $ P := \textit{randSphericalPolygon}(\,) $ \\
+    $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
+    $ \mathcal{F} := \{ QP, \widebar{QP} \},\;\text{with $\widebar{P}$ denoting the reversed spherical polygon $P$.}$ \\
+    
+    \tcp{Loop until $N$ fracture polygons have been reached.}
+    \While{$\|\mathcal{F}\| < N$} {
+      \tcp{Pick largest fragment outline and generate random fracture curve:}
+      $ P := \argmax_{P\in\mathcal{F}}{\textit{area}(P)} $ \\
+      $ C := \textit{randSphericalPolygon}(\,) $ \\
+      \tcp{Split $P$ with $C$:}
+      $ P_+ := P \cap C $ \\
+      $ P_- := P \cap \widebar{C} $ \\
+      \tcp{Test whether resulting halves are well-formed:}
+      \If{$P_+\ne\varnothing \wedge P_-\ne\varnothing  \wedge \textit{isSimple}(P_+) \wedge \textit{isSimple}(P_-)
+        $ \break\hphantom{\strut}\quad $
+        \wedge \max(\textit{area}(P_+)/\textit{area}(P_-),\textit{area}(P_-)/\textit{area}(P_+)) < r
+        %$ \break\hphantom{\strut}\quad $
+        %\wedge\, P_+ \, \text{lies in one hemisphere}
+        %$ \break\hphantom{\strut}\quad $
+        %\wedge\, P_- \, \text{lies in one hemisphere}
+        $~} {
+        \tcp{Replace $P$ in $\mathcal{F}$ by its two halves:}
+        $ \mathcal{F} := (\mathcal{F} \backslash P) \cup \{ P_+, P_- \} $ \\
       }
-    \textbf{Where:}\\
-    $\textit{randSigned}(\,) := \text{random value} \in [-1,1],\text{uniformly distributed} $ \\
+    }
+  }
 \end{algorithm}
 
 \begin{algorithm}[tb]
-    %\normalsize
-		\small
-    \caption{Outer fracture loop.}
-    \label{alg:SolutionRefinement}
-    \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
-    \SetCommentSty{commentfont}
-    %\LinesNumbered
-    \KwIn{ \\
-        $N$: target number of fragments.\\
-        $r$: maximum area ratio between larger and smaller half of a split fragment.\\
+  %\normalsize
+  \small
+  \caption{Random fracture generator \textit{randSphericalPolygon}(\,), loosely based on the 1-D random midpoint displacement
+method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}}
+  \label{alg:random-spherical-polygon}
+  \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
+  \SetCommentSty{commentfont}
+  %\LinesNumbered
+  \KwIn{ \\
+    $m$: order of initialisation polygon\\
+    $n$: number of recursive bisections of polygon edges\\
+    $R$: amount of random midpoint jitter along the curve\\
+    $A$: amplitude of lateral random displacement\\
+    $\rho$: fractal decay
+    $\sigma\in[0,1]$: strength of additional smoothing of the result\\
+  }
+  \KwResult{ \\
+    $P$: random spherical polygon, as a sequence of $p_i\in\IR^3, \|p_i\|=1$\\
+  }
+  \Begin{
+    \tcp{Initialise active set of fracture curves.}
+    %$ \mathcal{F} := \varnothing $ \\
+    $ P := \text{regular $m$-polygon along great circle $C_0$} $ \\
+    $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
+    $ P := QP $\\
+    $ \textit{depth} := 0 $\\
+    $ \mathcal{N} := 1\dots m $\qquad\text{\commentfont{// indices of new points}}\\
+    \While{true} {
+      \tcp{Perturb new points.}
+      $ a_i := \text{average arclength of edges adjacent to $p_i$} $ \\
+      $ t_i := \text{sphere tangent in average direction of edges adjacent to $p_i$} $ \\
+      $ t'_i := \text{sphere tangent orthogonal to $t_i$} $ \\
+      $ \forall i\in\mathcal{N}: p_i := \textit{normalise}(p_i
+        + (a_i\cdot R\cdot\textit{randSigned}(\,)) t_i
+        + (a_i\cdot A\cdot\textit{randSigned}(\,)) t'_i)\break
+        \text{where}
+        \quad
+        \textit{randSigned}(\,) := \text{random value} \in [-1,1],\text{uniformly distributed} $ \\
+      \tcp{Exit if desired depth is reached.}
+      \If{$\textit{depth} = n$}{break\\}
+      \tcp{Continue with bisection scheme.}
+      after each $p_i$, insert bisection point $(p_i+p_{1+(i\!\mod\|P\|)})/2$\\
+      $ \mathcal{N} := \text{indices of newly inserted points} $\\
+      \tcp{Attenuate amount of randomness.}
+      $R := \rho R$\\
+      $A := \rho A$\\
+      $\textit{depth} := \textit{depth} + 1$\\
     }
-    \KwResult{ \\
-        $\mathcal{F}$: set of $N$ spherical polygons denoting a fracture curve for each final fragment.\\
-    }
-    \Begin{
-        \tcp{Initialise active set of fracture curves.}
-        %$ \mathcal{F} := \varnothing $ \\
-        $ P_0 := \text{regular $n$-polygon along great circle $C_0$} $ \\
-        $ P_0 := P_0, \text{with each vertex moved by $2\pi/n\cdot R\cdot\textit{randSigned}(\,)$ along $C_0$} $ \\
-        $ P_0 := P_0, \text{with each vertex moved on unit sphere by $2\pi/n\cdot A\cdot\textit{randSigned}(\,)$ orthogonally to $C_0$} $ \\
-        $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
-        $ \mathcal{F} := \{ Q P_0, Q \widebar{P_0} \},\;\text{with $\widebar{P}$ the reversed spherical polygon $P$.}$ \\
-
-        \tcp{Loop until $N$ fracture polygons have been reached.}
-        \While{$\|\mathcal{F}\| < N$}{
-          TODO\\
-        }
-      }
-    \textbf{Where:}\\
-    $\textit{randSigned}(\,) := \text{random value} \in [-1,1],\text{uniformly distributed} $ \\
+  }
 \end{algorithm}
-
+  
 
 %% CHEAT SHEET -- our algorithm from a different paper
 %%
