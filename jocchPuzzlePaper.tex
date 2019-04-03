@@ -719,21 +719,20 @@ of polygon vertices $R$ to produce fragments with higher raggedness.
 \subsection{Generating the individual puzzle pieces}
 \label{sec:fragment-generation}
 
-
 \KRedit[In order to generate the puzzle pieces, a semi-automated approach was
 deployed using OpenSCAD software. OpenSCAD is a free Computer Aided
 Design (CAD) software which uses the Computational Geometry Algorithms
 Library (CGAL) as its constructive solid geometry (CSG) engine. Its
 script syntax is based upon functional programming philosophy which
-allows to generate geometry using a functional approach.]{}
-
+allows to generate geometry using a functional approach.]{}%
+%
 \KRedit[The proposed approach takes as input the watertight 3D models of the
 reconstructed urn (Figure~\ref{fig:reconstruction}-a) and core
 (Figure~\ref{fig:reconstruction}-b), both generated in the previous
 steps. The generator then produces:]{Once the fracture pattern has been generated, \MSedit[this]{it} is used to \MSedit[generate]{produce} the puzzle pieces.} \KRedit[Boolean operations are used for generating the puzzle pieces and the
 internal core with matching blind holes. These sets of operations,
 including union, intersection and difference, are the basis of how
-geometries are constructed in CAD systems.]{} For this, CSG operations are used to generate all the printable puzzle pieces. Firstly, the 3D model is translated to the centre of the fractured
+geometries are constructed in CAD systems. ]{}For this, CSG operations are used to generate all the printable puzzle pieces. Firstly, the 3D model is translated to the centre of the fractured
 sphere (see Figure~\ref{fig:spherea}). Thereafter, as shown in
 Figure~\ref{fig:sphereb},
 %
@@ -755,9 +754,6 @@ intersection of these two objects is defined as the set of all
 points that are part of both objects.]{} As a result, a puzzle piece is
 produced as shown in Figure~\ref{fig:spherec}.
 %
-
-%
-
 The algorithm iterates over all sections of the fractured sphere to
 automatically produce all puzzle pieces. This process is repeated to
 generate puzzle pieces at two different levels of detail so that they
@@ -780,11 +776,11 @@ can be used in subsequent operations.
 \KRedit[]{Figures~\ref{fig:pot-with-different-fracture-settings} illustrate the 
 generation of alternative versions of puzzles pieces for the Saltdean urn using various level of raggedness for similarly-sized fragments. For the museum gallery, we generated 16 individual puzzle pieces using straight edges based on the voronoi approach as this was deemed to be the simpler version for children to complete.} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
   to be used for the base of the puzzle. The user \MSedit[will]{would be able to} use this base
-  as a reference when assembling the rest of the puzzle pieces. \KRedit[The
+  as a reference when assembling the rest of the puzzle pieces.\KRedit[ The
   remaining 8 pieces are generated with up to 6 holes each for
   fitting the magnets. and up to 60
   matching blind-holes distributed across the surface to fit the
-  magnets.]
+  magnets.]{}
 
 \begin{figure}[htb]
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle0}%
@@ -808,46 +804,7 @@ generation of alternative versions of puzzles pieces for the Saltdean urn using 
     ceramic elephant figurine.}
 \end{figure}
 
-
-\KRedit[In order to generate the puzzle pieces, a semi-automated approach was
-deployed using OpenSCAD software. OpenSCAD is a free Computer Aided
-Design (CAD) software which uses the Computational Geometry Algorithms
-Library (CGAL) as its constructive solid geometry (CSG) engine. Its
-script syntax is based upon functional programming philosophy which
-allows to generate geometry using a functional approach.]{}
-
-\KRedit[The proposed approach takes as input the watertight 3D models of the
-reconstructed urn (Figure~\ref{fig:reconstruction}-a) and core
-(Figure~\ref{fig:reconstruction}-b), both generated in the previous
-steps. The generator then produces:]{Once the fracture pattern has been generated, \MSedit[this]{it} is used to \MSedit[generate]{produce} the puzzle pieces.} \KRedit[Boolean operations are used for generating the puzzle pieces and the
-internal core with matching blind holes. These sets of operations,
-including union, intersection and difference, are the basis of how
-geometries are constructed in CAD systems.]{} For this, CSG operations are used to generate all the printable puzzle pieces. Firstly, the 3D model is translated to the centre of the fractured
-sphere (see Figure~\ref{fig:spherea}). Thereafter, as shown in
-Figure~\ref{fig:sphereb}, each \MSedit[section of the fractured sphere]{fracture of the sphere}
-is intersected with the 3D model of the artefact. The
-intersection region of these two objects is defined as the set of all
-points that are part of both objects. As a result, a puzzle piece is
-produced as shown in Figure~\ref{fig:spherec}.
-%
-
-%
-
-The algorithm iterates over all sections of the fractured sphere to
-automatically produce all puzzle pieces. This process is repeated to
-generate puzzle pieces at two different levels of detail so that they
-can be used in subsequent operations.
-  
-\KRedit[]{Figures~\ref{fig:pot-with-different-fracture-settings} illustrate the 
-generation of alternative versions of puzzles pieces for the Saltdean urn using various level of raggedness for similarly-sized fragments. For the museum gallery, we generated 16 individual puzzle pieces using straight edges based on the Voronoi approach as this was deemed to be the simpler version for children to complete.} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
-  to be used for the base of the puzzle. The user \MSedit[will]{would be able to} use this base
-  as a reference when assembling the rest of the puzzle pieces. \KRedit[The
-  remaining 8 pieces are generated with up to 6 holes each for
-  fitting the magnets. and up to 60
-  matching blind-holes distributed across the surface to fit the
-  magnets.]
-
-\KRedit[]{Moreover, Figure~\ref{fig:three-shapes-with-different-fractures} demonstrates the generation of alternative versions of puzzles of various shapes from cultural heritage collections. The other two shapes have been digitised in a similar workflow than the Saltdean urn and underwent a similar process to generate the digital puzzle pieces.}
+\KRedit{Moreover, Figure~\ref{fig:three-shapes-with-different-fractures} demonstrates the generation of alternative versions of puzzles of various shapes from cultural heritage collections. The other two shapes have been digitised in a similar workflow than the Saltdean urn and underwent a similar process to generate the digital puzzle pieces.}
 
 
 
@@ -1089,6 +1046,7 @@ We thank the Brighton Museum and Art Gallery, and in particular Alex
 Hawkey and Andrew Maxted, for their input and support during the
 development of the research. We would also like to thank Russell Webb, the artist who painted the puzzle pot to resemble the original artefact.
 
+\greenBegin
 \appendix
 
 %\newcommand{\IR}{\textup{I\!R}}
@@ -1228,7 +1186,8 @@ method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}}
     $P := (1-\sigma)P + \sigma P_\text{smooth}$\\
   }
 \end{algorithm}
- 
+\greenEnd
+  
 %
 % The next two lines define the bibliography style to be used, and the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
