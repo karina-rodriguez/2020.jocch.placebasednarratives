@@ -365,10 +365,19 @@ interlocking pieces for 3D printing
 \cite{Xin:2011:MBP:2010324.1964992,Song:2012:RIP:2366145.2366147,sun_computational_2015}
 present various algorithms for generating puzzles with interlocking
 pieces, known as burr puzzles, from a 3D model.
+%
+\begin{figure}[b]
+  \centering
+  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
+  {\includegraphics[width=0.35\linewidth]{images/uk}}
+  \hspace{0.5in}
+  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
+  {\includegraphics[width=0.35\linewidth]{images/france}}
+  \caption{\label{fig:puz}Examples of pottery puzzles in museums}
+\end{figure}
 
 \KRedit{Another relevant area of research is the \MSedit[]{fracturing} simulation \MSedit[of fractures for]{of} 3D models. These fracturing effects are often used to display the breaking or destruction of objects or places in
 computer games, virtual reality and the film industry. In this area, predefined fracture patterns are often computed, while more novel solutions focus on creating fast approximations which are computational efficient and offer flexible control of fragment generation \cite{Schvartzman:2014:FAB:2556700.2556713,Hahn:2016:FAB:2897824.2925902,Zhu:2015:SRB:2809654.2766942,Muller:2013:RTD:2461912.2461934}. 
-
 
 Moreover, most of the proposed solutions \KRedit{for creating puzzles which are 3D printable} aim to create puzzles \KRedit[]{consisting of pieces which interlock with each other, without the need to have a fixed installation.} \MSedit[However,]{In our case,} we aim to
 create a permanent \MSedit[]{hands-on} exhibit \KRedit[of a pottery vase]{} for a \KRedit[]{public scape, such as a} busy museum
@@ -379,22 +388,9 @@ that it can wrap around a static core element.]
 
 Of relevance to the heritage field is the geometric analysis of a dataset of fracture patterns observed in wall paintings excavated at Akrotiri, Greece~\cite{Shin:2012:ASF:2362402.2362404}. This analysis suggests that when pottery is broken, this fragments in a hierarchical fracture pattern, where fragments break into two pieces recursively along cracks nearly orthogonal to previous ones.}
 
-
 Similar examples of pottery puzzles in other museums (though without
 deploying a fully digital workflow) are shown in
-Figure~\ref{fig:puz}.
-%
-\begin{figure}[htb]
-  \centering
-  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
-  {\includegraphics[width=0.35\linewidth]{images/uk}}
-  \hspace{0.5in}
-  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
-  {\includegraphics[width=0.35\linewidth]{images/france}}
-  \caption{\label{fig:puz}Examples of pottery puzzles in museums}
-\end{figure}
-%
-As shown in the images, these puzzles require a
+Figure~\ref{fig:puz}. As shown in the images, these puzzles require a
 static element (the core) that \MSedit[provides a clue of]{might provide clues about} the overall shape of
 the pot. Moreover, the core helps \KRedit[the user to assemble the puzzle]{to secure the pieces in place} with
 the use of magnets \KRedit{or other attachment mechanisms which are placed both} on \KRedit[its]{the core's} surface and on each puzzle piece. An initial proposal for a digital workflow to generate this type of puzzles is present in \cite{01763a4734614c50ab9f408cdd0f5470}. This paper extends the digital workflow to incorporate different fracture patterns as well as presents a full deployment of the workflow on an exhibit of the Brighton Museum and Art Gallery.
@@ -431,7 +427,7 @@ Belgian tribes and people from Brittany who had moved into the area
 and introduced the use of the potter's wheel in south
 Britain~\cite{Harding1974,Cunliffe1978,Adkins1982,Cunliffe1995}.
 %
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \includegraphics[width=0.6\linewidth]{images/pot}
   \caption{\label{fig:pot}
@@ -650,7 +646,7 @@ See Appendix~\ref{apx:hierarchical-algo} for more details on the
 algorithm. Its parameters affecting the fragmentation are
 shown in Table~\ref{tab:hierarchical-parameters}.
 %
-\begin{table}[htb]
+\begin{table}[tb]
   \begin{tabular}{|l|p{0.933\linewidth}|}
     \hline
     \multicolumn{2}{|l|}{Hierarchical Splitting}\\
@@ -692,7 +688,7 @@ of polygon vertices $R$ to produce fragments with higher raggedness.
 
 %Downside: distribution and size of fragments is harder to control. In our experiments,
 
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering%
   \subcaptionbox{\label{fig:fracture-type-examples:voronoi}%
     Voronoi fracture pattern}%
@@ -740,7 +736,7 @@ geometries are constructed in CAD systems.]{} For this, CSG operations are used 
 sphere (see Figure~\ref{fig:spherea}). Thereafter, as shown in
 Figure~\ref{fig:sphereb},
 %
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \subcaptionbox{3D model overlaid with all fragments' sphere sectors\label{fig:spherea}}
   {\includegraphics[width=0.30\linewidth]{images/sphere}}
@@ -831,7 +827,7 @@ determined to ensure an even distribution. Each point is then used to
 generate a cylinder whose origin is the centre of the 3D model, as
 illustrated in Figure~\ref{fig:cylinders}.
 %
-\begin{figure}[H]
+\begin{figure}[htb]
   \centering
   \subcaptionbox{Cylinders generated using as input a set of points in 3D space\label{fig:cylinders}}
   {\includegraphics[width=0.45\linewidth]{images/allcylinders.jpg}}
