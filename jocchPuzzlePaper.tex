@@ -4,10 +4,12 @@
 %\usepackage{color}
 \usepackage{amsmath}
 \usepackage{pseudocode}
-\usepackage[]{algorithm2e}
-%\usepackage[ruled]{algorithm2e} % For algorithms
+\usepackage[ruled]{algorithm2e}
+\usepackage{algorithmicx}
 \usepackage{subcaption}
 \usepackage{natbib}
+
+\input widebar
 
 \usepackage[normalem]{ulem}  % for strike-through (\sout)
 \input twmacros
@@ -630,12 +632,15 @@ processes~\cite{Bohn:2005:Four}.
 %
 This inspired our second fracture generation method that
 hierarchically subdivides the spherical domain until a target number
-of fragments is reached. Fractures occur at random orientations, and
-fracture lines are fractal curves to add more realistically looking
-raggedness to each edge; see Appendix~\ref{apx:hierarchical-algo} for
-more details.
+of fragments is reached. In each iteration, one fragment is subdivided into 
+two fragments by generating fracture lines at random orientations. 
+Fracture lines are fractal curves to add more realistically looking raggedness 
+to each edge. The method takes into account various criteria for fragmentation, including to prioritise larger fragments as well as to avoid creating very thin 
+or small fragments. 
+
 %
-Parameters of the algorithm are shown in
+See Appendix~\ref{apx:hierarchical-algo} for
+more details on the algorithm.  Parameters of the algorithm are shown in
 Table~\ref{tab:hierarchical-parameters}.
 %
 \begin{table}
@@ -669,11 +674,11 @@ Table~\ref{tab:hierarchical-parameters}.
 \end{table}
 %
 Figure~\ref{fig:fracture-type-examples:hierarchical:first}--\ref{fig:fracture-type-examples:hierarchical:last}
-shows resulting fracture line characteristics for different parameter values.
+shows resulting fracture line characteristics for different parameter values. Figure~\ref{fig:fracture-type-examples:hierarchical:first} demonstrates a fragmentation with a low amplitude $A$ and medium fractal decay $\rho$ to produce fragments with straight edges. Moreover, figure~\ref{fig:fracture-type-examples:hierarchical:last} demonstrates a fragmentation with a higher amplitude $A$ and a lower random jitter of polygon vertices $R$ to produce fragments with higher raggedness.
 
 %Downside: distribution and size of fragments is harder to control. In our experiments,
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering%
   \subcaptionbox{\label{fig:fracture-type-examples:voronoi}%
     Voronoi fracture pattern}%
@@ -697,7 +702,7 @@ shows resulting fracture line characteristics for different parameter values.
 \end{figure}
 
 \greenEnd
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \subcaptionbox{3D model contained within all fragments of sphere\label{fig:spherea}}
   {\includegraphics[width=0.30\linewidth]{images/sphere}}
@@ -714,7 +719,22 @@ shows resulting fracture line characteristics for different parameter values.
 \subsection{Generating the individual puzzle pieces}
 \label{sec:fragment-generation}
 
-\begin{figure}[h]
+
+\begin{figure}[H]    
+     \centering
+       \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 0.0\label{normal}}
+         {\includegraphics[width=0.33\textwidth]{images/pott1}}
+      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 1.0\label{normalsmooth}}
+        {\includegraphics[width=0.33\textwidth]{images/pott2}}
+      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.01, $\rho$: 0.5, $\sigma$: 0.0\label{lowjitter}}
+        {\includegraphics[width=0.33\textwidth]{images/pott3}}
+      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.2, $\rho$: 0.2, $\sigma$: 1.0\label{highjitter}}
+        {\includegraphics[width=0.33\textwidth]{images/pott5}}
+      \caption{\label{fig:pot-with-different-fracture-settings}%
+        Examples of puzzles with different parameters.}
+\end{figure}
+
+\begin{figure}[H]
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle0}%
   \includegraphics[width=0.33\textwidth]{images/saltdeanpuzzle0}%
   \includegraphics[width=0.33\textwidth]{images/elephantpuzzle0}\\
@@ -736,19 +756,6 @@ shows resulting fracture line characteristics for different parameter values.
     ceramic elephant figurine.}
 \end{figure}
 
-\begin{figure}[h]    
-     \centering
-       \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 0.0\label{normal}}
-         {\includegraphics[width=0.33\textwidth]{images/pott1}}
-      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 1.0\label{normalsmooth}}
-        {\includegraphics[width=0.33\textwidth]{images/pott2}}
-      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.01, $\rho$: 0.5, $\sigma$: 0.0\label{lowjitter}}
-        {\includegraphics[width=0.33\textwidth]{images/pott3}}
-      \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.2, $\rho$: 0.2, $\sigma$: 1.0\label{highjitter}}
-        {\includegraphics[width=0.33\textwidth]{images/pott5}}
-      \caption{\label{fig:pot-with-different-fracture-settings}%
-        Examples of puzzles with different parameters.}
-\end{figure}
 
 
 \KRedit[In order to generate the puzzle pieces, a semi-automated approach was
@@ -779,8 +786,9 @@ The algorithm iterates over all sections of the fractured sphere to
 automatically produce all puzzle pieces. This process is repeated to
 generate puzzle pieces at two different levels of detail so that they
 can be used in subsequent operations.
-
-\KRedit{For the Saltdean urn, we generated} \MSedit[14]{16} individual puzzle pieces. \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
+  
+\KRedit[]{Figures~\ref{fig:pot-with-different-fracture-settings} illustrate the 
+generation of alternative versions of puzzles pieces for the Saltdean urn using various level of raggedness for similarly-sized fragments. For the museum gallery, we generated 16 individual puzzle pieces using straight edges based on the voronoi approach as this was deemed to be the simpler version for children to complete.} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
   to be used for the base of the puzzle. The user \MSedit[will]{would be able to} use this base
   as a reference when assembling the rest of the puzzle pieces. \KRedit[The
   remaining 8 pieces are generated with up to 6 holes each for
@@ -788,9 +796,7 @@ can be used in subsequent operations.
   matching blind-holes distributed across the surface to fit the
   magnets.]
 
-\TW{This is where we should have, and reference,
-  Figures~\ref{fig:pot-with-different-fracture-settings}
-  and~\ref{fig:three-shapes-with-different-fractures}.}
+\KRedit[]{Moreover, Figure~\ref{fig:three-shapes-with-different-fractures} demonstrates the generation of alternative versions of puzzles of various shapes from cultural heritage collections. The other two shapes have been digitised in a similar workflow than the Saltdean urn and underwent a similar process to generate the digital puzzle pieces.}
 
 
 
@@ -923,6 +929,7 @@ texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3
 
 \section{\TWedit[Evaluation]{Deployment and Observations}}
 \label{eva}
+
 %% \section{Results}
 %% \label{res}
 %% \KR{need to add something here about the generalisation of the results. Tim can you advice?}
@@ -1035,12 +1042,35 @@ development of the research. We would also like to thank Russell Webb, the artis
 
 \appendix
 
+%\newcommand{\IR}{\textup{I\!R}}
+\newcommand{\IR}{\RR}
+
 \section{Fractal Hierarchical Fracture}
 \label{apx:hierarchical-algo}
 
 In the remainder, we provide a more formal description of the
-hierarchical fracture algorithm we use in
+hierarchical fracture algorithm used in
 Section~\ref{sec:fracture-patterns}.
+
+Fracture curves (along which larger fragments are split) and fragment
+outlines are represented as \emph{spherical polygons} on the unit
+sphere; once each final fragment's outline is determined in that
+spherical domain, 3D fragments are created by boolean intersection of
+the pottery item's geometry with sphere sector polytopes spanned by
+each fragment outline (see Section~\ref{sec:fragment-generation}).
+
+Spherical polygons are represented as (ordered) sequence of unit
+vectors $p_i\in\IR^3$ (with $\|p_i\|=1$). Their edges are defined as
+great-circle segments connecting consecutive $P_i$ and $P_{i+1}$, and
+the geodesic distance between two points is the arc length of that
+segment. The area of an $m$-sided spherical polygon is $(\sum_{i=1}^m
+A_i) - (m-2)\pi$, with $A_i$ its $i$th interior angle.
+
+\hrule
+
+Inside/out point tests can be robustly determined based on winding number, provided the spherical polygon 
+
+
 
 \TW{TODO: finish this very rough section; stratify terminology
   (fracture polygon; fracture line; fracture; fragment; fractal;
@@ -1062,17 +1092,61 @@ method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}.
         $r$: maximum area ratio between larger and smaller half of a split fragment.\\
     }
     \KwResult{ \\
-        $\mathcal{F}$: set of $N$ spherical polygons denoting fracture curves for producing fragments.\\
+        $\mathcal{F}$: set of $N$ spherical polygons denoting a fracture curve for each final fragment.\\
     }
     \Begin{
-        \tcp{Initialise output.}
-        $ \mathcal{F} = \varnothing $ \\
+        \tcp{Initialise active set of fracture curves.}
+        %$ \mathcal{F} := \varnothing $ \\
+        $ P := \textit{randSphericalPolygon}(\,) $ \\
+        $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
+        $ \mathcal{F} := \{ QP, \widebar{QP} \},\;\text{with $\widebar{P}$ denoting the reversed spherical polygon $P$.}$ \\
+
+        \tcp{Loop until $N$ fracture polygons have been reached.}
+        \While{$\|\mathcal{F}\| < N$} {
+          \tcp{Pick largest fragment outline and generate random fracture curve:}
+          $ P := \argmax_{P\in\mathcal{F}}{\textit{area}(P)} $ \\
+          $ C := \textit{randSphericalPolygon}(\,) $ \\
+          \tcp{Split $P$ with $C$:}
+          \tcp{Test whether resulting halves are well-formed:}
+          TODO\\
+          $ \mathcal{F} := (\mathcal{F} \backslash P) \cup \{ P_+, P_- \} $ \\
+        }
+      }
+    \textbf{Where:}\\
+    $\textit{randSigned}(\,) := \text{random value} \in [-1,1],\text{uniformly distributed} $ \\
+\end{algorithm}
+
+\begin{algorithm}[tb]
+    %\normalsize
+		\small
+    \caption{Outer fracture loop.}
+    \label{alg:SolutionRefinement}
+    \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
+    \SetCommentSty{commentfont}
+    %\LinesNumbered
+    \KwIn{ \\
+        $N$: target number of fragments.\\
+        $r$: maximum area ratio between larger and smaller half of a split fragment.\\
+    }
+    \KwResult{ \\
+        $\mathcal{F}$: set of $N$ spherical polygons denoting a fracture curve for each final fragment.\\
+    }
+    \Begin{
+        \tcp{Initialise active set of fracture curves.}
+        %$ \mathcal{F} := \varnothing $ \\
+        $ P_0 := \text{regular $n$-polygon along great circle $C_0$} $ \\
+        $ P_0 := P_0, \text{with each vertex moved by $2\pi/n\cdot R\cdot\textit{randSigned}(\,)$ along $C_0$} $ \\
+        $ P_0 := P_0, \text{with each vertex moved on unit sphere by $2\pi/n\cdot A\cdot\textit{randSigned}(\,)$ orthogonally to $C_0$} $ \\
+        $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
+        $ \mathcal{F} := \{ Q P_0, Q \widebar{P_0} \},\;\text{with $\widebar{P}$ the reversed spherical polygon $P$.}$ \\
 
         \tcp{Loop until $N$ fracture polygons have been reached.}
         \While{$\|\mathcal{F}\| < N$}{
           TODO\\
         }
-    }
+      }
+    \textbf{Where:}\\
+    $\textit{randSigned}(\,) := \text{random value} \in [-1,1],\text{uniformly distributed} $ \\
 \end{algorithm}
 
 
