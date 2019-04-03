@@ -264,7 +264,7 @@ artefact in creative ways. In addition, these technologies enable a
 high-level of customisation when producing physical objects in a
 variety of resolutions, materials, colours and densities. Another
 important advantage of digital fabrication includes the possibility
-for multiple replication and/or production in a cost effective way,
+for multiple replication and/or production in a cost-effective way,
 while ``future-proofing'' the information related to the artefact
 itself. Hence, these technologies are driving new trends for the
 mass-customisation of CH objects and experiences.
@@ -295,9 +295,9 @@ museums' collections through 3D technology
 
 Other examples employ 3D printed artefacts in educational programmes
 for children. The American Museum of Natural History asked students to
-capture and replicate dinosaur fossils from the museum's paleontology
+capture and replicate dinosaur fossils from the museum's palaeontology
 collections in order to synthesise a dinosaur and learn to think like
-paleontologists~\cite{AMNH2013}. \KRedit[]{Another application is a megalithic
+palaeontologists~\cite{AMNH2013}. \KRedit[]{Another application is a megalithic
 freestanding stone from Wales (UK) that was 3D printed in sliced vertical pieces 
 that slide down a
 cylindrical pillar~\cite{Miles2015}.}
@@ -502,10 +502,10 @@ Furthermore, official numbers (in the ``Overview of data in the
 Museums, Libraries and Archives Sector''~\cite{Matty2004}) confirm
 that most people who visit a museum/CH institution in the UK belong to
 a family group or a school group. Hence, the Brighton Museum and Art
-Gallery has a high numbers of families and school children visiting
-its premises. Moreover a survey, realised in summer 2015 to record
+Gallery has a high number of families and school children visiting
+its premises. Moreover, a survey which recorded
 visitors' opinions on the potential to exhibit the archaeological
-collections of the museum, revealed that people would be interested in
+collections of the museum revealed that people would be interested in
 hands-on children's activities~\cite{RoyalPavilionandMuseums2015}.
 
 The following section will describe a digital fabrication workflow to
@@ -531,7 +531,7 @@ The proposed workflow involves the following steps:
 \end{enumerate}
 %
 
-\KRedit{The approach for \MSedit[generating]{producing} solid surfaces for fabrication, which underlies the proposed \MSedit[workshop]{workflow}, deploys algorithms that combine triangular mesh representations with constructive solid geometry (CSG) operations. CSG is a technique commonly used in solid modeling CAD systems. It allows to create a complex surface by using Boolean operators to combine simpler objects. 
+\KRedit{The approach for \MSedit[generating]{producing} solid surfaces for fabrication, which underlies the proposed \MSedit[workshop]{workflow}, deploys algorithms that combine triangular mesh representations with constructive solid geometry (CSG) operations. CSG is a technique commonly used in solid modelling CAD systems. It allows to create a complex surface by using Boolean operators to combine simpler objects. 
 
 The implementation of the workflow uses a mixture of tools and systems including modelling tools, C++ and OpenSCAD.  OpenSCAD is a free Computer Aided
 Design (CAD) software which uses the Computational Geometry Algorithms
@@ -604,28 +604,28 @@ to roughly-spherical objects, it appears a reasonable approximation in
 our context.
 
 In this work, we investigated two different ways to generate such
-fractures: \emph{voronoi tesselation} of the sphere, and
+fractures: \emph{Voronoi tessellation} of the sphere, and
 \emph{hierarchical fracture} along ragged curves on the sphere.
 
-\paragraph{Voronoi tesselation.}
+\paragraph{Voronoi tessellation.}
 %
 In this approach, we generate a random set of $n$ uniformly
 distributed centroids on the sphere. Fracture lines are then defined
-as the edges of the corresponding spherical voronoi diagram.
+as the edges of the corresponding spherical Voronoi diagram.
 %
 The resulting fragment shapes are generally more uniform than
 naturally occurring pottery fragments but represent an interesting
 puzzle challenge due to the higher similarity amongst fragments.
 %
 Figure~\ref{fig:fracture-type-examples:voronoi} shows an example set
-of spherical voronoi fragments, visualised as solid spherical sectors.
+of spherical Voronoi fragments, visualised as solid spherical sectors.
 
 \paragraph{Hierarchical fracture.}
 %
 While real-world fracture lines are shaped by complex processes,
 including impact geometry and volumetric distribution of
 inhomogeneities in the material, Shin et al.\ in their study of
-wallpainting fragments~\cite{Shin:2012:ASF:2362402.2362404} found
+wall painting fragments~\cite{Shin:2012:ASF:2362402.2362404} found
 evidence that fracture patterns have similar statistics as cracks
 created by hierarchical fracture
 processes~\cite{Bohn:2005:Four}.
@@ -788,7 +788,7 @@ generate puzzle pieces at two different levels of detail so that they
 can be used in subsequent operations.
   
 \KRedit[]{Figures~\ref{fig:pot-with-different-fracture-settings} illustrate the 
-generation of alternative versions of puzzles pieces for the Saltdean urn using various level of raggedness for similarly-sized fragments. For the museum gallery, we generated 16 individual puzzle pieces using straight edges based on the voronoi approach as this was deemed to be the simpler version for children to complete.} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
+generation of alternative versions of puzzles pieces for the Saltdean urn using various level of raggedness for similarly-sized fragments. For the museum gallery, we generated 16 individual puzzle pieces using straight edges based on the Voronoi approach as this was deemed to be the simpler version for children to complete.} \MSedit[Six]{Seven} of these pieces \MSedit[are]{were} retained
   to be used for the base of the puzzle. The user \MSedit[will]{would be able to} use this base
   as a reference when assembling the rest of the puzzle pieces. \KRedit[The
   remaining 8 pieces are generated with up to 6 holes each for
@@ -910,7 +910,7 @@ positioned flat on the printer's bed.
 \end{figure}
 
 All pieces were printed in PLA (Polylactic Acid) filament on a FDM
-(Fused Deposition Modeling) 3D printer at a 0.2mm layer thickness with
+(Fused Deposition Modelling) 3D printer at a 0.2mm layer thickness with
 an infill value of 12\%. The core piece was printed at a 0.4 mm layer
 thickness.
 
@@ -938,7 +938,7 @@ texture. Figure~\ref{fig:assembled} \KRedit[demonstrates the samples that were 3
 The puzzle, its design and performance  \MSedit[have been mainly]{were initially} tested with
 the design team and the curators of the museum. \MSedit[The functional]{Functional} testing
 has been an iterative process throughout the digital fabrication
-workflow to see whether the requirements of the activity/exhibit  \MSedit[have
+workflow to see whether the requirements of the activity/exhibit \MSedit[have
 been]{were} met. The feedback from this process \MSedit[has]{} informed design decisions
 at subsequent steps of the workflow.
 
@@ -977,7 +977,7 @@ processes. Due to these challenges, the urn's shape had to be
 reconstructed to a certain extent to fill-in gaps which the
 digitisation process did not capture, such as parts of the rim and the
 inner-surface. The shape was also slightly simplified to make it
-easier to handle in the modeling stage. The fabrication process also
+easier to handle in the modelling stage. The fabrication process also
 requires considering tolerances due to the layer size of the 3D
 printing technology.]{Some of the challenges that we experienced and could be faced when creating similar puzzle activities are related both to the design and fabrication steps. Firstly, although the generation of the digital puzzle pieces can be mostly automated; the selection of the right fragmentation pattern might require of various iterations in order to comply with the design requirements. In addition, it should not be underestimated the time required for fabrication as well as post-processing steps (e.g. pasting pieces together, using certain materials), which might greatly affect the final appearance and functionality of the exhibit. That is why prototyping and iterative testing is crucial, in order to understand how measurements, settings and processes might need to change in order to successfully produce a satisfying result.}
 
@@ -985,7 +985,7 @@ printing technology.]{Some of the challenges that we experienced and could be fa
 A final consideration is given to how \MSedit[this]{the proposed} solution compares to other
 fabrication methods of archaeological puzzles. For instance, a similar
 puzzle to the one produced could be made using a more traditional
-approach: by modeling a pot from a hard wearing clay, firing and
+approach: by modelling a pot from a hard wearing clay, firing and
 glazing it. This pot could then be smashed, reassembled and a core
 could \MSedit[then]{} be made \MSedit[]{(even though producing a core should be a rather demanding task)}. \MSedit[This]{The whole} process \MSedit[is not]{would not be} very expensive, as it would
 probably cost one third of the cost of our proposed approach, and also
@@ -1054,12 +1054,12 @@ Section~\ref{sec:fracture-patterns}.
 
 Fracture curves (along which larger fragments are split) and fragment
 outlines are represented as \emph{spherical polygons} on the unit
-sphere; once each final fragment's outline is determined in that
+sphere. Once each final fragment's outline is determined in that
 spherical domain, 3D fragments are created by boolean intersection of
 the pottery item's geometry with sphere sector polytopes spanned by
 each fragment outline (see Section~\ref{sec:fragment-generation}).
 
-Spherical polygons are represented as (ordered) sequence of unit
+Spherical polygons are represented as an (ordered) sequence of unit
 vectors $p_i\in\IR^3$ (with $\|p_i\|=1$). Their edges are defined as
 great-circle segments connecting consecutive $P_i$ and $P_{i+1}$, and
 the geodesic distance between two points is the arc length of that
