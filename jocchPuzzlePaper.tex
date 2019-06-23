@@ -984,7 +984,6 @@ and underwent a similar process to generate the digital puzzle pieces.
 \KRedit[]{As shown in Figure~\ref{fig:three-shapes-with-different-fractures}, it is possible to create alternative versions of the puzzle for the same geometry. This ensures the user has some control over the best version of the puzzle for a given geometry. To achieve this, the best approach is to test the patterns with a simplified version of the geometry. Once the user has selected the best pattern, this can be applied to a high-resolution version of the geometry. The reason behind this is that, as expected, the computation time increases with the number of faces and the complexity of the 3D model. Table \ref{table-procesingtimes} presents the computatiom times for various 3D models with different number of faces in a laptop with Intel Core i9 processor and 32 GB DDR4.}
 
 
-
 \begin{table}
   \centering
 \greenBegin
@@ -993,6 +992,7 @@ and underwent a similar process to generate the digital puzzle pieces.
  Mesh & Number of faces on mesh & Average processing time for one puzzle piece
  \\ 
  \hline 
+ 3D scan of amber cup & \phantom{0,0,0,}800 & 8 milliseconds \\ 
  Sphere & \phantom{0,0}42,710 & 18 seconds \\ 
  3D scan of Saltdean pot & \phantom{0,0}57,050 & 10 minutes \\ 
  3D scan of amber cup & \phantom{0,}100,000 & 36 minutes \\ 
@@ -1004,21 +1004,23 @@ and underwent a similar process to generate the digital puzzle pieces.
 \greenEnd
 \end{table}
 
+\KRedit[]{Additionally, there are certain situations when the user will require of various tries before being able to find a suitable puzzle configuration. Figure~\ref{failureexamples} shows an example of an archaeological object, known as the amber cup, which geometrical properties makes it more challenging for generating a suitable puzzle solution. These properties include is topology and the shape which includes a wider rim. The figure also illustrates the use of patterns with high amplitude which creates very jagged fragments creating unsuitable cuts and very narrow extremes that can potentially break at fabrication time or during extended use. Lastly, the figure illustrates how the user can mitigate to a certain extent these effects by rotating the resulting pattern to see if there is a more suitable solution. This can work for certain fracture patterns and geometries. In this particular case, all solutions can be considered unsuitable for printing. Instead, the user should try generating a different patter or if the problem persists, decrease the amplitude of the pattern.}
 
 
 \begin{figure}[htb]
   \centering
    \subcaptionbox{Fracture pattern applied with no rotation}
-  {\includegraphics[width=0.45\linewidth]{images/rotation01}}%
+  {\includegraphics[width=0.45\linewidth]{images/rot1.jpg}}
   \subcaptionbox{Fracture pattern applied with rotation of $\pi/2$ in the Z axis}%
-  {\includegraphics[width=0.45\linewidth]{images/rotation02}}%
-  \hspace{0.2in}%
+  {\includegraphics[width=0.45\linewidth]{images/rot2.jpg}}%
+
+%   \hspace{0.2in}%
    \subcaptionbox{Fracture pattern applied with rotation of $\pi/2$ in the Y axis}
-   {\includegraphics[width=0.45\linewidth]{images/rotation03}}
+   {\includegraphics[width=0.45\linewidth]{images/rot3.jpg}}
    \hspace{0.2in}
   \subcaptionbox{Fracture pattern applied with rotation of $\pi/2$ in the X axis}
-  {\includegraphics[width=0.45\linewidth]{images/rotation04}}%
-  \caption{Examples of patterns for the amber cup scan with settings $m$: 6, $n$: 6, $R$: 0.1, $A$: 0.3, $\rho$: 0.5, $\sigma$: 0.3}
+  {\includegraphics[width=0.45\linewidth]{images/rot4.jpg}}%
+  \caption{Examples of puzzles produced for the the amber cup scan with a fracture pattern generated with settings $m$: 6, $n$: 6, $R$: 0.1, $A$: 0.3, $\rho$: 0.5, $\sigma$: 0.3 \label{failureexamples}}
 \end{figure}
 
 
