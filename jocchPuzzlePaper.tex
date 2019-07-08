@@ -287,7 +287,7 @@ Our response: \KR{Tim, could you please help with rephrasing}
 
 \greenBegin
 
-Our response: \KR{I think this can be removed... but Tim, please check?}
+Thank you, well spotted. We removed the superfluous randomisation.
 
 \greenEnd
 
@@ -1031,7 +1031,13 @@ and underwent a similar process to generate the digital puzzle pieces.
   \includegraphics[width=0.22\linewidth]{images/pot17.jpg}
   \includegraphics[width=0.22\linewidth]{images/pot18.jpg}
   \includegraphics[width=0.90\linewidth]{images/allselected.jpg}
-  \caption{Examples of puzzles produced for the the Saltdean pot scan with a fracture pattern generated with settings $m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 0 \label{manyexamples}}
+  \caption{\label{manyexamples}%
+    Examples of puzzles produced for the the Saltdean pot scan
+    with a fracture pattern generated with settings $m$: 6, $n$: 6,
+    $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 0. \TWedit{The
+      results represent conscutive runs of the algorithm
+      for twelve randomly chosen random seeds. The bottom row
+      shows [@KARINA: WHAT DOES IT SHOW?].}}
 \end{figure}
 
 
@@ -1427,11 +1433,9 @@ and~\ref{alg:random-spherical-polygon}.
   \Begin{
     \tcp{Initialise active set of fragment outlines.}
     %$ \mathcal{F} := \varnothing $ \\
-    $ P := \textit{randSphericalPolygon}(\,) $ \\
-    $ Q := \text{random rotation} \in \textit{SO\,$(3)$} $ \\
-    $ \mathcal{F} := \{ QP, \widebar{QP} \},\break
-        \text{where}
-        \quad
+    $ \greenBegin P := \textit{randSphericalPolygon}(\,) \greenEnd$ \\
+    $\greenBegin \mathcal{F} := \{ P, \widebar{P} \} \greenEnd,\break
+        \text{where}\;
         \text{$\widebar{P}$ denotes the reversed spherical polygon $P$, with inside and outside regions on the sphere swapped.}$ \\
     
     \tcp{Loop until $N$ fragment outlines have been reached.}
