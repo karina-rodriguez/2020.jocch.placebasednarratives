@@ -19,8 +19,8 @@
 \usepackage{algorithmicx}
 \usepackage{subcaption}
 \usepackage{natbib}
-\usepackage{afterpage}  % for float-page placement trick
-%\usepackage{placeins}
+%\usepackage{afterpage}  % for float-page placement trick
+\usepackage{placeins}
 
 \input widebar
 
@@ -979,10 +979,10 @@ rest of the puzzle pieces.
   \includegraphics[width=0.33\textwidth]{images/elephantpuzzle3}\\
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle6}%
   \includegraphics[width=0.33\textwidth]{images/saltdeanpuzzle4}%
-  \includegraphics[width=0.33\textwidth]{images/elephantpuzzle4}
+  \includegraphics[width=0.33\textwidth]{images/elephantpuzzle4}\\[-0.5\baselineskip]
   \caption{\label{fig:three-shapes-with-different-fractures}%
     Examples of algorithm applied to scans of an amber cup, Saltdean pot and
-    ceramic elephant figurine.}
+    ceramic elephant figurine.\vspace*{-1.0\baselineskip}}
 \end{figure}
 
 
@@ -1051,6 +1051,8 @@ and underwent a similar process to generate the digital puzzle pieces.
 %The figure also illustrates the use of patterns with high amplitude which creates very jagged fragments creating unsuitable cuts and very narrow extremes that can potentially break at fabrication time or during extended use. 
 % Lastly, the figure illustrates how the user can mitigate to a certain extent these effects by rotating the resulting pattern to see if there is a more suitable solution. This can work for certain fracture patterns and geometries. In this particular case, all solutions can be considered unsuitable for printing. Instead, the user should try generating a different patter or if the problem persists, decrease the amplitude of the pattern.
 }
+
+\FloatBarrier
 
 \begin{table}
   \centering
