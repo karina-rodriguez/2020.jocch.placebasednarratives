@@ -1026,7 +1026,19 @@ various shapes from cultural heritage collections. The other two
 shapes have been digitised in a similar workflow than the Saltdean urn
 and underwent a similar process to generate the digital puzzle pieces.
 
-\KRedit[]{As shown in Figure~\ref{fig:three-shapes-with-different-fractures}, it is possible to create alternative versions of the puzzle for the same geometry. This ensures the user has some control over the best version of the puzzle for a given geometry. To achieve this, the best approach is to test the patterns with a simplified version of the geometry. Once the user has selected the best pattern, this can be applied to a high-resolution version of the geometry. The reason behind this is that, as expected, the computation time increases with the number of faces and the complexity of the 3D model. Table \ref{table-procesingtimes} presents the computatiom times for various 3D models with different number of faces in a laptop with Intel Core i9 processor and 32 GB DDR4.}
+\KRedit[]{As shown in
+  Figure~\ref{fig:three-shapes-with-different-fractures}, it is
+  possible to create alternative versions of the puzzle for the same
+  geometry. This ensures the user has some control over the best
+  version of the puzzle for a given geometry. To achieve this, the
+  best approach is to test the patterns with a simplified version of
+  the geometry. Once the user has selected the best pattern, this can
+  be applied to a high-resolution version of the geometry. The reason
+  behind this is that, as expected, the computation time increases
+  with the number of faces and the complexity of the 3D
+  model. Table~\ref{table-procesingtimes} presents the computatiom
+  times for various 3D models with different number of faces in a
+  laptop with Intel Core i9 processor and 32 GB DDR4.}
 
 \KRedit[]{Users might require of various tries before finding a
   suitable puzzle configuration. Although fragment shapes vary across
@@ -1054,7 +1066,7 @@ and underwent a similar process to generate the digital puzzle pieces.
 
 \FloatBarrier
 
-\begin{table}
+\begin{table}[th]
   \centering
 \greenBegin
 \begin{tabular}{ |l|c|c| } 
@@ -1070,7 +1082,7 @@ and underwent a similar process to generate the digital puzzle pieces.
  3D scan of Saltdean pot & 1,269,160 & 3 hours 28 minutes \\ 
  \hline
 \end{tabular}
-\caption{\label{table-procesingtimes} Processing times to compute fragments for a sample of 3D meshes}
+\caption{\label{table-procesingtimes}Processing times to compute fragments for a sample of 3D meshes}
 \greenEnd
 \end{table}
 
