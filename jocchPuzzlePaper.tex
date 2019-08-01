@@ -125,15 +125,15 @@
 \begin{abstract}
 Three-dimensional (3D) puzzles of heritage artefacts are typically
 used to engage audiences in the interpretation of archaeological
-artefacts in a museum gallery. The reason for this is that a puzzle
+objects in a museum gallery. The reason for this is that a puzzle
 can be seen as an enjoyable educational activity in the form of a game
 but also as a complex activity that archaeologists undertake when
 re-assembling fragments, for instance of broken pottery. Until now the
 creation of this type of experiences is mostly a manual process and
 the artefacts used rarely reflect those in the collection due to the
-obvious destructive nature of the puzzle making process. To overcome
-these limitations, the contribution of this paper is a novel worfklow
-for the design and fabrication of 3D puzzles of artefacts. The input
+complex nature of the process. The contribution of this paper is a novel 
+digital worfklow for the design and fabrication of 3D puzzles which overcomes
+these limitations. The input
 to the workflow is an authentic artefact from a heritage collection,
 which is then digitised using technologies such as 3D scanning and 3D
 modelling. Thereafter, a puzzle generator system produces the puzzle
@@ -142,11 +142,11 @@ pieces (female) and a single core piece (male) for
 fabrication. Finally, the pieces are fabricated using 3D printing
 technology and post-processed to facilitate the puzzle assembly. To
 demonstrate the feasibility of the proposed novel workflow, we
-deployed it to create a puzzle exhibit of the Saltdean urn, which is
+deployed it to create a puzzle activity of the Saltdean urn, which is
 exhibited at the Archaeology Gallery of the Brighton Museum and Art
 Gallery. The workflow is also used with further artefacts in order to
-demonstrate its applicability to other shapes and types of
-artefacts. The significance of this research is that it eases the task
+demonstrate its applicability to other shapes. The significance of this 
+research is that it eases the task
 of creating puzzle-like activities and maintaining them in the long
 term within a busy public space such as a museum gallery.
 \end{abstract}
@@ -196,164 +196,163 @@ term within a busy public space such as a museum gallery.
   %\caption{a) 3D scanned model of pottery urn artefact; b) 3D model of puzzle pieces of reconstructed urn; c) printed parts of the puzzle }
 
 
-{\centering \textbf{\Large Response to reviewers}\par }
+% {\centering \textbf{\Large Response to reviewers}\par }
 
-\greenBegin
-We would like to thank reviewers for their useful comments. We also take the opportunity to highlight that this paper is an invited paper from the Eurographics Workshop on Graphics and Cultural Heritage that has been fully vetted in a two-cycle peer review process. We include the original review along with our responses to the original review so that reviewers have evidence that some of their requests for changes were already addressed and accepted at the time of publication for GCH. Given our research has been progressing since its original publication, we have included in this version a more detailed evaluation which we acknowledge is a useful suggestion. 
+% \greenBegin
+% We would like to thank reviewers for their useful comments. We also take the opportunity to highlight that this paper is an invited paper from the Eurographics Workshop on Graphics and Cultural Heritage that has been fully vetted in a two-cycle peer review process. We include the original review along with our responses to the original review so that reviewers have evidence that some of their requests for changes were already addressed and accepted at the time of publication for GCH. Given our research has been progressing since its original publication, we have included in this version a more detailed evaluation which we acknowledge is a useful suggestion. 
 
-\noindent\fbox{%
-    \parbox{\textwidth}{
-\textbf{Our original responses in the GCH review cycle}
+% \noindent\fbox{%
+%     \parbox{\textwidth}{
+% \textbf{Our original responses in the GCH review cycle}
 
-Thanks for the reviewer’s comment. We have address their main concerns in the new version:
+% Thanks for the reviewer’s comment. We have address their main concerns in the new version:
 
-1. Additional references:  We did not include the suggested references as this related to 4D modelling which show the dynamic evolution of CH assets across different spatial scales. However, in our case we are talking about a single static object which has been scanned. 
+% 1. Additional references:  We did not include the suggested references as this related to 4D modelling which show the dynamic evolution of CH assets across different spatial scales. However, in our case we are talking about a single static object which has been scanned. 
 
-2. Evaluation: we have included a new section called evaluation which is highlighted in red. This describes plans for the evaluation (as this won’t be able to be done until the gallery opens). In addition, we describe functional evaluation as part of the design process as well as an extensive comparison with other methods for producing similar puzzle. Our qualitative assessment of the advantages and disadvantages of our method versus other approaches should provide evidence of how our approach performs.
+% 2. Evaluation: we have included a new section called evaluation which is highlighted in red. This describes plans for the evaluation (as this won’t be able to be done until the gallery opens). In addition, we describe functional evaluation as part of the design process as well as an extensive comparison with other methods for producing similar puzzle. Our qualitative assessment of the advantages and disadvantages of our method versus other approaches should provide evidence of how our approach performs.
 
-Hopefully these changes satisfy the request from reviewers.
-}
-}
+% Hopefully these changes satisfy the request from reviewers.
+% }
+% }
 
 
-In the following paragraphs we address comments of each reviewer.
+% In the following paragraphs we address comments of each reviewer.
 
-\greenEnd
+% \greenEnd
 
 
-\textbf{Reviewer: 1}
+% \textbf{Reviewer: 1}
 
-Reviewer 1 made no requests for changes.
+% Reviewer 1 made no requests for changes.
 
-\textbf{Reviewer: 2}
+% \textbf{Reviewer: 2}
 
-1. Comments
+% 1. Comments
 
-Since this is an extended version of a previously published work I would really appreciate if it would be possible to further extend the contribution performing even some minor evaluation of its impact on the museum experience: I think it would be useful for eventual readers and implementers to get an idea about what are the average engagement times (completion or surrender) for a typical visitor so that its impact in terms of visitors fluxes inside the museum could be estimated, another interesting impact would be even a very simple interview-based evaluation of the experience as seen from the users (in order to get some qualitative estimate of the engagement capabilities).
+% Since this is an extended version of a previously published work I would really appreciate if it would be possible to further extend the contribution performing even some minor evaluation of its impact on the museum experience: I think it would be useful for eventual readers and implementers to get an idea about what are the average engagement times (completion or surrender) for a typical visitor so that its impact in terms of visitors fluxes inside the museum could be estimated, another interesting impact would be even a very simple interview-based evaluation of the experience as seen from the users (in order to get some qualitative estimate of the engagement capabilities).
 
-\greenBegin
+% \greenBegin
 
 
-Our response:
+% Our response:
 
-We have changed section 5 to include a more detailed evaluation of the exhibit.
+% We have added in section 5  a more detailed evaluation of the exhibit.
 
-\greenEnd
+% \greenEnd
 
 
 
-2. Comments
+% 2. Comments
 
-From the technical contribution point of view I think that the fracture method, based on creating the fracture patterns on the sphere surface, is interesting. 
-I think that it has some limitations: the first is that generating the fracture layouts on the enclosing sphere makes it a bit hard to control what is really going to happen on the actual model geometry, this can be especially seen on Fig. 9 left and right column, where you can see tiny pieces or very thin fragments (especially on left column); the other main limitation, I believe, is the fact that using the inscribing sphere will give good results whenever the object is a convex (sphere-like) pot, like the fabricated shape, but in presence of strong concavities (or even very elongated and thin pots)  it might be again hard to predict the fragmentation of the results after cutting the shape with the sphere sectors. 
-Anyway I believe that the authors have well defined the domain of applications and I don't have too strong opinions about these two points. I think one good addition, since the approach, as stated by the authors, might require some trial and error, would be to give an idea about the processing time required for getting a tentative fracture layout.
-also, some further example shapes (and failure cases) might be a good addition.
+% From the technical contribution point of view I think that the fracture method, based on creating the fracture patterns on the sphere surface, is interesting. 
+% I think that it has some limitations: the first is that generating the fracture layouts on the enclosing sphere makes it a bit hard to control what is really going to happen on the actual model geometry, this can be especially seen on Fig. 9 left and right column, where you can see tiny pieces or very thin fragments (especially on left column); the other main limitation, I believe, is the fact that using the inscribing sphere will give good results whenever the object is a convex (sphere-like) pot, like the fabricated shape, but in presence of strong concavities (or even very elongated and thin pots)  it might be again hard to predict the fragmentation of the results after cutting the shape with the sphere sectors. 
+% Anyway I believe that the authors have well defined the domain of applications and I don't have too strong opinions about these two points. I think one good addition, since the approach, as stated by the authors, might require some trial and error, would be to give an idea about the processing time required for getting a tentative fracture layout.
+% also, some further example shapes (and failure cases) might be a good addition.
 
-\greenBegin
+% \greenBegin
 
-Our response:
+% Our response:
 
-We have added a paragraph in section 4.3 to describe how a user might need to try alternative versions of the puzzle in order to find the most suitable to their needs. This will address the limitations suggested by the reviewers that a given results might not produced the desired results. We also added table 2 with processing timings for a sample of 3D meshes to give an idea how long it takes to compute a puzzle piece.
+% We have added a paragraph in section 4.3 to describe how a user might need to try alternative versions of the puzzle in order to find the most suitable to their needs. This will address the limitations suggested by the reviewers that a given results might not produced the desired results. We also added table 2 with processing timings for a sample of 3D meshes to give an idea how long it takes to compute a puzzle piece. Furthermore, we added an additional figure (Figure~\ref{manyexamples}) which illustrates different version of running the algorithm and how failure cases might look like (these are mostly very small pieces). We added a related discussion on this topic and describe some possible ways to mitigate these failure cases. The faster solution is to generate many alternative versions with a low-poly 3D mesh and choose the best one visually which can later be applied to a high-poly 3D model.
 
-\KR{Have not added the request for more shapes or showing failure, not sure how to deal with this.}
 
-\greenEnd
+% \greenEnd
 
 
-3. Comments
+% 3. Comments
 
-W.r.t. the text quality I think it is ok, just some minor notes:
-[Page 5,  line 14] Double dots.
+% W.r.t. the text quality I think it is ok, just some minor notes:
+% [Page 5,  line 14] Double dots.
 
-\greenBegin
+% \greenBegin
 
-Our response: This is fixed.
+% Our response: This is fixed.
 
-\greenEnd
+% \greenEnd
 
 
-4. Comments
+% 4. Comments
 
 
-[Page 9,  line 14/15] A (amplitude) description: it think this could be enhanced it is hard to get the meaning without reading the pseudo-code listing at the end of the paper. 
+% [Page 9,  line 14/15] A (amplitude) description: it think this could be enhanced it is hard to get the meaning without reading the pseudo-code listing at the end of the paper. 
 
-\greenBegin
+% \greenBegin
 
-Our response: We actually tried to design
-Table~\ref{tab:hierarchical-parameters} in a way that it provides a
-self-contained intuition of the algorithm without requiring reading
-the pseudo code; but we realise that some level of duplication in the
-body text would indeed have improved readability, as not everyone will
-consult the table. We hope that the now added parenthetical
-expressions will offer that.
+% Our response: We actually tried to design
+% Table~\ref{tab:hierarchical-parameters} in a way that it provides a
+% self-contained intuition of the algorithm without requiring reading
+% the pseudo code; but we realise that some level of duplication in the
+% body text would indeed have improved readability, as not everyone will
+% consult the table. We hope that the now added parenthetical
+% expressions will offer that.
 
-\greenEnd
+% \greenEnd
 
-5. Comments
+% 5. Comments
 
-[Page 18, line 15/16] I think Q here is not needed since you already apply the random rotation on the great circle C\_0 in randSphericalPolygon() 
+% [Page 18, line 15/16] I think Q here is not needed since you already apply the random rotation on the great circle C\_0 in randSphericalPolygon() 
 
-\greenBegin
+% \greenBegin
 
-Thank you, well spotted. We removed the superfluous randomisation.
+% Thank you, well spotted. We removed the superfluous randomisation.
 
-\greenEnd
+% \greenEnd
 
 
-6. Comments
+% 6. Comments
 
-I would only recommend to adequately cite the cgal project. 
+% I would only recommend to adequately cite the cgal project. 
 
-\greenBegin
+% \greenBegin
 
-Our response: We have included the reference~\cite{cgal:eb-14a}.
+% Our response: We have included the reference~\cite{cgal:eb-14a}.
 
-\greenEnd
+% \greenEnd
 
-\textbf{Reviewer: 3}
+% \textbf{Reviewer: 3}
 
 
-7. Comments:
+% 7. Comments:
 
 
-I cannot find a detailed responses to reviewers' letter from the authors. I have to search the manuscript to find out where my previous comments have been addressed and unfortunately some of them have not been addressed. I would like to review a new revision of the manuscript in which the authors will carefully and fully addressed all reviewers' comments. 
+% I cannot find a detailed responses to reviewers' letter from the authors. I have to search the manuscript to find out where my previous comments have been addressed and unfortunately some of them have not been addressed. I would like to review a new revision of the manuscript in which the authors will carefully and fully addressed all reviewers' comments. 
 
-\greenBegin
+% \greenBegin
 
-Our response: we have included the original review of our conference paper and the answers to reviewers’ comments  in the introduction. All comments from reviewers were addressed in the conference version.
+% Our response: we have included the original review of our conference paper and the answers to reviewers’ comments  in the introduction. All comments from reviewers were addressed in the conference version.
 
-\greenEnd
+% \greenEnd
 
 
-8. Comments:
+% 8. Comments:
 
-I have mentioned that some references on 4D and 5D modelling of CH objects are missing. The authors have ignored this comment
-Rodríguez-Gonzálvez, P., Muñoz-Nieto, A. L., del Pozo, S., Sanchez-Aparicio, L. J., Gonzalez- Aguilera, D., Micoli, L., ... \& Haynes, I. (2017). 4D Reconstruction and visualization of Cultural Heritage: Analyzing our legacy through time. The International Archives of Photogrammetry,
-Remote Sensing and Spatial Information Sciences, 42, 609.
-Logothetis, S., A. Delinasiou, and E. Stylianidis. "Building information modelling for cultural heritage: a review." ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences 2, no. 5 (2015): 177.
-Kyriakaki, Georgia, Anastasios Doulamis, Nikolaos Doulamis, Marinos Ioannides, Konstantinos Makantasis, Eftichios Protopapadakis, Andreas Hadjiprocopis et al. "4D reconstruction of tangible cultural heritage objects from web-retrieved images." International Journal of Heritage in the Digital Era 3, no. 2 (2014): 431-451.
+% I have mentioned that some references on 4D and 5D modelling of CH objects are missing. The authors have ignored this comment
+% Rodríguez-Gonzálvez, P., Muñoz-Nieto, A. L., del Pozo, S., Sanchez-Aparicio, L. J., Gonzalez- Aguilera, D., Micoli, L., ... \& Haynes, I. (2017). 4D Reconstruction and visualization of Cultural Heritage: Analyzing our legacy through time. The International Archives of Photogrammetry,
+% Remote Sensing and Spatial Information Sciences, 42, 609.
+% Logothetis, S., A. Delinasiou, and E. Stylianidis. "Building information modelling for cultural heritage: a review." ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences 2, no. 5 (2015): 177.
+% Kyriakaki, Georgia, Anastasios Doulamis, Nikolaos Doulamis, Marinos Ioannides, Konstantinos Makantasis, Eftichios Protopapadakis, Andreas Hadjiprocopis et al. "4D reconstruction of tangible cultural heritage objects from web-retrieved images." International Journal of Heritage in the Digital Era 3, no. 2 (2014): 431-451.
 
-\greenBegin
+% \greenBegin
 
-Our response: we previously mentioned that these references were not relevant to our work which is why we did not include them in the revision (either of the conference or of the journal paper). Given the reviewer's comments we  had another look at the references and still believe our initial assessment is correct. The suggested references deal with the recording of cultural heritage assets over time and multi-source data integration. In particular they deal with recording CH at an architectural scale (reference 1 and 3), including rural landscape and urban landscapes as well as the use of Building Information Modeling (BIM) for historic environments and structures (reference 2). In our case, we deal with one single object CH object and we are not particularly focusing on its documentation, conservation nor preservation. Neither are we interested to record the object through time. We instead aim to create a physical puzzle for an exhibit. If the intended link to these references is the use of 3D technologies, we could also possibly include all references to research dealing with 3D technologies for CH. But this means we also need to include other hundreds or thousands of references to other work which makes this suggestion impractical. We apologize if we are not understanding the suggested link between our work and the work in these references, and are open to hear how these reference could help the readers of the paper.
+% Our response: we previously mentioned that these references were not relevant to our work which is why we did not include them in the revision (either of the conference or of the journal paper). Given the reviewer's comments we had another look at the references and still believe our initial assessment is correct. The suggested references deal with the recording of cultural heritage assets over time and multi-source data integration. In particular they deal with recording CH at an architectural scale (reference 1 and 3), including rural landscape and urban landscapes as well as the use of Building Information Modeling (BIM) for historic environments and structures (reference 2). In our case, we deal with one single CH object and we are not particularly focusing on its documentation, conservation nor preservation. Neither are we interested to record the object through time. We instead aim to create a physical puzzle for an exhibit. If the intended link to these references is the use of 3D technologies, we believe that this will mean introducing a new section that reviews the use of 3D technologies for CH. However, this will require an in-depth review of the area and will possibly include hundreds of references to research in the last few years, which makes this suggestion impractical. We would like to clarify our paper is not intended as a state of the art paper, but rather we are making a contribution to a specific problem in this larger domain. 
 
-\greenEnd
+% \greenEnd
 
 
-9. Comments:
+% 9. Comments:
 
-Some aspects regarding the innovative part of the algorithm and comparisons with many other similar methods should be given.
+% Some aspects regarding the innovative part of the algorithm and comparisons with many other similar methods should be given.
 
-\greenBegin
+% \greenBegin
 
-Our response: we acknowledge that there are many different way to generate physical puzzles for archaeological artefacts. We highlighted the section in discussion where we assess our approach to other methods, usually involving some physical manipulation.  We have added a further paragraph to deal with the advantages of the hierarchical approach with regards to the way it mimics fracture processes and gives the user control in the generation process.
+% Our response: we acknowledge that there are many different way to generate physical puzzles for archaeological artefacts. We highlighted the section in discussion where we assess our approach to other methods, usually involving some physical manipulation.  We have added a further paragraph to deal with the advantages of the hierarchical approach with regards to the way it mimics fracture processes and gives the user control in the generation process.
 
-\greenEnd
+% \greenEnd
 
 
 
 
-\newpage
+% \newpage
 %
 % This command processes the author and affiliation and title information and builds
 % the first part of the formatted document.
@@ -488,7 +487,7 @@ Visually impaired audiences as well as the elderly constitute groups
 that can also benefit greatly from digital
 fabrication. \cite{DAgnano2015} propose a system which facilitates
 the navigation on an architectural 3D printed facade, allowing blind
-users to listen to audio descriptions. Other research deploy 3D
+users to listen to audio descriptions. Other research deploys 3D
 printed reliefs, with complementing interactive applications, to
 support visually impaired users to feel paintings and natural history
 exhibits~\cite{Reichinger2016a,Samaroudi2017}.
@@ -562,10 +561,11 @@ Moreover, most of the proposed solutions for creating puzzles which
 are 3D printable aim to create puzzles consisting of pieces which
 interlock with each other, without the need to have a fixed
 installation. In our case, we aim to create a permanent hands-on
-exhibit for a public scape, such as a busy museum gallery. As pottery
+exhibit for a public space, such as a busy museum gallery. As pottery
 is a common archaeological finding at an excavation site, we focus on
-this type of artefact, and the shape of its fragments when broken into
-shards or pieces. This type of artefact is also interesting as its
+this type of artefact, 
+and the shape of its fragments or shards when broken. 
+This type of artefact is also interesting as its
 reconstruction from shards is a problem often faced by archaeologists.
 
 Of relevance to the heritage field is the geometric analysis of a
@@ -585,8 +585,8 @@ placed both on the core's surface and on each puzzle piece. An initial
 proposal for a digital workflow to generate this type of puzzles is
 present in~\cite{01763a4734614c50ab9f408cdd0f5470}. This paper extends
 the digital workflow to incorporate different fracture patterns as
-well as presents a full deployment of the workflow on an exhibit of
-the Brighton Museum and Art Gallery.
+well as presents a full deployment of the workflow on the chosen 
+exhibit of the Brighton Museum and Art Gallery.
 
 
 %Also, both the core and puzzle pieces are 3D printed making the exhibit and activity ``future-proof''. 
@@ -645,7 +645,7 @@ puzzles~\cite{Smith2002}. These requirements included:
   the dimensions of the artefact were scaled-up proportionally);
 \item to have a thickness of around 10 mm for each individual piece,
   as this was found suitable for easy handling by small hands;
-\item to have approximately 10-12 pieces to assemble the puzzle. Thus,
+\item to have approximately 10 pieces to assemble the puzzle. Thus,
   pieces should measure at least 50.8 mm across, as 6-8 year olds can
   handle pieces of this size;
 \item to design a core piece which would be attached to a rotating
@@ -775,9 +775,9 @@ shown in Figure~\ref{fig:reconstructiona}.
 % \end{figure}
 
 Afterwards, the central core piece was produced. This can be generated
-for any type of pottery puzzle by using a boolean operation. The
+for any type of pottery puzzle by using a Boolean operation. The
 resulting watertight model is shown in
-Figure~\ref{fig:reconstructionb}. The core required also of a
+Figure~\ref{fig:reconstructionb}. The core required also a
 through-hole along its height in order to fit onto the revolving base,
 as shown in the design in Figure~\ref{fig:alexdesign}.
 
@@ -789,7 +789,7 @@ Before creating individual ``puzzle pieces'' (shards, or
 is, hypothetical \emph{fracture lines} along which the ceramic object
 broke.
 
-We model fracture lines within the spherical domain, conceptually
+We model fracture lines within the spherical domain, by conceptually
 projecting the artefact's geometry onto a sphere. While this restricts
 the range of possible fractures, it still spans an expressive-enough
 range of fragment geometries in our context.
@@ -927,7 +927,7 @@ Figure~\ref{fig:sphereb},
    \hspace{0.2in}
   \subcaptionbox{Resulting 3D model of puzzle piece\label{fig:spherec}}
   {\includegraphics[width=0.30\linewidth]{images/puzzlepiece}}%
-  \caption{Puzzle fragment generation through CSG operations between a 3D model and sphere sectors spanned by the fragment outlines.}
+  \caption{Puzzle fragment generation through CSG operations between a 3D model and sphere sectors spanned by the fragment outlines}
 \end{figure}
 %
 for each fragment, the 3D model of the artefact is intersected with a
@@ -950,18 +950,18 @@ can be used in subsequent operations.
       \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.2, $\rho$: 0.2, $\sigma$: 1.0\label{highjitter}}
         {\includegraphics[width=0.33\textwidth]{images/pott5}}
       \caption{\label{fig:pot-with-different-fracture-settings}%
-        Examples of puzzles with different parameters.}
+        Examples of puzzles with different parameters}
 \end{figure}
 
-Figures~\ref{fig:pot-with-different-fracture-settings} illustrate the
+Figure~\ref{fig:pot-with-different-fracture-settings} illustrate the
 generation of alternative versions of puzzles pieces for the Saltdean
-urn using various level of raggedness for similarly-sized
+urn using various levels of raggedness for similarly-sized
 fragments. For the museum gallery, we generated 16 individual puzzle
 pieces using straight edges based on the voronoi approach as this was
 deemed to be the simpler version for children to complete. Seven of
 these pieces were retained to be used for the base of the puzzle. The
 user would be able to use this base as a reference when assembling the
-rest of the puzzle pieces.
+rest of the puzzle.
 
 \begin{figure}[htb]
   \includegraphics[width=0.33\textwidth]{images/ambercuppuzzle0}%
@@ -982,7 +982,7 @@ rest of the puzzle pieces.
   \includegraphics[width=0.33\textwidth]{images/elephantpuzzle4}\\[-0.5\baselineskip]
   \caption{\label{fig:three-shapes-with-different-fractures}%
     Examples of algorithm applied to scans of an amber cup, Saltdean pot and
-    ceramic elephant figurine.\vspace*{-1.0\baselineskip}}
+    ceramic elephant figurine\vspace*{-1.0\baselineskip}}
 \end{figure}
 
 
@@ -1017,7 +1017,7 @@ rest of the puzzle pieces.
       on low-resolition geometry. The bottom row
       shows the pieces generated with one of these fracture
       patterns (top, third-column), applied to a higher-resolution
-      model of the pot (30,000 faces).}}
+      model of the pot (30,000 faces)}}
 \end{figure}
 
 Moreover, Figure~\ref{fig:three-shapes-with-different-fractures}
@@ -1028,24 +1028,24 @@ and underwent a similar process to generate the digital puzzle pieces.
 
 \KRedit[]{As shown in
   Figure~\ref{fig:three-shapes-with-different-fractures}, it is
-  possible to create alternative versions of the puzzle for the same
+  possible to create alternative versions of the puzzle from the same
   geometry. This ensures the user has some control over the best
-  version of the puzzle for a given geometry. To achieve this, the
+  version of the puzzle for a given 3D mesh. To achieve this, the
   best approach is to test the patterns with a simplified version of
-  the geometry. Once the user has selected the best pattern, this can
+  the 3D mesh. Once the user has selected the best pattern, this can
   be applied to a high-resolution version of the geometry. The reason
   behind this is that, as expected, the computation time increases
   with the number of faces and the complexity of the 3D
-  model. Table~\ref{table-procesingtimes} presents the computatiom
+  model. Table~\ref{table-procesingtimes} presents the computation
   times for various 3D models with different number of faces in a
   laptop with Intel Core i9 processor and 32 GB DDR4.}
 
-\KRedit[]{Users might require of various tries before finding a
+\KRedit[]{Users might require various attempts before finding a
   suitable puzzle configuration. Although fragment shapes vary across
   the different runs, they tend to be of consistent
   characteristics. Figure~\ref{manyexamples} shows various examples
-  generated by for the Saltdean pot archaeological artefac. The
-  puzzles pieces have been generated with 16 random seeds using the
+  generated for the Saltdean pot archaeological artefact. The
+  puzzle pieces have been generated with 16 random seeds using the
   same settings of $m$: 6, $n$: 6, $R$: 0.3, $A$: 0.1, $\rho$: 0.5,
   $\sigma$: 0. As illustrated in the figure, some configurations work
   better than others to produce feasible puzzles which are
@@ -1058,8 +1058,8 @@ and underwent a similar process to generate the digital puzzle pieces.
   is a more suitable solution. However, this is mostly a manual
   process and in most situations it is faster to generate a large
   number of solutions automatically and then pick up the best. The
-  bottom row of Figure~\ref{manyexamples} illustrates a good sets of
-  puzzles pieces that have a suitable size and can be manufactured.
+  bottom row of Figure~\ref{manyexamples} illustrates a good set of
+  puzzle pieces that have a suitable size and can be manufactured.
 %The figure also illustrates the use of patterns with high amplitude which creates very jagged fragments creating unsuitable cuts and very narrow extremes that can potentially break at fabrication time or during extended use. 
 % Lastly, the figure illustrates how the user can mitigate to a certain extent these effects by rotating the resulting pattern to see if there is a more suitable solution. This can work for certain fracture patterns and geometries. In this particular case, all solutions can be considered unsuitable for printing. Instead, the user should try generating a different patter or if the problem persists, decrease the amplitude of the pattern.
 }
@@ -1250,8 +1250,8 @@ facilitates assembling the puzzle, nonetheless having full 360-degree
 physical access to the spot might allow groups of people to interact
 with it in a more easy and comfortable way.
 As for the space where the puzzle pieces rest, it is better to have a
-kind of tray or physical barrier in order to prevent pieces from
-falling down and possibly brake. Lastly, it has been noticed that
+kind of tray or wooden box in order to prevent pieces from
+falling down and possibly breaking. Lastly, it has been noticed that
 visitors are more willing to try the activity when they find the
 puzzle unassembled and its pieces lying around the core, instead of
 seeing the fragmented pot already put together. We hypothesise that
@@ -1357,15 +1357,15 @@ would probably cost one third of the cost of our proposed approach,
 and also requires only access to clay and a kiln. However, the puzzle
 pieces cannot be fragmented in a controlled manner. For instance, the
 pieces would not necessarily break with the dimensions required and in
-equal sizes, the magnets would be difficult to fit neatly. Most
-importantly, if a single piece disappeared from the gallery, the
+equal sizes, the magnets would be difficult to fit neatly. Moreover, 
+if a single piece disappeared from the gallery, the
 process to replace the piece would be costly and complex.
 
 Alternatively, it is possible to make a pot using clay and produce a
 mould or negative using plaster of Paris or silicone. Tin would then
 be used to make the shard shapes in the mould. The puzzle pieces and
 core would then be casted in jesmonite. Holes for the magnets would
-have to be be drilled in the casted material. Although this process is
+have to be drilled in the casted material. Although this process is
 slightly more expensive than the previous one, it would be possible to
 replace a piece if this was lost. However, the mould would require to
 be carefully guarded so it would not get lost, and it would suffer of
@@ -1411,17 +1411,18 @@ relatively low cost in comparison to other traditional design and
 production methods and can be deployed to enhance the interpretation
 of artefacts in heritage environments.
 
-Future work will examine the effect that such an object and activity
-have in engaging young audiences as well as investigating the
+Future work will present the effects that such an object and activity
+have in engaging young audiences as well as analysing the
 audience's opinion about the physical characteristics of the puzzle.
 
 \section{Acknowledgments}
 
 We thank the Brighton Museum and Art Gallery, and in particular Alex
-Hawkey and Andrew Maxted, for their input and support during the
+Hawkey, Andrew Maxted and Richard Le Saux, for their input and support during the
 development of the research. We would also like to thank Russell Webb,
 the artist who painted the puzzle pot to resemble the original
-artefact.
+artefact. Finally, we thanks the 3D printing technicians Trevor Taylor, 
+Oliver Keatch and Dan Brooks.
 
 \appendix
 
@@ -1438,7 +1439,7 @@ Section~\ref{sec:fracture-patterns}.
 Fracture lines (along which larger fragments are split) and fragment
 outlines are represented as \emph{spherical polygons} on the unit
 sphere. Once each final fragment's outline is determined in that
-spherical domain, 3D fragments are created by boolean intersection of
+spherical domain, 3D fragments are created by Boolean intersection of
 the artefact's geometry with sphere sector polytopes spanned by each
 fragment outline (see Section~\ref{sec:fragment-generation}).
 
