@@ -117,7 +117,7 @@
  {\includegraphics[width=.40\linewidth]{images/allpieces}}
  \subcaptionbox{Fabricated puzzle in museum exhibition\label{step3}}
   {\includegraphics[width=.35\linewidth]{images/exhibitmuseum}}
-  \caption{Workflow for the development of physical puzzles of pottery archaeological artefacts}
+  \caption{Workflow for the development of physical puzzles of pottery archaeological artefacts.}
   \label{fig:teaser}
 \end{teaserfigure}
 %
@@ -545,7 +545,7 @@ pieces, known as burr puzzles, from a 3D model.
   \hspace{0.5in}
   \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
   {\includegraphics[width=0.35\linewidth]{images/france}}
-  \caption{\label{fig:puz}Examples of pottery puzzles in museums}
+  \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
 \end{figure}
 
 Another relevant area of research is the fracturing simulation of 3D
@@ -607,7 +607,7 @@ urn, shown in Figure~\ref{fig:pot}.%
   \centering
   \includegraphics[width=0.6\linewidth]{images/pot}
   \caption{\label{fig:pot}
-    Late Iron Age funerary urn from Saltdean, Sussex (UK)}
+    Late Iron Age funerary urn from Saltdean, Sussex (UK).}
 \end{figure}
 %
 The urn comes from the cliff top at Saltdean, a coastal area near
@@ -662,9 +662,9 @@ puzzles~\cite{Smith2002}. These requirements included:
 %
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.5\linewidth]{images/alexdesign}
+  \includegraphics[width=0.5\linewidth]{images/alexdesign}\\[-0.5\baselineskip]
   \caption{\label{fig:alexdesign}%
-    Design of puzzle core piece on its rotating base, design courtesy of Alex Hawkey}
+    Design of puzzle core piece on its rotating base, design courtesy of Alex Hawkey.\vspace*{-1\baselineskip}}
 \end{figure}
 
 When discussing with the designer of the museum, it was acknowledged
@@ -763,7 +763,7 @@ shown in Figure~\ref{fig:reconstructiona}.
   {\includegraphics[width=0.45\linewidth]{images/potcomplete}}
   \subcaptionbox{3D model of internal core of the puzzle\label{fig:reconstructionb}}
   {\includegraphics[width=0.45\linewidth]{images/corewhole}}
-  \caption{3D models used for puzzle generation}
+  \caption{3D models used for puzzle generation.}
 \end{figure}
 %
 % \begin{figure}[h]
@@ -808,10 +808,12 @@ The resulting fragment shapes are generally more uniform than
 naturally occurring fragments but represent an interesting puzzle
 challenge due to the higher similarity amongst fragments.
 %
-Figure~\ref{fig:fracture-type-examples:voronoi}
+Figure~\ref{fig:fracture-type-examples:voronoi} shows an example set
+of spherical Voronoi fragments, visualised as solid spherical sectors.
 %
 \begin{figure}[htb]
   \centering%
+  \vspace*{-2\baselineskip}%
   \subcaptionbox{\label{fig:fracture-type-examples:voronoi}%
     Voronoi fracture pattern}%
   {\includegraphics[width=0.30\linewidth]{images/fractureBlender}}%
@@ -833,11 +835,8 @@ Figure~\ref{fig:fracture-type-examples:voronoi}
   {\includegraphics[width=0.30\linewidth]{images/fracturehighestamplitude}}%
   \hspace*{0.1in}%
   \caption{\label{fig:fracture-type-examples}%
-    Fracture patterns}
+    Fracture patterns\vspace*{-1\baselineskip}.}
 \end{figure}
-%
-shows an example set
-of spherical Voronoi fragments, visualised as solid spherical sectors.
 
 \paragraph{Hierarchical fracture.}
 %
@@ -888,7 +887,7 @@ Table~\ref{tab:hierarchical-parameters}.
   \caption{\label{tab:hierarchical-parameters}%
     Parameters of our hierarchical fracture algorithm.
     %
-    See Appendix~\ref{apx:hierarchical-algo} for algorithmic details.}
+    See Appendix~\ref{apx:hierarchical-algo} for algorithmic details.\vspace{-1.0\baselineskip}}
 \end{table}
 %
 Figure~\ref{fig:fracture-type-examples:hierarchical:first}--\ref{fig:fracture-type-examples:hierarchical:last}
@@ -898,7 +897,7 @@ demonstrates a fragmentation with a low amplitude $A$\TWedit{ (random
   lateral displacement of the curve)} and medium
 fractal decay $\rho$\TWedit{ (attenuation of displacement toward
   finer scales)} to produce fragments with straight
-edges. Moreover,
+edges. More-\goodbreak over,
 Figure~\ref{fig:fracture-type-examples:hierarchical:last} demonstrates
 a fragmentation with a higher amplitude $A$ and a lower random jitter
 of polygon vertices $R$ to produce fragments with higher raggedness.
@@ -917,8 +916,9 @@ the centre of the fractured sphere (see
 Figure~\ref{fig:spherea}). Thereafter, as shown in
 Figure~\ref{fig:sphereb},
 %
-\begin{figure}[htb]
-  \centering
+\begin{figure}[b]
+  \centering%
+  \vspace*{-0.5\baselineskip}
   \subcaptionbox{3D model overlaid with all fragments' sphere sectors\label{fig:spherea}}
   {\includegraphics[width=0.30\linewidth]{images/sphere}}
   \hspace{0.2in}
@@ -926,8 +926,9 @@ Figure~\ref{fig:sphereb},
    {\includegraphics[width=0.30\linewidth]{images/intersection}}
    \hspace{0.2in}
   \subcaptionbox{Resulting 3D model of puzzle piece\label{fig:spherec}}
-  {\includegraphics[width=0.30\linewidth]{images/puzzlepiece}}%
-  \caption{Puzzle fragment generation through CSG operations between a 3D model and sphere sectors spanned by the fragment outlines}
+  {\includegraphics[width=0.30\linewidth]{images/puzzlepiece}}
+  \caption{Puzzle fragment generation through CSG operations between a 3D model and
+    sphere sectors spanned by the fragment outlines.\vspace*{-1.0\baselineskip}}
 \end{figure}
 %
 for each fragment, the 3D model of the artefact is intersected with a
@@ -950,7 +951,7 @@ can be used in subsequent operations.
       \subcaptionbox{$m$: 6, $n$: 6, $R$: 0.3, $A$: 0.2, $\rho$: 0.2, $\sigma$: 1.0\label{highjitter}}
         {\includegraphics[width=0.33\textwidth]{images/pott5}}
       \caption{\label{fig:pot-with-different-fracture-settings}%
-        Examples of puzzles with different parameters}
+        Examples of puzzles with different parameters.}
 \end{figure}
 
 Figure~\ref{fig:pot-with-different-fracture-settings} illustrate the
@@ -982,7 +983,7 @@ rest of the puzzle.
   \includegraphics[width=0.33\textwidth]{images/elephantpuzzle4}\\[-0.5\baselineskip]
   \caption{\label{fig:three-shapes-with-different-fractures}%
     Examples of algorithm applied to scans of an amber cup, Saltdean pot and
-    ceramic elephant figurine\vspace*{-1.0\baselineskip}}
+    ceramic elephant figurine.\vspace*{-1.0\baselineskip}}
 \end{figure}
 
 
@@ -1008,7 +1009,7 @@ rest of the puzzle.
   \includegraphics[width=0.22\linewidth]{images/pot18.jpg}
   \includegraphics[width=0.88\linewidth]{images/allselected.jpg}\\[-1.0\baselineskip]
   \caption{\label{manyexamples}%
-    \KRedit{Examples of puzzles produced for a simplified mesh of the 
+    Examples of puzzles produced for a simplified mesh of the 
     Saltdean pot scan (800 faces)
     with a fracture pattern generated with settings $m$: 6, $n$: 6,
     $R$: 0.3, $A$: 0.1, $\rho$: 0.5, $\sigma$: 0. The
@@ -1017,7 +1018,7 @@ rest of the puzzle.
       on low-resolition geometry. The bottom row
       shows the pieces generated with one of these fracture
       patterns (top, third-column), applied to a higher-resolution
-      model of the pot (30,000 faces)}}
+      model of the pot (30,000 faces).}
 \end{figure}
 
 Moreover, Figure~\ref{fig:three-shapes-with-different-fractures}
@@ -1068,7 +1069,7 @@ and underwent a similar process to generate the digital puzzle pieces.
 
 \begin{table}[th]
   \centering
-\greenBegin
+%\greenBegin
 \begin{tabular}{ |l|c|c| } 
  \hline
  Mesh & Number of faces on mesh & Average processing time for one puzzle piece
@@ -1082,8 +1083,8 @@ and underwent a similar process to generate the digital puzzle pieces.
  3D scan of Saltdean pot & 1,269,160 & 3 hours 28 minutes \\ 
  \hline
 \end{tabular}
-\caption{\label{table-procesingtimes}Processing times to compute fragments for a sample of 3D meshes}
-\greenEnd
+\caption{\label{table-procesingtimes}Processing times to compute fragments for a sample of 3D meshes.}
+%\greenEnd
 \end{table}
 
 
@@ -1113,7 +1114,7 @@ illustrated in Figure~\ref{fig:cylinders}.
   {\includegraphics[width=0.45\linewidth]{images/allcylinders.jpg}}
   \subcaptionbox{Core with blind-holes across the surface\label{fig:coreholes}}
   {\includegraphics[width=0.45\linewidth]{images/coreholes}}
- \caption{Generating matching holes for the magnets which constitute the attachment mechanism for the Saltdean urn puzzle}
+ \caption{Generating matching holes for the magnets which constitute the attachment mechanism for the Saltdean urn puzzle.}
 \end{figure}
 
 The algorithm to create the blind-holes is based on the CSG operations
@@ -1134,7 +1135,7 @@ hole, for each cylinder as shown in Figure~\ref{fig:holesb}.
   \hspace{0.3in}
     \subcaptionbox{Puzzle piece with blind-holes\label{fig:holesc}}
     {\includegraphics[width=0.22\linewidth]{images/holes3.jpg}}
-  \caption{Generating blind holes for each puzzle piece}
+  \caption{Generating blind holes for each puzzle piece.}
 \end{figure}
 
 The generated geometries are then used to produce the
@@ -1165,8 +1166,8 @@ were suitable for the puzzle pot activity (see Figure~\ref{fig:test}).
   \subcaptionbox{Colour and texture for the puzzle pieces\label{fig:col}}
    {\includegraphics[width=0.446\linewidth]{images/colour}}
 
-  \caption{
-    Prototyping was performed before full fabrication of puzzle}
+  \caption{%
+    Prototyping was performed before full fabrication of puzzle.}
 \end{figure}
 %
 Colours and textures were also tested (see
@@ -1192,7 +1193,7 @@ positioned flat on the printer's bed.
    {\includegraphics[width=0.4299\linewidth]{images/painting}}
   \subcaptionbox{Painted and assembled puzzle at the museum gallery\label{fig:allprintedassembled}}
   {\includegraphics[width=0.4508\linewidth]{images/exhibitmuseumassembled}}
-    \caption{Fabricated puzzle pieces and central core generated by proposed workflow and final hands-on exhibit}
+    \caption{Fabricated puzzle pieces and central core generated by proposed workflow and final hands-on exhibit.}
 \end{figure}
 
 All pieces were printed in PLA (Polylactic Acid) filament on a FDM
@@ -1260,7 +1261,7 @@ artefact to the extent of some visitors not being sure whether they
 are meant to touch and interact with the object.]{}
 %
 %
-\greenBegin%
+%\greenBegin%
 The evaluation of the puzzle pot activity 
 and its performance in terms of enhancing the visiting experience for families 
 of the Archaeology Gallery has already taken place and the detailed analysis 
@@ -1307,7 +1308,7 @@ fragmented pot already put together. An explicit invitation to
 assemble the puzzle is essential to overcome some people’s reluctance
 to touch an object inside the exhibition setting. 
 
-\greenEnd
+%\greenEnd
 
 
 
@@ -1344,7 +1345,7 @@ testing is crucial, in order to understand how measurements, settings
 and processes might need to change in order to successfully produce a
 satisfying result.
 
-\greenBegin
+%\greenBegin
 
 A final consideration is given to how the proposed solution compares
 to other fabrication methods of archaeological puzzles. For instance,
@@ -1393,7 +1394,7 @@ process; the two-step approach for generating puzzle pieces has its
 advantages as it allows the user to further manipulate the 3D geometry and 
 fracture patterns to generate different versions of puzzles. 
 
-\greenEnd
+%\greenEnd
 
 
 %A small-scale pre-user acceptance test has also taken place with two
@@ -1480,8 +1481,8 @@ and~\ref{alg:random-spherical-polygon}.
   \Begin{
     \tcp{Initialise active set of fragment outlines.}
     %$ \mathcal{F} := \varnothing $ \\
-    $ \greenBegin P := \textit{randSphericalPolygon}(\,) \greenEnd$ \\
-    $\greenBegin \mathcal{F} := \{ P, \widebar{P} \} \greenEnd,\break
+    $ P := \textit{randSphericalPolygon}(\,)$ \\
+    $ \mathcal{F} := \{ P, \widebar{P} \},\break
         \text{where}\;
         \text{$\widebar{P}$ denotes the reversed spherical polygon $P$, with inside and outside regions on the sphere swapped.}$ \\
     
@@ -1513,7 +1514,7 @@ and~\ref{alg:random-spherical-polygon}.
   %\normalsize
   \small
   \caption{Random fracture generator \textit{randSphericalPolygon}(\,), based on the 1-D random midpoint displacement
-method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}}
+method by Fournier et al.~\cite{Fournier:1982:CRS:358523.358553}.}
   \label{alg:random-spherical-polygon}
   \newcommand{\commentfont}[1]{\textit{\textcolor{ForestGreen}{#1}}}
   \SetCommentSty{commentfont}
