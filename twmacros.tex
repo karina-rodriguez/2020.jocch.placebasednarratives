@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Tim's Mark-up Macros
+%
+% To remove all subsequent inline comments, place at the beginning of your document:
+%
+%      HERE, OSKAR: =============.
+%                                 |
+%                                 |
+%\def\hidecomments{}  %  <========'
+%
+% By undefining hidecomments again, comments can be temporarily re-enabled.
+%
+% require:
+%
+%  \usepackage[usenames,dvipsnames]{xcolor}
+%  \usepackage[normalem]{ulem}  % for strike-through (\sout)
+%
+% usage:
+%
+%  \TWedit{text insertiong}
+%  \TWedit[removed this text]{replaced by this one}
+%  \TW{comment}
+%
+% Alternative definitions of the underlying ``EDIT'' can be used for
+% collaborative writing, display of diffs, final version for approval,
+% etc.  Note that for the final version, author identifiers disappear
+% and color coding changes to displaying of removals and insertions.
+%
+%
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+\def\initials#1{\protect\clap{\smash{\raisebox{1.4ex}{\tiny{\textsf{\textit{#1}}}}}}}%
+%
+\makeatletter
+\newcommand{\NOTE}[3]{\protect\@ifundefined{hidecomments}{%
+  \strut{\color{#2}{\hspace{0pt}\initials{#1}\protect{[#3]}}}%
+  }{}}
+\newcommand{\EDITbyauthor}[4][]{\protect\@ifundefined{hidecomments}{%
+  \strut{\color{#3}{\hspace{0pt}\initials{#2}\protect\sout{#1}{#4}}}%
+  }{}}
+\newcommand{\EDITredandgreen}[4][]{\protect\@ifundefined{hidecomments}{%
+%  \strut{\color{Red}{\hspace{0pt}\protect\sout{#1}{\color{ForestGreen}{#4}}}}%
+  \strut{\color{Red}{\hspace{0pt}\protect\sout{#1}{\color{WildStrawberry}{#4}}}}%
+  }{}}
+\newcommand{\EDITgreenonly}[4][]{\protect\@ifundefined{hidecomments}{%
+%  \strut{\color{ForestGreen}{#4}}%
+  \strut{\color{WildStrawberry}{#4}}%
+  }{}}
+\newcommand{\EDITfinal}[4][]{\protect%
+  \strut{#4}%
+  {}}
+\newcommand{\NOTEboxed}[3]{\protect\@ifundefined{hidecomments}{%
+  {\centering\fbox{\parbox{0.97\linewidth}{\protect\EDIT{#1}{#2}{#3}}}}%
+  }{}}
+
+%\newcommand{\EDIT}[4][]{\EDITredandgreen[#1]{#2}{#3}{#4}}
+\newcommand{\EDIT}[4][]{\EDITfinal[#1]{#2}{#3}{#4}}
+%\newcommand{\EDIT}[4][]{\EDITbyauthor[#1]{#2}{#3}{#4}}
+%\newcommand{\EDIT}[4][]{\EDITfinal[#1]{#2}{#3}{#4}}
+
+%\newcommand{\greenBegin}{\color{ForestGreen}}
+\newcommand{\greenBegin}{\color{WildStrawberry}}
+\newcommand{\greenEnd}{\color{black}}
+\newcommand{\redStart}{\color{Red}}
+\newcommand{\redEnd}{\color{black}}
+
+\makeatother
+%
+\newcommand{\TWedit}[2][]{\protect\EDIT[#1]{TW}{Orange}{#2}}
+\newcommand{\TW}[1]{\protect\NOTE{TW}{Orange}{#1}}
+\newcommand{\TWboxed}[1]{\NOTEboxed{TW}{Orange}{#1}}
+%
+\newcommand{\KRedit}[2][]{\protect\EDIT[#1]{KR}{blue}{#2}}
+\newcommand{\KR}[1]{\protect\NOTE{KR}{blue}{#1}}
+\newcommand{\KRboxed}[1]{\NOTEboxed{KR}{blue}{#1}}
+%
+\newcommand{\MSedit}[2][]{\protect\EDIT[#1]{MS}{green}{#2}}
+\newcommand{\MS}[1]{\protect\NOTE{MS}{green}{#1}}
+\newcommand{\MSboxed}[1]{\NOTEboxed{MS}{green}{#1}}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\ignore#1{}
+
+\usepackage{bm}
+% see also: http://tex.stackexchange.com/questions/3238/bm-package-versus-boldsymbol
+
+%\newcommand{\vect}[1]{\textbf{#1}}      % use US standard more common in graphics
+\newcommand{\vect}[1]{{\ensuremath{\boldsymbol{#1}}}}    % use ISO standard (doesn't seem to work with default font, but does with \usepackage{newtxmath})
+%\newcommand{\vect}[1]{\textbf{\textit{#1}}}    % use ISO standard (doesn't work for Greek symbols)
+%\newcommand{\vect}[1]{\textbf{\textit{#1}}}    % use ISO standard (doesn't work for Greek symbols)
+%\newcommand{\vect}[1]{{\ensuremath{\bm{#1}}}} % use ISO standard (occasionally falls back to Knuth's font)
+
+%\newcommand{\mtrx}[1]{#1}
+\newcommand{\mtrx}[1]{\vect{#1}}
+
+%\newcommand{\trans}{^{\!\top}\!}
+\newcommand{\trans}{^{\top}\!}  % new math font does better kerning
+
+% already defined in our-commands.tex
+%\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\styleMap}[1]{\mathcal{#1}}
+
+%\newcommand{\styleModelPointVect}[1]{\texttt{p.#1}}
+%\newcommand{\styleModelPointScal}[1]{\texttt{p.#1}}
+%\newcommand{\styleModelPointVect}[1]{\vect{#1}^\text{m}}
+%\newcommand{\styleModelPointScal}[1]{     {#1}^\text{m}}
+\newcommand{\styleModelPointVect}[1]{\bar{\vect{#1}}}
+\newcommand{\styleModelPointScal}[1]{\bar{     {#1}}}
+
+
+%\newcommand{\myparagraph}[2]{\paragraph{#1}}
+\newcommand{\myparagraph}[2][\quad]{\smallskip\noindent\mbox{\textbf{#2}}#1}
+%\newcommand{\myparagraph}[2][\quad]{\smallskip\noindent\mbox{\sffamily\textsc{\textbf{#2}}}#1}
+
+\newcommand{\RR}{{\mathbb R}}
+
+%\newcommand{\weight}{\omega}   % reads like ``oeight''
+\newcommand{\weight}{w}         % reads like ``weight''
+
+%\def\twsubsubsectionstar#1{\vspace{1.5ex}\noindent\textsf{\MakeUppercase{#1}}\par\nopagebreak\vspace{0.5ex}\nopagebreak\noindent}
+\def\twsubsubsectionstar#1{\vspace{2ex}\noindent\textsf{#1}\par\nopagebreak\vspace{1ex}\nopagebreak\noindent}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% Lots of figures is OK
+\renewcommand{\textfraction}{0}%{0.05}
+\renewcommand{\topfraction}{1}%{0.95}
+\renewcommand{\bottomfraction}{1}%{0.95}
+\renewcommand{\dbltopfraction}{1}%{0.9}
+\renewcommand{\floatpagefraction}{1}%{0.95}
