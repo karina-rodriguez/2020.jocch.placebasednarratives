@@ -68,8 +68,9 @@
 %
 % The "title" command has an optional parameter, allowing the author to define a "short title" to be used in page headers.
 
-\title[Interactive Experience of place based narratives via Augmented Reality (AR) Maps]%
-      {Interactive Experience of place based narratives via Augmented Reality (AR) Maps}
+
+\title[Creative Experiences for engaging communities with Cultural Heritage]%
+      {Creative Experiences for Engaging Communities with Cultural Heritage through  Place Based Narratives}
 %
 % The "author" command and its associated commands are used to define the authors and their affiliations.
 % Of note is the shared affiliation of the first two authors, and the "authornote" and "authornotemark" commands
@@ -185,42 +186,42 @@ technologies has focused on easing the task of recording, classifying and
 preserving cultural assets (e.g. museum objects, heritage buildings). However,
 there is a current shift from researching how artefacts might
 benefit from these technologies to understanding how communities can
-participate in the process of identifying which artefacts to preserve. 
+participate in the process of identifying and interpreting the heritage which is relevant to them. 
 
 
-\begin{figure}[b]
-  \centering
-  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
-  {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
-  \hspace{0.5in}
-  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
-  {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
-  \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
-\end{figure}
+% \begin{figure}[b]
+%   \centering
+%   \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
+%   {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
+%   \hspace{0.5in}
+%   \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
+%   {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
+%   \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
+% \end{figure}
 
 Until now, communities have rarely had an input into which heritage to preserve.
 Their participation in this process might provide new insights into which
-heritage is important for their community. Computer graphics technologies also
-have an important role to play in this process, but limited research has
-been done in this area. The research presented in this paper aims to address
-this gap. In particular, it explores how entry barriers can be lowered for a
+heritage is important for their community. But most importantly, it will allow to explore the benefits for people in engaging in this process, including in exploring their identity. In this way, engagement with heritage might lead to benefits such as improvements of people's wellbeing and resilience. 
+
+
+Computer graphics technologies have an important role to play in this process. They can be used to generate visually rich 3D environments for people to interact with and can underpin a high-level of creativity in the process of engaging with heritage. However, limited research has been done in this area.  The research presented in this paper aims to address this gap. Following our research presented in \cite{6b8314fd76a64d3f86fd627505cc29e9}, this paper expands on our research towards exploring how entry barriers can be lowered for a
 wider set of audiences to connect with their local heritage outside museum
-settings. For this, it proposes the use of creative and narrative-based
-approaches, given the potential for stories to illuminate different viewpoints
-regarding Cultural Heritage assets. Hence, the term \textit{place-based
-narratives} is used to refer to the interpretative stories linked to the
+settings. In particular, it expands the theoretical context in which the research is conceptualised, as well as presents a digitisation pipeline which allow to capture a wide variety of creative narrative forms based on photogrammetry. 
+
+In this research, the term \textit{place-based
+narratives} is used to refer to the narratives linked to the
 people, objects, sites and events in the urban landscape as told by the
 community. As such, the research acknowledges the important relationships
-between a community and the areas in which they move on a daily basis, which
+between a community and the geographical areas in which they move on a daily basis, which
 can greatly enhance the public's understanding and appreciation of objects and
 sites. 
 
-The contribution of the research is twofold, firstly by proposing an approach for
+The main contribution of this research is the development of creative and narrative-based
+approaches for engaging with heritage of place. Given the potential for stories to illuminate different viewpoints regarding Cultural Heritage assets, this approach can easily be deployed with a variety of traditional and non-traditional museum audiences, such as young children, people with disabilities and others with mental health problems. The methodology for the research is based on an iterative research process, in which we firstly explore and propose the conceptual approach for
 the development of place-based narratives through community involvement; and
-secondly by deploying novel technologies which can re-tell the
-narratives. The technical contribution combines both digital technologies and
-physical printed material. In this research, this development is referred to
-as an \emph{Augmented Reality (AR)} Map. This is defined as a physical printed
+secondly by deploying novel technologies and workflows to support this process.
+
+The technical contributions of the research include a workflow to digitise creative narrative forms produced during the narrative process, as well as digital experiences  to communicate these narratives to a wider audience. Given the emphasis on place, we use \emph{Augmented Reality (AR)} Maps, which are physical printed
 map, such as a map of a geographical area or a building, with embedded
 augmented digital 3D scenes in order to provide additional layers of
 information to the user. The technology has been developed using an
@@ -254,7 +255,7 @@ Thereafter, the narratives were converted into an AR Map.
 The paper is organised as follows: Section~\ref{ref} presents related work in
 this area, Section~\ref{meth} presents the methodology used in this research
 to facilitate the creation of narratives by the community, while
-Section~\ref{tech} describes the technology developed for the Augmented
+Section~\ref{dig} presents a pipeline to easily digitise physical craft created during the narrative process. Thereafter, Section~\ref{tech} describes the technology developed for the Augmented
 Reality (AR) Maps. Section~\ref{eval} discusses preliminary evaluation of this
 research, and finally Section~\ref{conc} presents conclusions and further
 work.
@@ -262,6 +263,30 @@ work.
 
 \section{Related work} 
 \label{ref}
+This research seeks to explore creative ways to engage people with heritage of their local communities. As such, the research is contextualised within the concepts of \emph{narrative} and \emph{place}.
+
+We define narrative as \emph{the showing or the telling of events occurring over time} \cite{10.2307/1343711} and use the distinction proposed by Chatman's \cite{10.2307/468421} between narrative structure, manifestation (the specific medium in which the narrative is presented), content and expression (the various media through which stories can be communicated). Hence, there is an acknowledgement that narratives are not always encoded linguistically, but can also be shown through audiovisual media and artefacts \cite{PAHL2004339}.  
+
+
+By The spatial dimension in narratives is also relevant to the study of identity as the interplay between identity and place has been widely acknowledged by the research community. Although there are discrepancies between the definition of space and place, we make use of a humanist perspective in which the focus lies in relating space to place through the experiences of human beings as agents. 
+
+It is widely recognised that individual narratives are both temporal as spatial: a sequential outward movement from the \emph{safe} home to the \emph{open, unpredictable, and consequently dangerous} outside world \cite{Bruner2004-BRULAN}. Moreover, Harold et al. \cite{PROSHANSKY198357} identified that the places a child grows up in, those that he or she comes to know, prefer, and seek out or avoid contribute significantly to their individual identity. 
+
+
+
+Digital approaches for creating and communicating narratives over digital media have been extensively studied in the field of Information and Communication Technologies (ICT). Within this domain, the term \emph{immersion} and \emph{interactivity} are used to refer to the ability of the media to enable the \emph{reader} to explore the non-linear narrative content, while being fully involved in the experience by incorporating multiple physical senses.
+%, typically visual, audio and touch.  
+%\KR{Kate/Liam could you include more literature on children and technology: negative/positive experience}
+
+Previous research in this area includes design methods and tools for enabling children to create digital content which is combined with the physical environment \cite{ALHUMAIDAN201824}. 
+However, these tools do not support users building physical objects which can serve as narrative forms, but rather focus on creating digital content which is combined with the physical environment.
+- a functionality which is provided by Augmented Reality technologies. 
+Kang et al. \cite{10.1145/3173225.3173264} propose a platform which allows children to prototype and test complex engineering systems (i.e., a bicycle) using paper and a digital simulation environment. The functionality supports building predefined systems which enable children to learn how they work. 
+Willis et al. \cite{10.1145/2460625.2460682} propose a tool for interactive storytelling bringing tangible objects to life by using printed media and mobile technology. Our approach \citeA{6b8314fd76a64d3f86fd627505cc29e9} significantly advances the state of the art by enabling CYP to create narratives using physical artefacts, drawings and other content which are then translated into an Augmented Reality experience (see \textit{Visual Evidence} attachment). 
+
+
+We recognise the increasing blurring of boundaries between the physical and the digital in people's lives and the need to allow people to explore experiential approaches, based on narratives, which incorporate a variety of digital forms \cite{articleJordan}. 
+
 Related research on community engagement
 with heritage includes the framework proposed by G{\"o}ttler and Ripp
 \cite{icomos1812}, which formulate different levels of community engagement
@@ -403,127 +428,6 @@ The next steps in the methodology are explained in the following sections.
 \section{Digitisation of artwork} 
 \label{dig} 
 
-\KR{add work in photogrammetry}
-
-\section{Augmented Reality (AR) Map Development} \label{tech} Normally, the
-outcomes of psycho-geography and participatory approaches, which are not
-mediated by technologies, are lost shortly after the process of engaging with
-communities. The reason is that, as demonstrated by the resulting crafted
-objects (Figure~\ref{fig:artwork}), while the materials which are used  are
-amenable to creative approaches they are not necessarily easy for
-digitisation. Hence, results from these participatory approaches are normally
-disposed of shortly after their display and are rarely disseminated to
- a larger audience in their original form. 
-
-This research explored the role of graphics technologies for i) the
-digitisation of the narratives produced in order to support their
-documentation and preservation; and ii) re-telling these narratives to others.
-These audiences include other members of the same community, audiences who are
-new to the geographical area and other stakeholders who might have an interest
-in better understanding which elements of the cultural landscape are
-significant to the community.
-
-While the process for digitisation is better understood by the research
-community - in terms of deciding which technologies to use for which artefacts
-- the requirement to re-tell the narratives has not previously been fully
-explored. Thus, there are many potential digital experiences which could be
-used for this purpose. 
-
-A novel approach for re-telling these narratives is proposed. This approach
-combines elements of a physical and a digital experience. The digital element
-is intended to serve as a canvas for users to interact with the journeys and
-find more information relevant to the narratives through hyperlinks. 
-
-From early on in the research, it was clear that communicating the
-geographical location was critical to re-telling the narratives. However,
-using precise geographical information, such as in a Geographical Information
-System (GIS), was not possible without having to reveal the exact location of
-the address of members of the community. Hence, the idea of providing the
-content geographically in-situ was discarded. Instead, the research
-incorporated an experience very familiar to people when visiting a new
-location. This is the communication of specific information through a printed
-map (e.g. a tourist map or a building map). Printed maps allow the
-abstraction of geographical/spatial information while enabling the reader to
-orient themselves in the space. Augmented Reality (AR) is then used to embed
-the digitised narratives without losing their geographical information. AR
-also has the advantage that multiple interpretations can be embedded in
-parallel to the same visual information. 
-
-The research also considered the need to create physical media which is
-cost-effective to produce and distribute to a large audience. As such, all
-physical elements of the experience can easily be reproduced by the user by
-printing a PDF map. Moreover, the digital element is easily accessible from a
-web browser on a PC, tablet or smartphone so that there is no need to install
-. 
-
-The Augmented Reality web-application renders a 3D scene with the crafted
-houses, which are positioned over the printed map in a similar way to the
-crafted artwork (see Figure~\ref{fig:ARexperience}). When the user clicks or
-taps on each of the houses, an animation is triggered to simulate the box
-being opened. The content inside the box is then rendered on a viewer for the
-viewer to inspect in more detail. 
-
-The following sub-sections will describe in detail how the different
-components of the Augmented Reality (AR) map were developed.
-
-\subsection{Development of printed graphical map} %talk about the development
-process for the printed map: mapnik, openstreetmap data, rendering of scene, 
-The development of a printed map addressed various requirements as described
-below:
-
-\begin{itemize} 
-  \item Display information on the street layout in a way which is easy for the user to understand. 
-  \item Not reveal the precise geographical location of the houses. 
-  \item Be self-contained in terms of telling the user how to access 
-  the digital element of the experience. 
-  \item Include a marker for the Augmented Reality which is not too distracting. 
-\end{itemize}
-
-In order to address the first two requirements, a customised rendering of a
-map was created. This map displayed information, which is geographically
-accurate, but detailed information, such as street names, were omitted. The
-open-source mapping toolkit Mapnik \cite{mapnik} was used to generate the map.
-This toolkit, with binding in Python, can programmatically generate rendering
-of geographical maps with the appearance the user wants. For this, an XML
-stylesheet is created which filters only the information of the streets for
-rendering and provides other information such as colour and line thickness.
-Thereafter, a Python script processed this stylesheet to produce the final
-rendering. Geographical data of Brighton and Hove (UK) was retrieved from OpenStreetMap
-\cite{OpenStreetMap} in the OSM data format. This data was then used as input
-to the script in order to produce the rendering of the map in PNG format (see
-Figure~\ref{fig:map}).
-
-
-\begin{figure}[b]
-\includegraphics[width=\linewidth]{images/maprender.jpg}
-\caption{Rendering of map using Mapnik toolkit} \label{fig:map} 
-\end{figure}
- 
-The rendering of the map was further processed in the GIMP image processing
-tool \cite{gimp} to include as additional information the names of relevant
-geographical references. All references were extracted from the children's
-narratives and included historic buildings, libraries, museums, parks,
-cemetery and sculptures. Instructions on how to access the website with the AR
-experience were also included.
-
-Furthermore, a fiducial code or marker with the logo of the school was
-included as illustrated in Figure~\ref{fig:print}. The marker serves both as a
-way to identify the geographical location of the school as well as to enable
-the AR content. Other markerless solutions were considered. However, AR over
-the web does not yet have the performance required for marker-less AR, which
-is normally distributed via apps and often reliant on Google's ARCore
-software. Hence, not wanting to compromise in web-based delivery, the
-logo-based marker was considered a suitable solution.
-
-
-Finally, general information about the project was included for printing as a
-double-sided page (see Figure~\ref{fig:print}). In this way, the double-sided
-page is a self-containing output of the project.
-
-% The following subsection will describe how the 3D scene which is augmented
-% on the map was developed.
-
-
 \subsection{Digitisation of 3D scene for AR} There were several considerations
 made in order to digitise the physical artwork using 3D technologies. These
 decisions were driven by the fact that the content was going to be rendered as
@@ -652,6 +556,128 @@ and the execution processing required to decompress and use them. It stores a
 full scene description in JSON format, which includes node hierarchy, cameras,
 and materials and it also contains descriptor information about animations and
 meshes.
+
+\KR{add work in photogrammetry}
+
+\section{Augmented Reality (AR) Map Development} \label{tech} Normally, the
+outcomes of psycho-geography and participatory approaches, which are not
+mediated by technologies, are lost shortly after the process of engaging with
+communities. The reason is that, as demonstrated by the resulting crafted
+objects (Figure~\ref{fig:artwork}), while the materials which are used  are
+amenable to creative approaches they are not necessarily easy for
+digitisation. Hence, results from these participatory approaches are normally
+disposed of shortly after their display and are rarely disseminated to
+ a larger audience in their original form. 
+
+This research explored the role of graphics technologies for i) the
+digitisation of the narratives produced in order to support their
+documentation and preservation; and ii) re-telling these narratives to others.
+These audiences include other members of the same community, audiences who are
+new to the geographical area and other stakeholders who might have an interest
+in better understanding which elements of the cultural landscape are
+significant to the community.
+
+While the process for digitisation is better understood by the research
+community - in terms of deciding which technologies to use for which artefacts
+- the requirement to re-tell the narratives has not previously been fully
+explored. Thus, there are many potential digital experiences which could be
+used for this purpose. 
+
+A novel approach for re-telling these narratives is proposed. This approach
+combines elements of a physical and a digital experience. The digital element
+is intended to serve as a canvas for users to interact with the journeys and
+find more information relevant to the narratives through hyperlinks. 
+
+From early on in the research, it was clear that communicating the
+geographical location was critical to re-telling the narratives. However,
+using precise geographical information, such as in a Geographical Information
+System (GIS), was not possible without having to reveal the exact location of
+the address of members of the community. Hence, the idea of providing the
+content geographically in-situ was discarded. Instead, the research
+incorporated an experience very familiar to people when visiting a new
+location. This is the communication of specific information through a printed
+map (e.g. a tourist map or a building map). Printed maps allow the
+abstraction of geographical/spatial information while enabling the reader to
+orient themselves in the space. Augmented Reality (AR) is then used to embed
+the digitised narratives without losing their geographical information. AR
+also has the advantage that multiple interpretations can be embedded in
+parallel to the same visual information. 
+
+The research also considered the need to create physical media which is
+cost-effective to produce and distribute to a large audience. As such, all
+physical elements of the experience can easily be reproduced by the user by
+printing a PDF map. Moreover, the digital element is easily accessible from a
+web browser on a PC, tablet or smartphone so that there is no need to install
+. 
+
+The Augmented Reality web-application renders a 3D scene with the crafted
+houses, which are positioned over the printed map in a similar way to the
+crafted artwork (see Figure~\ref{fig:ARexperience}). When the user clicks or
+taps on each of the houses, an animation is triggered to simulate the box
+being opened. The content inside the box is then rendered on a viewer for the
+viewer to inspect in more detail. 
+
+The following sub-sections will describe in detail how the different
+components of the Augmented Reality (AR) map were developed.
+
+\subsection{Development of printed graphical map} %talk about the development
+process for the printed map: mapnik, openstreetmap data, rendering of scene, 
+The development of a printed map addressed various requirements as described
+below:
+
+\begin{itemize} 
+  \item Display information on the street layout in a way which is easy for the user to understand. 
+  \item Not reveal the precise geographical location of the houses. 
+  \item Be self-contained in terms of telling the user how to access 
+  the digital element of the experience. 
+  \item Include a marker for the Augmented Reality which is not too distracting. 
+\end{itemize}
+
+In order to address the first two requirements, a customised rendering of a
+map was created. This map displayed information, which is geographically
+accurate, but detailed information, such as street names, were omitted. The
+open-source mapping toolkit Mapnik \cite{mapnik} was used to generate the map.
+This toolkit, with binding in Python, can programmatically generate rendering
+of geographical maps with the appearance the user wants. For this, an XML
+stylesheet is created which filters only the information of the streets for
+rendering and provides other information such as colour and line thickness.
+Thereafter, a Python script processed this stylesheet to produce the final
+rendering. Geographical data of Brighton and Hove (UK) was retrieved from OpenStreetMap
+\cite{OpenStreetMap} in the OSM data format. This data was then used as input
+to the script in order to produce the rendering of the map in PNG format (see
+Figure~\ref{fig:map}).
+
+
+\begin{figure}[b]
+\includegraphics[width=\linewidth]{images/maprender.jpg}
+\caption{Rendering of map using Mapnik toolkit} \label{fig:map} 
+\end{figure}
+ 
+The rendering of the map was further processed in the GIMP image processing
+tool \cite{gimp} to include as additional information the names of relevant
+geographical references. All references were extracted from the children's
+narratives and included historic buildings, libraries, museums, parks,
+cemetery and sculptures. Instructions on how to access the website with the AR
+experience were also included.
+
+Furthermore, a fiducial code or marker with the logo of the school was
+included as illustrated in Figure~\ref{fig:print}. The marker serves both as a
+way to identify the geographical location of the school as well as to enable
+the AR content. Other markerless solutions were considered. However, AR over
+the web does not yet have the performance required for marker-less AR, which
+is normally distributed via apps and often reliant on Google's ARCore
+software. Hence, not wanting to compromise in web-based delivery, the
+logo-based marker was considered a suitable solution.
+
+
+Finally, general information about the project was included for printing as a
+double-sided page (see Figure~\ref{fig:print}). In this way, the double-sided
+page is a self-containing output of the project.
+
+% The following subsection will describe how the 3D scene which is augmented
+% on the map was developed.
+
+
 
 % The following section will describe the implementation details of the AR
 % application.
