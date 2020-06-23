@@ -1,6 +1,6 @@
 % The first command in your LaTeX source must be the \documentclass command.
 \documentclass[acmlarge,screen,dvipsnames]{acmart}
-%\usepackage{color}
+%usepackage{color}
 \usepackage{amsmath}
 \usepackage{pseudocode}
 \usepackage[ruled]{algorithm2e}
@@ -13,6 +13,7 @@
 \input widebar
 
 \usepackage[normalem]{ulem}  % for strike-through (\sout)
+
 \input twmacros
 %
 % defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
@@ -132,21 +133,24 @@ This research investigates how communities can
 meaningfully connect with Cultural Heritage through creative and digital
 experiences. It also explores how entry barriers can be lowered for
 a wider set of audiences to increase their participation in such experiences.
-For this, the research investigates the use of creative and narrative-based
-approaches, given the potential for stories to illuminate different viewpoints
-and interpretations of Cultural Heritage within the community. The contribution of the
+For this, the research \MSedit[investigates the use of creative and narrative-based
+approaches, given the potential for stories to illuminate]{deploys creative and narrative or story-based approaches as means to illuminate}investigates the use of creative and narrative-based
+approaches, given the potential for stories to illuminate  different viewpoints
+and interpretations of Cultural Heritage within the community. \MS{Here the two fold contribution is not clear and the word contribution is mentioned twice}
+The contribution of the
 paper is two fold
 contribution is a novel approach for re-telling communities' narratives
 linked to people, objects, sites and events in the urban landscape as told by
 the community. The research proposed the novel concept of \emph{Augmented
-Reality (AR) Maps}, which are physical maps with augmented digital narratives
-and delivered through \emph{Immersive Web} technology. This concept is
+Reality (AR) Maps}, \MS{These are physical maps with augmented digital narratives, delivered through \emph{Immersive Web} technology} which are physical maps with augmented digital narratives
+and delivered through \emph{Immersive Web} technology. This \MS{The} concept is
 proposed as a means to document and disseminate the narratives in a way which
 can enhance the public understanding and appreciation of objects and sites in
-their communities. The approach has been tested with 32 children in local
+their communities. The approach \MS{was initially piloted with a class of 32 children in a local primary school in Brighton and Hove (UK) in order to understand its suitability
+for community engagement, especially for young audiences. Currently, the project has been expanded to five more schools in the area} has been tested with 32 children in local
 primary school in the city of Brighton and Hove (UK) in order to understand its suitability
 for community engagement. The significance of the research is that it
-demonstrates the potential of both creative and digital approaches for
+demonstrates the potential \MS{of the synergy between creative and digital approaches} of both creative and digital approaches for
 enabling meaningful engagement with the Cultural Heritage, while improving the
 well-being of the participants as well as their sense of community and place.
 \end{abstract}
@@ -184,9 +188,9 @@ computing~Media arts}
 \section{Introduction} In recent years, the development of graphics
 technologies has focused on easing the task of recording, classifying and
 preserving cultural assets (e.g. museum objects, heritage buildings). However,
-there is a current shift from researching how artefacts might
-benefit from these technologies to understanding how communities can
+there is a current shift from researching how artefacts might benefit from these technologies to understanding how communities can
 participate in the process of identifying and interpreting the heritage which is relevant to them. 
+
 
 
 % \begin{figure}[b]
@@ -199,7 +203,7 @@ participate in the process of identifying and interpreting the heritage which is
 %   \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
 % \end{figure}
 
-Until now, communities have rarely had an input into which heritage to preserve.
+\MS{For instance, until now} Until now, communities have rarely had an input into which heritage to preserve.
 Their participation in this process might provide new insights into which
 heritage is important for their community. But most importantly, it will allow to explore the benefits for people in engaging in this process, including in exploring their identity. In this way, engagement with heritage might lead to benefits such as improvements of people's wellbeing and resilience. 
 
@@ -435,11 +439,14 @@ augmented content on the map. Hence, important requirements were to keep high
 framerates as well as to include content from every child. This meant that the
 houses and their content were prioritised for digitisation. Other crafted objects, 
 such as those containing foliage, feathers and wire were deemed too challenging 
-for their digitisation during this stage of the project.
+for their inclusion in the AR experience during this stage of the project.
 
-The first task was to produce the 32 3D models of the boxes as well as to
+The first task was to produce the 3D models of the boxes as well as to
 digitise all content inside the boxes. A mixed approach was used to create the
-3D models of the houses. Given the fact all houses are based on a physical box
+3D models of the houses. We trialed to methods which can potentially produce suitable results for generating this type of experiences. These include 3D modelling and photogrammetry for large-scale digitisation. Both of these will be explained in the following subsection.
+
+\subsection{3D modelling}
+Given the fact all houses are based on a physical box
 which can be represented by a cuboid (see Figure~\ref{fig:boxes}), the use of
 3D scanning or photogrammetry was discarded in favour of 3D modelling the
 boxes using the modelling tool Blender\cite{blender}. 
@@ -491,7 +498,6 @@ Figure~\ref{fig:3Dhouse}.
 
 
 
-
 \begin{figure}[ht] \centering
 \includegraphics[width=\linewidth]{images/models.PNG} \caption{3D model
 of houses with and without texture} \label{fig:3Dhouse} 
@@ -531,11 +537,11 @@ of children detailing local geographies, journeys from home to school and
 objects in the environment.} \label{fig:drawingmaps} 
 \end{figure}
 
-Moreover, objects crafted in clay were 3D scanned using the Artec3D handheld
-3D scanner. Additional 3D models were accessed from a relevant project
-\cite{14f05b94a1844f5e850c87fc9d042c59}. This project undertook the
-digitisation of public sculptures in the same geographical area using a
-crowdsourcing approach and published the resulting 3D content on the web.
+% Moreover, objects crafted in clay were 3D scanned using the Artec3D handheld
+% 3D scanner. Additional 3D models were accessed from a relevant project
+% \cite{14f05b94a1844f5e850c87fc9d042c59}. This project undertook the
+% digitisation of public sculptures in the same geographical area using a
+% crowdsourcing approach and published the resulting 3D content on the web.
 
 All content had to be post-processed in order to make it web-ready for the AR
 experience. This required developing workflows for the production of 3D meshes
@@ -548,7 +554,87 @@ them through the imageoptim web service \cite{ImageOptim}.
 % 2048x2048, 512x1024) to facilitate loading.  The images produced used a final
 % resolution of 96dpi.
 
-The glTF file format was used for encoding the 3D models and their animation
+\subsection{Photogrammetry}
+\KR{add work in photogrammetry}
+
+
+Colour calibration
+1.  Photograph Xrite colour checker, use RAW. The room is dark with two side lights from the area of acquisition.
+
+2.  Using Lightroom Classic export the image in DNG 
+Profile is generated.
+
+Image acquisition 
+Prepare the house by avoided convex areas.
+
+1.  Side surface is added to the house
+2.  Place object and scale bar in the following setup
+3.  White image of page – blank page
+
+4.  Check for focus/ exposure/aperture/ISO
+Aperture could be F/11, any larger causes  problems with the alignment of camera. 
+Check on diffraction or any other  issue impacting the large depth of field or low aperture.
+Everything should be shot at ISO100
+5.  3 rounds of 20 degrees each image: 1 landscape and 2 vertical in inverted positions
+6.  Photograph  number: 360/20 = 18 images minimum x 3 = 54
+Resilience
+
+After photography:
+7.  Save RAW to hardrive
+8.  Images are imported to lightroom classic. They are white balanced by using a white page; and then the colour calibration is applied.
+9.  Images are then exported as JPEG for processing in Metashape. I have tried using TIFF, but this fails the alignment of camera. It seems to be from a process of  too much detail in the background which is being detected (given the high resolution of the images). Background needs to be masked as suggested here: https://www.agisoft.com/forum/index.php?topic=11920.0. But have not had time to experiment.
+Process all of them with myscipt.py in Python.
+
+Once they are  finished, open each project in Metashape.
+We are using one of the following scale bars
+% http://culturalheritageimaging.org/What_We_Offer/Gear/Scale_Bars/
+
+5cm Scale Bars (2)
+ 
+Each bar uses 2 non-coded circular cross-type targets. Centers of each target are approximately 5cm apart. Each bar’s overall dimensions are 10cm x 6cm tall.
+
+In the software, we need to:
+1.  Detect markers – cross (non coded)
+ 
+
+This will identify the points in the marker bar.
+ 
+Then select  the two points and add a scale bar as follows.
+ 
+
+To the distance add the value 0.05003 and refresh the model.
+ 
+
+2.  Duplicate the model
+3.  Remove the excess geometry, including the measurement bar.
+4.  Select Mesh -> decimate to 5,000 triangles (no replace the default model)
+5.  Workflow –> build texture at 1024
+
+
+
+
+
+\begin{figure}[ht] \centering
+\includegraphics[width=1\linewidth]{images/metashape.png}
+\caption{metashape.} \label{fig:drawingmaps} 
+\end{figure}
+
+
+
+\begin{figure}[ht] \centering
+\includegraphics[width=0.45\linewidth]{images/m1tex_80x80.png}
+\includegraphics[width=0.45\linewidth]{images/m2tex_80x80.png}
+\caption{texture patches} \label{fig:drawingmaps} 
+\end{figure}
+
+
+\begin{figure}[ht] \centering
+\includegraphics[width=0.45\linewidth]{images/domtex1.png}
+\includegraphics[width=0.45\linewidth]{images/domtex2.png}
+\caption{dominant} \label{fig:drawingmaps} 
+\end{figure}
+
+Finally, the glTF file format was used for encoding the 3D models and their animation
 for the AR experience. glTF (GL Transmission Format) is a common specification
 for the efficient transmission and loading of 3D scenes and models, especially
 by web applications \cite{khronos}. It reduces both the size of 3D resources
@@ -557,7 +643,6 @@ full scene description in JSON format, which includes node hierarchy, cameras,
 and materials and it also contains descriptor information about animations and
 meshes.
 
-\KR{add work in photogrammetry}
 
 \section{Augmented Reality (AR) Map Development} \label{tech} Normally, the
 outcomes of psycho-geography and participatory approaches, which are not
