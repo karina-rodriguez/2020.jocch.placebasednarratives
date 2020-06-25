@@ -9,7 +9,8 @@
 \usepackage{natbib}
 %\usepackage{afterpage}  % for float-page placement trick
 \usepackage{placeins}
-
+\usepackage{gensymb}
+\usepackage{amssymb}
 \input widebar
 
 \usepackage[normalem]{ulem}  % for strike-through (\sout)
@@ -208,7 +209,7 @@ heritage is important for their community. But most importantly, it will allow p
 
 Computer graphics technologies have an important role to play in \sout{this process} community engagement activities. They can be used to generate visually rich 3D environments for people to interact with and can underpin a high-level of creativity in the process of engaging with heritage. However, limited research has been done in this area.  The research presented in this paper aims to address this gap. Following our research presented in \cite{6b8314fd76a64d3f86fd627505cc29e9} \MS{this reference does not appear correctly}, this paper expands \sout{on our research} towards exploring how entry barriers can be lowered for a
 wider set of audiences to \sout{connect} enhance the connections with their local heritage outside museum
-settings. In particular, \sout{it} the paper expands the theoretical context in which the research is conceptualised, as well as presents a digitisation pipeline \sout{which allow} allowing to capture a wide variety of creative narrative forms based on photogrammetry. 
+settings. In particular, \sout{it} the paper expands the theoretical context in which the research is conceptualised, as well as presents alternative digitisation pipeline allowing to capture a wide variety of creative narrative forms based on non-image  and image based 3D modeling. 
 
 In this research, the term \textit{place-based
 narratives} is used to refer to the narratives linked to \sout{the}
@@ -336,11 +337,11 @@ creative development of narratives, capturing narratives through digital
 technology, wider engagement with the community and evaluation.
 
 
-\begin{figure}[b]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\linewidth]{images/method}
-  \caption{\label{fig:pot}
-    Late Iron Age funerary urn from Saltdean, Sussex (UK).}
+  \includegraphics[width=0.3\linewidth]{images/method}
+\caption{Methodology for engaging with communities deployed by the research}
+\label{fig:method}
 \end{figure}
 
 % \begin{figure}[b]
@@ -391,12 +392,19 @@ material.
 
 There was no involvement of digital technologies at this stage, as it was
 decided children could explore more freely their environment without the
-mediation of a digital device. Instead, each child produced a decorated box
+mediation of a digital device. We used crafted elements that represented 
+the narratives regarding the journeys children undertake from home to school. 
+In order to provide a starting point, we use the concept of \emph{home} as a
+starting point and each child produced a decorated box
 which represented their house as illustrated by Figure~\ref{fig:boxes}. This
 was the first observation task as many children had not, until that point,
-really paid attention to the fa\c{c}ade of their houses. Boxes were used both
-as markers and containers of the child's personal narrative. There were no
-limitations on what material children could use to capture their narratives.
+really paid attention to the fa\c{c}ade of their houses. 
+
+
+Box-houses were used both
+as geographical markers and containers of additional elements of the child's personal narrative. 
+There were no
+limitations on what material children could use to capture their narratives of their own journeys.
 As a result, crafted elements were created from a mixture of materials such as
 clay, cardboard, foam, plastic, wire, foliage, feathers.
 Figure~\ref{fig:artwork}-left illustrates a mixture of the produced crafted materials
@@ -412,7 +420,7 @@ interpretative narratives and the collective journeys made by the children, all
 converging at the shared community of school (see Figure~\ref{fig:artwork}). 
 
 \begin{figure}[ht] \centering
-\includegraphics[width=\linewidth]{images/variousassets.jpg}
+\includegraphics[width=0.7\linewidth]{images/variousassets.jpg}
 \caption{Crafted objects produced during the workshops documenting place-based
 narratives} \label{fig:artwork} \end{figure}
 
@@ -427,220 +435,7 @@ The next steps in the methodology are explained in the following sections.
 %-------------------------------------------------------------------------
 \section{Digitisation of artwork} 
 \label{dig} 
-
-\subsection{Digitisation of 3D scene for AR} \sout{There were} Several considerations
-were taken into account \sout{made} in order to digitise the physical artwork using 3D technologies. \sout{These}
-Decisions were mostly driven by the fact that \sout{the content} the crafted material was going to be rendered as
-augmented content on the map. Hence, important requirements were to keep high
-framerates as well as to include content from every child. This meant that the
-houses and their content were prioritised for digitisation. Other crafted objects, 
-such as those containing foliage, feathers and wire were deemed too challenging 
-for their inclusion in the AR experience during \sout{this stage} the first iterations of the project.
-
-Hence, the first task was to produce the 3D models of the \sout{boxes} box-houses as well as to
-digitise all content inside the boxes. A mixed approach was used to create the
-3D models of the houses. We trialed \sout{to} two methods which can potentially produce suitable results for generating this type of experiences. These include 3D modelling and photogrammetry for large-scale digitisation. Both of these will be explained in the following subsections.
-
-\subsection{3D modelling}
-Given the fact that all houses are based on a physical box
-which can be represented by a cuboid (see Figure~\ref{fig:boxes}), the use of
-3D scanning or photogrammetry was discarded in favour of 3D modelling the
-boxes using the modelling tool Blender\cite{blender}. 
-
-
-\begin{figure}[ht] \centering
-\includegraphics[width=\linewidth]{images/boxes.png} \caption{Example
-of physical model houses crafted by children depicting their own houses}
-\label{fig:boxes} \end{figure}
-
-In Blender \sout{the Blender program}, simple primitives, such as cubes and planes, were used
-to create the shape of each house. The geometry of each house began \sout{geometries of the houses each began} as
-a simple cube, with additions such as balconies, porches or roofs being
-created through the addition of planes.
-
-
-The textures for each house were created from images taken with a digital
-camera. The camera used was a mirrorless Sony a7R III with a Sigma 1:1.4 DG
-macro lens. The houses were placed on a 360 electronic turntable, with two
-Elinchrom 1000 ELC Pro HD lights with Elinchrom Rotalux softboxes used to
-provide diffuse lighting. This setup ensured that the textures for each side
-of the cuboid could be captured with some degree of automation while ensuring
-high quality results.
- 
- The number of photos required for each house depended on the geometry of the
- house. Some houses required only one image (of the fa\c{c}ade) with a simple
- cardboard texture used for all other faces, while others needed up to four
- (one for each side). Many of the houses required additional images due to
- features such as roofs or gutters. The images were taken at an angle
- perpendicular to each face in order to avoid any perspective effect. 
-
- \begin{figure}[ht] \centering
-\includegraphics[width=0.49\linewidth]{images/za_tex_template.png}
-\includegraphics[width=0.49\linewidth]{images/za_tex.jpg}
-\caption{Example of unwrapped texture of house} \label{fig:pattern}
-\end{figure}
-
-
-After all the houses had been photographed, the next step was to create the
-texture for each 3D model. This was done using the photo editing software
-paint.net \cite{paintnet}. First of all, a rough blueprint (see
-Figure~\ref{fig:pattern}-left) of each house had to be drawn with
-approximately the right measurements so as to avoid distorting the texture
-when applying it to the mesh. The images on each side were cropped to fit in
-this blueprint as illustrated in Figure~\ref{fig:pattern}. The resulting
-textures were then imported into Blender. The 3D models were UV Unwrapped and
-aligned with the texture. The final 3D model is shown in
-Figure~\ref{fig:3Dhouse}. 
-
-
-
-\begin{figure}[ht] \centering
-\includegraphics[width=\linewidth]{images/models.PNG} \caption{3D model
-of houses with and without texture} \label{fig:3Dhouse} 
-\end{figure}
-
-A further modelling task was to produce an animation for each 3D model. This
-animation simulates the house `roof' opening and closing in a similar way
-which people can open and close the physical box. This was implemented using
-keyframes and transformations on the roof sub-objects, and each animation
-lasts for 60 frames. Four animations were modelled which correspond to the
-four different states a house can be in: 
-
-\begin{itemize} 
-  \item \textbf{Open:}
-The roof has been rotated 180 degrees by its base, exposing the inside of the
-box. 
-\item \textbf{Opening:} Transition animation interpolated between open
-and closed. 
-\item \textbf{Close:} The initial state.  
-\item \textbf{Closing:} Transition animation interpolated between closed and open. 
-
-\end{itemize}
-
-
-The drawings and other written content inside the boxes were scanned using a
-flat-bed scanner. Figure \ref{fig:drawingmaps} shows examples of this digital
-content. Further editing was done to the images in order to blur personal
-information, for example names and addresses. The images were applied as
-textures to 3D planes so that they can be visualised as a 3D model.
-
-\begin{figure}[ht] \centering
-\includegraphics[width=0.6\linewidth]{images/lkp1.jpg}
-\includegraphics[width=0.6\linewidth]{images/mgp2.jpg}
-\includegraphics[width=0.6\linewidth]{images/fhp1.jpg} 
-\caption{Drawings
-of children detailing local geographies, journeys from home to school and
-objects in the environment.} \label{fig:drawingmaps} 
-\end{figure}
-
-% Moreover, objects crafted in clay were 3D scanned using the Artec3D handheld
-% 3D scanner. Additional 3D models were accessed from a relevant project
-% \cite{14f05b94a1844f5e850c87fc9d042c59}. This project undertook the
-% digitisation of public sculptures in the same geographical area using a
-% crowdsourcing approach and published the resulting 3D content on the web.
-
-All content had to be post-processed in order to make it web-ready for the AR
-experience. This required developing workflows for the production of 3D meshes
-to be of suitable size/quality for distributing them over the web. 
-
-Moreover, the textures had to be optimised for web delivery as the initial images were
-produced with very high resolution and file size. This was done by running
-them through the imageoptim web service \cite{ImageOptim}.  
-%Furthermore, all images had to be resized to dimensions which were powers of two (e.g.
-% 2048x2048, 512x1024) to facilitate loading.  The images produced used a final
-% resolution of 96dpi.
-
-\subsection{Photogrammetry}
-\KR{add work in photogrammetry}
-
-
-Colour calibration
-1.  Photograph Xrite colour checker, use RAW. The room is dark with two side lights from the area of acquisition.
-
-2.  Using Lightroom Classic export the image in DNG 
-Profile is generated.
-
-Image acquisition 
-Prepare the house by avoided convex areas.
-
-1.  Side surface is added to the house
-2.  Place object and scale bar in the following setup
-3.  White image of page – blank page
-
-4.  Check for focus/ exposure/aperture/ISO
-Aperture could be F/11, any larger causes  problems with the alignment of camera. 
-Check on diffraction or any other  issue impacting the large depth of field or low aperture.
-Everything should be shot at ISO100
-5.  3 rounds of 20 degrees each image: 1 landscape and 2 vertical in inverted positions
-6.  Photograph  number: 360/20 = 18 images minimum x 3 = 54
-Resilience
-
-After photography:
-7.  Save RAW to hardrive
-8.  Images are imported to lightroom classic. They are white balanced by using a white page; and then the colour calibration is applied.
-9.  Images are then exported as JPEG for processing in Metashape. I have tried using TIFF, but this fails the alignment of camera. It seems to be from a process of  too much detail in the background which is being detected (given the high resolution of the images). Background needs to be masked as suggested here: https://www.agisoft.com/forum/index.php?topic=11920.0. But have not had time to experiment.
-Process all of them with myscipt.py in Python.
-
-Once they are  finished, open each project in Metashape.
-We are using one of the following scale bars
-% http://culturalheritageimaging.org/What_We_Offer/Gear/Scale_Bars/
-
-5cm Scale Bars (2)
- 
-Each bar uses 2 non-coded circular cross-type targets. Centers of each target are approximately 5cm apart. Each bar’s overall dimensions are 10cm x 6cm tall.
-
-In the software, we need to:
-1.  Detect markers – cross (non coded)
- 
-
-This will identify the points in the marker bar.
- 
-Then select  the two points and add a scale bar as follows.
- 
-
-To the distance add the value 0.05003 and refresh the model.
- 
-
-2.  Duplicate the model
-3.  Remove the excess geometry, including the measurement bar.
-4.  Select Mesh -> decimate to 5,000 triangles (no replace the default model)
-5.  Workflow –> build texture at 1024
-
-
-
-
-
-\begin{figure}[ht] \centering
-\includegraphics[width=1\linewidth]{images/metashape.png}
-\caption{metashape.} \label{fig:drawingmaps} 
-\end{figure}
-
-
-
-\begin{figure}[ht] \centering
-\includegraphics[width=0.45\linewidth]{images/m1tex_80x80.png}
-\includegraphics[width=0.45\linewidth]{images/m2tex_80x80.png}
-\caption{texture patches} \label{fig:drawingmaps} 
-\end{figure}
-
-
-\begin{figure}[ht] \centering
-\includegraphics[width=0.45\linewidth]{images/domtex1.png}
-\includegraphics[width=0.45\linewidth]{images/domtex2.png}
-\caption{dominant} \label{fig:drawingmaps} 
-\end{figure}
-
-Finally, the glTF file format was used for encoding the 3D models and their animation
-for the AR experience. glTF (GL Transmission Format) is a common specification
-for the efficient transmission and loading of 3D scenes and models, especially
-by web applications \cite{khronos}. It reduces both the size of 3D resources
-and the execution processing required to decompress and use them. It stores a
-full scene description in JSON format, which includes node hierarchy, cameras,
-and materials and it also contains descriptor information about animations and
-meshes.
-
-
-\section{Augmented Reality (AR) Map Development} \label{tech} Normally, the
+Normally, the
 outcomes of psycho-geography and participatory approaches, which are not
 mediated by technologies, are lost shortly after the process of engaging with
 communities. The reason is that, as demonstrated by the resulting crafted
@@ -657,6 +452,191 @@ These audiences include other members of the same community, audiences who are
 new to the geographical area and other stakeholders who might have an interest
 in better understanding which elements of the cultural landscape are
 significant to the community.
+
+Several considerations were taken into 
+account in order to digitise the physical artwork using 3D technologies. Decisions were mostly driven by the fact that the process must be scalable to deal with large amount of crafted elements, and that the crafted material was going to be rendered as
+augmented content on the map. Hence, important requirements were to design workflows that provided content from every child, produced high-quality content and that enable to produce good quality representations which enabled to keep high
+framerates. This meant that the
+box-houses and their content were prioritised for digitisation amongs other crafted elements.
+Other crafted objects, 
+such as those containing foliage, feathers and wire were deemed too challenging 
+for their inclusion in the AR experience during the first iterations of the project.
+
+% Hence, we prioritiised 3D models of the box-houses as well as to
+% digitise all content inside the boxes.
+% A mixed approach was used to create the 3D models of the houses. 
+We trailed two methods which produce suitable results for digitising this type of visual content. For both methods we used a mirrorless Sony a7R III with a Sigma 1:1.4 DG
+macro lens. The box-houses were placed on a 360 electronic turntable, with two
+Elinchrom 1000 ELC Pro HD lights with Elinchrom Rotalux softboxes used to
+provide diffuse lighting. This setup ensured that the process had some degree of automation while ensuring
+high quality results.
+
+Afterwards, we produced 3D models both by non-image 3D modelling and image based 3D modelling, also known as Structure from Motion (SfM). The latter process was deemed to be the most suitable for large-scale digitisation in such as way which maintains the visual quality of the narrative forms produced. These will be explained in the following subsections.
+
+\subsection{Digitisation by 3D modelling}
+Given the fact that all crafted objects are based on a physical box
+which can be represented by a cuboid (see Figure~\ref{fig:boxes}), the use of
+3D scanning or photogrammetry was discarded in favour of 3D modelling the
+boxes using the modelling tool Blender\cite{blender}. 
+
+
+\begin{figure}[ht] \centering
+\includegraphics[width=0.7\linewidth]{images/boxes.png} \caption{Example
+of physical model houses crafted by children depicting their own houses}
+\label{fig:boxes} \end{figure}
+
+In Blender, simple primitives, such as cubes and planes, were used
+to create the shape of each box-house. The geometry began as
+a simple cube, with additions such as balconies, porches or roofs being
+created through the addition of planes.
+
+
+The textures for each box-house were created from images taken with the digital
+camera. The number of photos required for each box-houses depended on its complexity. Some required only one image (of the fa\c{c}ade) with a simple
+ cardboard texture used for all other faces, while others needed up to four
+ (one for each side). Many of the box-houses required additional images due to
+ features such as roofs or gutters. The images were taken at an angle
+ perpendicular to each face in order to avoid any perspective effect. 
+
+%  \begin{figure}[ht] \centering
+% \includegraphics[width=0.49\linewidth]{images/za_tex_template.png}
+% \includegraphics[width=0.49\linewidth]{images/za_tex.jpg}
+% \caption{Example of unwrapped texture of house} \label{fig:pattern}
+% \end{figure}
+
+
+The next step was to create the
+texture for each 3D model. This was done using a texture blueprint of each box-house and fitting cropped images from each side of the boxes. The resulting
+textures were then imported into Blender. The 3D models were UV Unwrapped and
+aligned with the texture. The final 3D model is shown in
+Figure~\ref{fig:3Dhouse}. 
+
+\begin{figure}[ht] \centering
+\includegraphics[width=\linewidth]{images/models.PNG} \caption{3D model
+of houses with and without texture} \label{fig:3Dhouse} 
+\end{figure}
+
+A further modelling task was to produce an animation for each 3D model. This
+animation simulates the box-house `roof' opening and closing in a similar way
+which people can open and close the physical box. This takes advantage of the simplicity of the modelling approach and enable to create interesting effects during the AR experience.
+
+The animation was implemented using
+keyframes and transformations on the roof sub-objects, and each animation
+lasts for 60 frames. Four animations were modelled which correspond to the
+four different states a box-house can be in: 
+
+\begin{itemize} 
+  \item \textbf{Open:}
+The roof has been rotated 180 degrees by its base, exposing the inside of the
+box. 
+\item \textbf{Opening:} Transition animation interpolated between open
+and closed. 
+\item \textbf{Close:} The initial state.  
+\item \textbf{Closing:} Transition animation interpolated between closed and open. 
+
+\end{itemize}
+
+
+% The drawings and other written content inside the boxes were scanned using a
+% flat-bed scanner. Figure \ref{fig:drawingmaps} shows examples of this digital
+% content. Further editing was done to the images in order to blur personal
+% information, for example names and addresses. The images were applied as
+% textures to 3D planes so that they can be visualised as a 3D model.
+
+% \begin{figure}[ht] \centering
+% \includegraphics[width=0.6\linewidth]{images/lkp1.jpg}
+% \includegraphics[width=0.6\linewidth]{images/mgp2.jpg}
+% \includegraphics[width=0.6\linewidth]{images/fhp1.jpg} 
+% \caption{Drawings
+% of children detailing local geographies, journeys from home to school and
+% objects in the environment.} \label{fig:drawingmaps} 
+% \end{figure}
+
+% Moreover, objects crafted in clay were 3D scanned using the Artec3D handheld
+% 3D scanner. Additional 3D models were accessed from a relevant project
+% \cite{14f05b94a1844f5e850c87fc9d042c59}. This project undertook the
+% digitisation of public sculptures in the same geographical area using a
+% crowdsourcing approach and published the resulting 3D content on the web.
+
+
+\subsection{Digitisation by image-based 3D modelling}
+In order to deal with a potentially large amount of crafted items, we
+experimented with a semi-automated image-based workflow. The main motivation for this is that it will allow us to process a wider variety of shapes without having to deal with modelling every customisation done to the crafted items. The main challenges which needed to be addressed was to ensure the visual quality of the items by capturing both the shape and the colour accurately. 
+
+
+All box-houses were created from a similar cardboard box as a starting point, which were customised using paper of various colours and crayons. Although areas coloured using crayons displayed some shine when catching beams of light, most material was fairly non-reflective. We followed a similar process than \cite{Gaiani_2017} to ensure colour fidelity of the artefacts. This ensured that the 3D models which resulted from the process had a good and uniform quality in particular for the cardboard textures.
+
+
+We made use of the X-Rite ColorChecker for the colour characterization process in the lighting environment in which we performed the digitisation process. The X-Rite ColorChecker automatically detects the colour checker and produces an ICC profile which is then applied to all images.
+
+
+Thereafter, the workflow required of an operator taking a set of images using the
+automated setup. For this, each box-house was placed on a turntable with a white background and photographed every $20\degree$ over three-full $360\degree$ rotations. For each rotation, the camera is rotated $90\degree$, generating in total between 54 - 60 images. We also made use of a measuring bar which uses circular cross-type targets. This allows to introduce scale to the 3D model when this is later processed.
+
+The digital images were shot using ISO 100, and an aperture of F/11. The images were shot in RAW and later processed using the ICC profile before exporting them as a JPEG to be used during the image-based 3D modelling process. The sets of images are then automatically processed by a Python script which uses the Agisoft Metashape API 
+\cite{Metashapesite}. This script reads the images from a folder, processes a 3D model, detect the targets captured in the image, scales and centres the model as shown in Figure \ref{fig:metashape}. All of this process is fully automatic.
+
+
+\begin{figure}[ht] \centering
+\includegraphics[width=1\linewidth]{images/metashape.png}
+\caption{3D model of the box-house generated through a photogrammetry automated process} \label{fig:metashape} 
+\end{figure}
+
+
+Thereafter, a manual process is required to remove the excess geometry, including the measuring bar. Finally, the resulting 3D model is decimated to a size of 5,000 triangles and a texture with a reduced resolution. All content had to be post-processed in order to make it web-ready for the AR
+experience. This required developing workflows for the production of 3D meshes
+to be of suitable size/quality for distributing them over the web. 
+% Moreover, the textures had to be optimised for web delivery as the initial images were
+% produced with very high resolution and file size. This was done by running
+% them through the imageoptim web service \cite{ImageOptim}.  
+%Furthermore, all images had to be resized to dimensions which were powers of two (e.g.
+% 2048x2048, 512x1024) to facilitate loading.  The images produced used a final
+% resolution of 96dpi.
+For this, the glTF file format was used for encoding the 3D models and their animation
+for the AR experience. glTF (GL Transmission Format) is a common specification
+for the efficient transmission and loading of 3D scenes and models, especially
+by web applications \cite{khronos}. It reduces both the size of 3D resources
+and the execution processing required to decompress and use them. It stores a
+full scene description in JSON format, which includes node hierarchy, cameras,
+and materials and it also contains descriptor information about animations and
+meshes.
+
+
+\subsection{Measuring colour fidelity}
+Ensuring and measuring colour fidelity of 3D models in an image-based 3D modelling process is still an open research matter. As such, we designed a method to evaluate the resulting colour fidelity of the 3D models being produced by the digitisation process. For this, we made the assumption that all areas of the 3D model which display a cardboard texture will have very similar colours.
+
+Our method uses small patches (80 by 80 pixels) which are extracted from textures of two different 3D models, as shown in Figure \ref{fig:texturepatches}. We select areas that correspond to the non-decorated areas of the cardboard boxes as we assume these two areas must be similar in colour. 
+
+
+We make use of the $\Delta$E (Delta E) measurement to understand the differences perceived between colours from the two different textures. $\Delta$EE is a metric for understanding how the human eye perceives colour difference, which was proposed by the International Commission on Illumination (CIE). On a typical scale, the Delta E value will range from 0 to 100. The difference of less than 1.0 between two colours means that the difference is not perceptible by human eyes. Any values above 11 indicate colours are more similar than opposite, while a value of 100 means that colours are exact opposite. We hypothesised that getting values between 1-10 meant the changes in texture colour will be perceptible only through close observation or at a glance in the worst case scenario.
+
+In order to calculate this metric, we firstly have to select the best colours in the texture patch to compare. For this, we look for the dominant colours on a given patch using K-means cluster analysis. By using this method, we produce a distribution of the most 5 dominant colours as illustrated in Figure \ref{fig:distribution}. We then test the most dominant colours against the most dominant colours of the other texture.
+
+
+\begin{figure}[ht] \centering
+\subcaptionbox{Two 80 x 80 pixel texture patches from different 3D models\label{fig:textures}\linebreak}
+  {\includegraphics[width=0.45\linewidth]{images/m1tex_80x80.png}
+   \includegraphics[width=0.45\linewidth]{images/m2tex_80x80.png}
+  }\\[-0.5\baselineskip]
+  \subcaptionbox{Five most dominant colours on the texture and percentage distribution\label{fig:distribution}}
+  {\includegraphics[width=0.45\linewidth]{images/domtex1.png}
+   \includegraphics[width=0.45\linewidth]{images/domtex2.png}
+  }\\[-0.5\baselineskip]
+
+ \caption{Texture patches used for evaluation quality of colour fidelity across different 3D models resulting from the image-based 3D modelling process} 
+ \label{fig:texturepatches} 
+\end{figure} 
+
+
+Table presents a comparison across the five most dominant colours. To calculate this, we take the top 5 most dominant colours of a texture patch and convert  them to the CIELAB color space. We then apply the CIELAB 2000 $\Delta$E algorithm using Python colormath library. 
+
+
+
+Our results demonstrate that the change in visual perception between the most dominant colours of the two texture patches fall within the values of 10. This means our process produces low resolution textures which have a good and uniform quality in terms of colour. This allows us to produce a standardised process which can be deployed for the large-scale content, while ensuring the visual quality of the outcomes.
+
+
+
+\section{Augmented Reality (AR) Map Development} \label{tech} 
 
 While the process for digitisation is better understood by the research
 community - in terms of deciding which technologies to use for which artefacts
@@ -801,8 +781,8 @@ give suitable latency and framerate with browsers, such as Firefox with WebVR.
 
 
 \begin{figure}[ht] \centering
-\includegraphics[width=0.6\linewidth]{images/ARcontentw_sculpture.png}
-\includegraphics[width=0.6\linewidth]{images/animationARexperience_zoom.png}
+\includegraphics[width=0.48\linewidth]{images/ARcontentw_sculpture.png}
+\includegraphics[width=0.48\linewidth]{images/animationARexperience_zoom.png}
 \caption{AR Map experience showing the different house models and a sculpture in the geographical area (left),
  animation to open the house is triggered when the user taps on a house model providing a visualisation
  of the child's map shown in Figure~\ref{fig:drawingmaps}  } \label{fig:ARexperience}
@@ -920,8 +900,8 @@ large amount in 80 gsm recycled paper and we distributed them amongst the
 visitors of the museum and sent extra copies to the school.
 
 \begin{figure}[ht] \centering
-\includegraphics[width=0.6\linewidth]{images/IMG_20190720_103105.jpg}
-\includegraphics[width=0.6\linewidth]{images/IMG_20190720_151644.jpg}
+\includegraphics[width=0.48\linewidth]{images/IMG_20190720_103105.jpg}
+\includegraphics[width=0.48\linewidth]{images/IMG_20190720_151644.jpg}
 \caption{Setup at the Hove museum for the celebration of the artwork and
 release of the AR application, top) area with the original map, bottom) area
 where people can engage in the creative process} \label{fig:museum}
