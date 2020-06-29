@@ -11,6 +11,8 @@
 \usepackage{placeins}
 \usepackage{gensymb}
 \usepackage{amssymb}
+\usepackage{array}
+
 \input widebar
 
 \usepackage[normalem]{ulem}  % for strike-through (\sout)
@@ -71,8 +73,8 @@
 % The "title" command has an optional parameter, allowing the author to define a "short title" to be used in page headers.
 
 
-\title[Creative Experiences for engaging communities with Cultural Heritage]%
-      {Creative Experiences for Engaging Communities with Cultural Heritage through  Place Based Narratives}
+\title[Creative Experiences for engaging communities with cultural heritage]%
+      {Creative Experiences for Engaging Communities with Cultural Heritage through Place-Based Narratives}
 %
 % The "author" command and its associated commands are used to define the authors and their affiliations.
 % Of note is the shared affiliation of the first two authors, and the "authornote" and "authornotemark" commands
@@ -129,28 +131,12 @@ for dissemination to a wider audience\vspace*{0.5\baselineskip}}
 
 %-------------------------------------------------------------------------
 \begin{abstract} 
-\KR{need to redo this to be more in line with REF and to include two iterations}
-This research investigates how communities can
-meaningfully connect with Cultural Heritage through creative and digital
-experiences. It also explores how entry barriers can be lowered for
-a wider set of audiences to increase their participation in such experiences.
-For this, the research \sout{investigates the use of creative and narrative-based
-approaches, given the potential for stories to illuminate} deploys creative and narrative or story-based approaches as means to illuminate \sout{investigates the use of creative and narrative-based
-approaches, given the potential for stories to illuminate} different viewpoints
-and interpretations of Cultural Heritage within the community. \MS{Here the twofold contribution was not clear and the word contribution was mentioned twice, hence I have changed that to reflect the two parts of contribution}
-The contribution of the
-paper is twofold
-\sout{contribution is}, as it includes a novel approach for developing and re-telling communities' narratives
-linked to people, objects, sites and events in the urban landscape; while also proposing a workflow to communicate these narratives through \emph{Augmented
+This research explores technologically advanced means to enhance audiences' connection with cultural heritage assets through participatory creative methods which particularly reinforce young people's sense of identity and well-being, during sensitive ``transitional'' periods of their lives. Hence, the research investigates how communities can
+meaningfully connect with cultural heritage through creative and digital
+experiences, while aiming at lowering the entry barriers to increase audiences' participation.
+For this, the research deploys creative and narrative or story-based approaches to illuminate different viewpoints and interpretations of cultural heritage within communities. The contribution of the paper is twofold, as it includes a novel approach for developing and re-telling communities' narratives linked to people, objects, sites and events in the urban landscape. At the same time, it proposes a workflow to communicate these narratives through \emph{Augmented
 Reality (AR) Maps}. These are physical maps with augmented digital narratives, delivered through \emph{Immersive Web} technology. This concept is
-proposed as a means to document and disseminate the narratives in a way \sout{which
-can enhance} that enhances the public understanding and appreciation of objects and sites \sout{in
-their} within communities. The approach was initially piloted with a class of 32 children in a local primary school in Brighton and Hove (UK) in order to understand its suitability
-for community engagement, targeting young audiences. \MS{I have added more info on the second iteration} Currently, the project has been expanded to five more schools in the area with plans to expand it further \sout{has been tested with 32 children in local
-primary school in the city of Brighton and Hove (UK) in order to understand its suitability
-for community engagement.} The significance of the research is that it
-demonstrates the potential of the synergy between creative and digital approaches \sout{of both creative and digital approaches} for
-enabling meaningful engagement with the Cultural Heritage, while improving the
+proposed as a means to document and disseminate the narratives in a way that enhances the public understanding and appreciation of objects and sites. The approach was initially piloted with a class of 32 children in a local primary school in Brighton and Hove (UK) in order to understand its suitability for community engagement, targeting young audiences. Currently, the project has been expanded to five more schools in the area with plans to expand it further. The significance of the research is that it demonstrates the potential of the synergy between creative and digital approaches for enabling meaningful engagement with the cultural heritage, while improving the
 well-being of the participants as well as their sense of community and place.
 \end{abstract}
 %------------------------------------------------------------------------- % 
@@ -187,87 +173,72 @@ computing~Media arts}
 \section{Introduction} In recent years, the development of graphics
 technologies has focused on easing the task of recording, classifying and
 preserving cultural assets (e.g. museum objects, heritage buildings). However,
-there is a current shift from researching how artefacts might benefit from these technologies (collection oriented efforts) to understanding how communities can
+there is a current shift from researching how artefacts might benefit fro these technologies (collection oriented efforts) to understanding how communities can
 participate in the process of identifying and interpreting the heritage which is relevant to them (audience oriented efforts). 
 
 
 
-\begin{figure}[b]
-  \centering
-  \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
-  {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
-  \hspace{0.5in}
-  \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
-  {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
-  \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
-\end{figure}
+% \begin{figure}[b]
+%   \centering
+%   \subcaptionbox{Puzzle-pot from the Bristol Museum \& Art Gallery (UK), photo courtesy of Andrew Maxted}
+%   {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
+%   \hspace{0.5in}
+%   \subcaptionbox{Puzzle-pot from Rez\'e Museum (France), photo courtesy of Theophane Nicola}
+%   {\includegraphics[width=0.35\linewidth]{images/IMG_7377}}
+%   \caption{\label{fig:puz}Examples of pottery puzzles in museums.}
+% \end{figure}
 
-For instance, until now \sout{Until now}, communities have rarely had an input into which heritage to present or preserve.
-\sout{Their participation} Participating in this process might provide new insights into which
-heritage is important for their community. But most importantly, it will allow people to explore the benefits \sout{for people in} of engaging in \sout{this} such process, as well as \sout{including in} exploring their own identity. In this way, engagement with heritage \sout{might} has the potential to lead to \sout{benefits such as} improvements of people's well-being and resilience. 
+For instance, until now, communities have rarely had an input into which heritage to present or preserve. Participating in this process might provide new insights into which
+heritage is important for them. But most importantly, it would allow people to explore the benefits of engaging in such process, as well as exploring their own identity and sense of belonging. In this way, engagement with heritage becomes an active experience and has the potential to lead to improvements of people's well-being and resilience. 
 
 
-Computer graphics technologies have an important role to play in \sout{this process} community engagement activities. They can be used to generate visually rich 3D environments for people to interact with and can underpin a high-level of creativity in the process of engaging with heritage. However, limited research has been done in this area.  The research presented in this paper aims to address this gap. Following our research presented in \cite{6b8314fd76a64d3f86fd627505cc29e9} \MS{this reference does not appear correctly}, this paper expands \sout{on our research} towards exploring how entry barriers can be lowered for a
-wider set of audiences to \sout{connect} enhance the connections with their local heritage outside museum
-settings. In particular, \sout{it} the paper expands the theoretical context in which the research is conceptualised, as well as presents alternative digitisation pipeline allowing to capture a wide variety of creative narrative forms based on non-image  and image based 3D modeling. 
+Computer graphics technologies have an important role to play in community engagement activities. They can be used to generate visually rich 3D environments for people to interact with and can underpin a high-level of creativity in the process of engaging with heritage. However, limited research has been done in this field.  This paper aims to address this gap. Following our research presented in \cite{6b8314fd76a64d3f86fd627505cc29e9}, this paper expands towards exploring how entry barriers can be lowered for a wider set of audiences to enhance the connections with their local heritage outside museum
+settings. In particular, the paper expands the theoretical context in which the research is conceptualised, as well as presents alternative digitisation pipelines allowing to capture a wide variety of creative narrative forms based on non-image and image based 3D modeling. 
 
 In this research, the term \textit{place-based
-narratives} is used to refer to the narratives linked to \sout{the}
-people, objects, sites and events in the urban landscape as told by the
-community. As such, the research acknowledges the important \MS{geographical is important as we discuss about place-based narratives. Could we add instead something like "spatiotemporal relationships"? It has a meaning that expands to place and time, which might be even more related to history and heritage} relationships
-between a community and the geographical \MS{if we add the word spatiotemporal then geographical should be removed} areas in which they move on a daily basis, which
-can greatly enhance the public's understanding and appreciation of objects and
-sites. 
+narratives} is used to refer to the narratives linked to people, objects, sites and events in the urban landscape as told by the community. As such, the research acknowledges the important relationships between a community and the spatiotemporal context in which they move and function on a daily basis. Exploring and helping these relationships to emerge can greatly enhance the public's understanding and appreciation of objects and sites. 
 
-The main contribution of this research is the development of creative and narrative-based
-approaches for engaging with heritage \sout{of} through place. Given the potential for stories to illuminate different viewpoints regarding Cultural Heritage assets, this approach can easily be deployed with a variety of traditional and non-traditional museum audiences, such as young children, people with disabilities, people with mental health problems and others. The methodology for the research is based on an iterative \sout{research} process, in which we firstly explore and propose the conceptual approach for
+The main contribution of the research is the development of creative and narrative-based
+approaches for engaging with heritage through place. Given the potential for stories to illuminate different viewpoints regarding Cultural Heritage (CH) assets, this approach can easily be deployed with a variety of traditional and non-traditional museum audiences, such as young children, people with disabilities, people with mental health problems and others. The methodology for the research is based on an iterative process, in which we firstly explore and propose the conceptual approach for
 the development of place-based narratives through community involvement; and
-secondly \sout{by deploying} we deploy novel technologies and workflows to support this process, \MS{here I would add something to show that it is indeed an iterative process, such as: while re-examining concepts and technologies as they emerge from the creativity sessions and participants' narrative input.}
+secondly we deploy novel technologies and workflows to support this process, while re-examining concepts and technologies as they emerge from the creativity sessions and participants' narrative input.
 
-The technical contributions of the research include a workflow to digitise creative narrative forms produced during the \sout{narrative} engagement \sout{process} sessions, as well as digital experiences to communicate these narratives to a wider audience. Given the emphasis on place, we use \emph{Augmented Reality (AR)} Maps, which are physical printed
-maps, such as a map of a geographical area or a building, with embedded
-augmented digital 3D scenes in order to provide additional layers of
-information to the user. The technology has been developed using an
+The technical contributions of the research include a workflow to digitise creative narrative forms produced during the engagement sessions, as well as digital experiences to communicate these narratives to a wider audience. Given the emphasis on place, we use \emph{Augmented Reality (AR)} Maps, which are physical printed
+maps, such as a map of a geographical area or a building, with embedded augmented digital 3D scenes in order to provide additional layers of information to the user. The technology has been developed using an
 \emph{Immersive Web} approach to ensure wider accessibility of the content.
 
 The \emph{Augmented Reality (AR) Map} concept is proposed to appeal to the
-user's curiosity and add further layers of understanding to the Cultural
-Heritage material. It is hypothesised that this approach is of interest to the
-community both in terms of user engagement and with regards to the information
-transmitted. By using their mobile devices, users can trigger additional
+user's curiosity and add further layers of understanding to the CH material. This approach can trigger the interest of the community and work as the ``hook" both in terms of user involvement and engagement, as well as with regards to the information
+transmitted and hence learning or appreciation \cite{Csikszentmihalyi1995}. By using their mobile devices, users can trigger additional
 information without being distracted from the main information conveyed by the
-map. Interactions with the digital 3D scenes embedded in the map \sout{might} include
+map. Interactions with the digital 3D scenes embedded in the map include
 the ability to visualise and interact with the narratives of communities
-recorded as a mixture of content including text, images and 3D \sout{content} objects. 
+recorded as a mixture of content including text, images and 3D objects.    
 
 By encoding the narratives as a digital element of the experience, these
 narratives can have a life of their own; evolve to take into account
 other viewpoints; survive the lifespan of the physical element; and form
-a vivid, present depiction of heritage that can be deployed by future
-generations as well \MS{I have added this about future generations}.
-Moreover, the printed element of the map can also serve as a physical
+a vivid, present depiction of heritage that can be further deployed by future
+generations. Moreover, the printed element of the map can also serve as a physical
 memento of an experience, such as a visit to a neighbourhood. In this
 way, the research conceptualises a transmedia storytelling-based
 interpretative framework for cultural heritage. This idea can be
 extended to enrich cities or artefacts in museums with multiple
-interpretative narratives \MS{I would add as it is very relevant to
-current situation " while representing different voices and embracing
-diversity in the heritage context"}.
+interpretative narratives, whilst representing different voices and embracing
+diversity in the heritage context.
 
 The approach for creating and re-telling place-based narratives was
 piloted with a community of school children in the city of Brighton and
-Hove (UK) and then expanded to five more schools in the area. \MS{I
-added the iteration} The children firstly engaged through \sout{an
-artistic} a creative process to generate place-based narratives of their
+Hove (UK) and then expanded to five more schools in the area. The children firstly engaged through a creative process to generate place-based narratives of their
 daily journeys between home and school. Thereafter, the narratives were
 converted into an AR Map that the children and their families could
-experience and share. \MS{added this about sharing experience}
+experience and share.
 
 The paper is organised as follows: Section~\ref{ref} presents related
 work in this area, Section~\ref{meth} presents the methodology used in
 this research to facilitate the creation of narratives by the community,
 while Section~\ref{dig} presents a pipeline to easily digitise physical
-craft created during the narrative process. Thereafter,
+craft produced during the narrative creative process. Thereafter,
 Section~\ref{tech} describes the technology developed for the Augmented
 Reality (AR) Maps. Section~\ref{eval} discusses preliminary evaluation
 of this research, and finally Section~\ref{conc} presents conclusions
@@ -276,16 +247,20 @@ and further work.
 
 \section{Related work} 
 \label{ref}
-This research seeks to explore creative ways to engage people with heritage of their local communities. As such, the research is contextualised within the concepts of \emph{narrative} and \emph{place}.
+\subsection{Narratives, place and identity}
+This research explores creative ways to engage people with the heritage of their local communities as means to enhance their identity and sense of belonging. As such, the research is contextualised within the concepts of \emph{narrative}, \emph{identity} and \emph{place}.
 
-We define narrative as \emph{the showing or the telling of events occurring over time} \cite{10.2307/1343711} and use the distinction proposed by Chatman's \cite{10.2307/468421} between narrative structure, manifestation (the specific medium in which the narrative is presented), content and expression (the various media through which stories can be communicated). Hence, there is an acknowledgement that narratives are not always encoded linguistically, but can also be shown through audiovisual media and artefacts \cite{PAHL2004339}.  
+Narratives, have been recognised as powerful tools to communicate information about artefacts, collections, buildings, sites, life experiences and beyond, while supporting communities in the interpretation process\cite{Kelly2010,Pine2007}. Creating a narrative or telling a story is one of the oldest activities and still amongst the most powerful ones in terms of engaging communities with content. This happens because narratives are fundamental in the ways human beings understand and make sense of themselves and the world. As Bruner \cite{Bruner1986} suggests, one of the ways that people think follows a narrative mode. The narrative mode can be described as a good story that provides verification about a person, a place, an event or the world.
 
+Stories or narratives might include real or fictional facts that are related to tangible or intangible CH heritage assets \cite{HandlerMiller2004}. A narrative in a CH site or place might revolve around an individual object, an important historical person, an interesting building or a story about it. The narrative can present information about this place with a certain level of detail under a theme (e.g. such as the journeys of the children from home to school). The narrative might also combine multiple objects and present many stories under such theme. The wealth of narratives, though, can be vast and many narratives have the capability to illuminate multiple views or interpretations, adding in this way many layers of information about life experiences.
 
-By The spatial dimension in narratives is also relevant to the study of identity as the interplay between identity and place has been widely acknowledged by the research community. Although there are discrepancies between the definition of space and place, we make use of a humanist perspective in which the focus lies in relating space to place through the experiences of human beings as agents. 
+Narratives have also different aspects and expressions. Hence, a narrative is defined as \emph{the showing or the telling of events occurring over time} \cite{10.2307/1343711}. As proposed by Chatman's \cite{10.2307/468421} there is also a distinction between narrative structure, manifestation (the specific medium in which the narrative is presented), content and expression (the various media through which stories can be communicated). Therefore, we acknowledge that narratives are not always encoded linguistically, but can also be shown through audiovisual media and artefacts \cite{PAHL2004339}. The interplay of media becomes even more obvious if we consider the constant negotiation between the physical and digital boundaries in people’s lives and identity \cite{Jordan2009}. 
 
-It is widely recognised that individual narratives are both temporal as spatial: a sequential outward movement from the \emph{safe} home to the \emph{open, unpredictable, and consequently dangerous} outside world \cite{Bruner2004-BRULAN}. Moreover, Harold et al. \cite{PROSHANSKY198357} identified that the places a child grows up in, those that he or she comes to know, prefer, and seek out or avoid contribute significantly to their individual identity. 
+The study of identity is also related to the spatial dimension in narratives, as the links between identity and place exist. As Harold et al. \cite{PROSHANSKY198357} identified, the places a child grows up in, those that he or she comes to know, prefer, and seek out or avoid contribute significantly to their individual identity.
 
+Therefore, the place-based narratives this research emphasizes, have the potential to enhance children's connections with place; support individual identity building; enhance community relations; and consequently result to strengthening young people's sense of belonging, resilience and well-being overall.
 
+\subsection{Participatory narrative development for AR}
 
 Digital approaches for creating and communicating narratives over digital media have been extensively studied in the field of Information and Communication Technologies (ICT). Within this domain, the term \emph{immersion} and \emph{interactivity} are used to refer to the ability of the media to enable the \emph{reader} to explore the non-linear narrative content, while being fully involved in the experience by incorporating multiple physical senses.
 %, typically visual, audio and touch.  
@@ -329,19 +304,16 @@ the following section will  describe methods for engagement which are
 accessible to a variety of audiences, followed by digital technologies for
 documenting and re-telling these experiences. 
 
-\KR{add text in the proposal - both for AR expeiences, and also for place, narrative and identity}
-
 %-------------------------------------------------------------------------
-\section{Methodology for engaging communities with their CH through place
-based narratives} 
+\section{Methodology for engaging communities with their CH through place-based narratives} 
 \label{meth} The methodology of the research was designed by
-a multi-disciplinary team of experts including Cultural Heritage (CH)
+a multi-disciplinary team of experts including CH
 professionals, members of a civic group, education specialists, artists,
 well-being professionals and computer scientists. In the initial stage, the
 research focused on children, as it is possible to engage with them through
-formal education. \sout{In particular} For the pilot case, the research engaged with children between
+formal education. For the pilot case, the research engaged with children between
 the ages of 10-11 studying at a local primary school, in the year before they
-move to secondary school. A second iteration of the project included more children from local schools in the final years of primary education. \MS{added this about second iteration}
+move to secondary school. A second iteration of the project includes more children from local schools in the final years of primary education.
 
 Figure~\ref{fig:method} illustrates the methodology for conducting the
 research, which includes the following stages: design of the experience,
@@ -352,7 +324,7 @@ technology, wider engagement with the community and evaluation.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.3\linewidth]{images/method}
-\caption{Methodology for engaging with communities deployed by the research}
+\caption{Methodology for engaging with communities as deployed by the research}
 \label{fig:method}
 \end{figure}
 
@@ -363,17 +335,17 @@ technology, wider engagement with the community and evaluation.
 % \label{fig:method} 
 % \end{figure}
 
-During the design of the experience \MS{shall we better say of the "experiential framework"?}, the team aimed to understand how children
-could engage with their cultural environment while \sout{addressing subjects in the} taking into account the 
+During the design of the experiential framework, the team aimed to understand how children
+could engage with their cultural environment while taking into account the 
 curriculum, stimulating their creativity and addressing their well-being
-needs. \sout{Particular} Attention was placed on identifying any particular issues
-concerning the children who \sout{will be} were involved in the experience, including any
-educational or well-being issues that might \sout{be experiencing} affect them at that point
-in time. These issues are context dependent and are likely to be \sout{affected} influenced by
+needs. Attention was placed on identifying any particular issues
+concerning the children who were involved in the experience, including any
+educational or well-being issues affecting them at that point
+in time. These issues are context dependent and are likely to be influenced by
 external factors including community cohesion, socio-economic situation and
 pressures from friends and family.
 
-Thereafter, an artist facilitated ten workshops at the \MS{added about pilot school} pilot school in order to
+Thereafter, an artist facilitated ten workshops at the pilot school in order to
 enable children to create narratives. These workshops used creative methods
 and psycho-geography techniques to explore the journeys children make from home
 to school five days a week. Psycho-geography refers to the study of the effects
@@ -402,15 +374,14 @@ geographical landscape, were created as a result of this process. These
 \emph{place-based narratives} used a mixture of physical, visual and textual
 material. 
 
-There was no involvement of digital technologies at this stage, as it was
+At this stage, there was no involvement of digital technologies, as it was
 decided children could explore more freely their environment without the
-mediation of a digital device. We used crafted elements that represented 
-the narratives regarding the journeys children undertake from home to school. 
-In order to provide a starting point, we use the concept of \emph{home} as a
-starting point and each child produced a decorated box
+mediation of a digital device. Instead, we used crafted elements that represented 
+the narratives around the journeys children undertake from home to school. 
+In order to provide a starting point, we used the concept of \emph{home}. Thus, each child produced a decorated box
 which represented their house as illustrated by Figure~\ref{fig:boxes}. This
-was the first observation task as many children had not, until that point,
-really paid attention to the fa\c{c}ade of their houses. 
+was the first observation task that enabled children -many of them for the first time-
+to really pay attention to the fa\c{c}ade of their houses. 
 
 
 Box-houses were used both
@@ -419,40 +390,39 @@ There were no
 limitations on what material children could use to capture their narratives of their own journeys.
 As a result, crafted elements were created from a mixture of materials such as
 clay, cardboard, foam, plastic, wire, foliage, feathers.
-Figure~\ref{fig:artwork}-left illustrates a mixture of the produced crafted materials
-\sout{which was produced}. Children also produced drawings or collages using a
+Figure~\ref{fig:teaser}-left illustrates a mixture of the crafted materials. Children also produced drawings or collages using a
 mixture of materials (e.g. foliage, printed images), illustrating their
-journeys (see example Figure~\ref{fig:drawingmaps}). Some children wrote
+journeys. Some children wrote
 textual content with stories of people, objects, sites and historical events they
-researched on \MS{added about historical events}. 
+researched on.
 
 Finally, all elements were organised according to their geographical location
 on a physical 3D map. This crafted artwork piece celebrates the individual
 interpretative narratives and the collective journeys made by the children, all
-converging at the shared community of school (see Figure~\ref{fig:artwork}). 
+converging at the shared community of school (see Figure~\ref{fig:teaser}). 
 
-\begin{figure}[ht] \centering
-\includegraphics[width=0.7\linewidth]{images/variousassets.jpg}
-\caption{Crafted objects produced during the workshops documenting place-based
-narratives} \label{fig:artwork} 
-\end{figure}
+% \begin{figure}[ht] \centering
+% \includegraphics[width=0.7\linewidth]{images/variousassets.jpg}
+% \caption{Crafted objects produced during the workshops documenting place-based
+% narratives} \label{fig:artwork} 
+% \end{figure}
 
 The next steps in the methodology are explained in the following sections.
 
-\textbf{\begin{figure}[ht] % %     \centering % %    
-\includegraphics[width=\linewidth]{images/IMG_7377.jpeg} % %     
-\caption{Children with artwork documenting place-based narratives of central
-Hove} 
-\label{fig:childart} 
-\end{figure}} %
+% \textbf{\begin{figure}[ht] % %     \centering % %    
+% \includegraphics[width=\linewidth]{images/IMG_7377.jpeg} % %     
+% \caption{Children with artwork documenting place-based narratives of central
+% Hove} 
+% \label{fig:childart} 
+% \end{figure}} %
 %-------------------------------------------------------------------------
 \section{Digitisation of artwork} 
 \label{dig} 
-Normally, the
+Usually, the
 outcomes of psycho-geography and participatory approaches, which are not
 mediated by technologies, are lost shortly after the process of engaging with
 communities. The reason is that, as demonstrated by the resulting crafted
-objects (Figure~\ref{fig:artwork}), while the materials which are used  are
+objects (Figure~\ref{fig:teaser}), while the materials which are used  are
 amenable to creative approaches they are not necessarily easy for
 digitisation. Hence, results from these participatory approaches are normally
 disposed of shortly after their display and are rarely disseminated to
@@ -460,36 +430,36 @@ disposed of shortly after their display and are rarely disseminated to
 
 This research explored the role of graphics technologies for i) the
 digitisation of the narratives produced in order to support their
-documentation and preservation; and ii) re-telling these narratives to others.
-These audiences include other members of the same community, audiences who are
+documentation and preservation; and ii) re-telling or sharing these narratives with others.
+Further audiences include other members of the same micro or macro community, audiences who are
 new to the geographical area and other stakeholders who might have an interest
 in better understanding which elements of the cultural landscape are
 significant to the community.
 
 Several considerations were taken into  account in order to digitise the
 physical artwork using 3D technologies. Decisions were mostly driven by
-the fact that the process must be scalable to deal with large amount of
-crafted elements, and that the crafted material was going to be rendered
-as augmented content on the map. Hence, important requirements were to
-design workflows that provided content from every child, produced
-high-quality content and that enable to produce good quality
-representations which enabled to keep high framerates. This meant that
+the fact that the process should be scalable to deal with a large amount of
+crafted elements, and the crafted material was going to be rendered
+as augmented content on the map. Hence, important requirements were: to
+design workflows that provided craft work from every child; to produce
+high-quality content; and to enable the production of good quality
+representations while keeping high framerates. This meant that
 the box-houses and their content were prioritised for digitisation
-amongs other crafted elements. Other crafted objects,  such as those
-containing foliage, feathers and wire were deemed too challenging  for
+amongst other crafted elements. Other crafted objects, such as those
+containing foliage, feathers and wire, were deemed too challenging  for
 their inclusion in the AR experience during the first iterations of the
 project.
 
 % Hence, we prioritiised 3D models of the box-houses as well as to
 % digitise all content inside the boxes.
 % A mixed approach was used to create the 3D models of the houses. 
-We trailed two methods which produce suitable results for digitising this type of visual content. For both methods we used a mirrorless Sony a7R III with a Sigma 1:1.4 DG
+Two methods with suitable results for digitising this type of visual content were trialed. For both methods we used a mirrorless Sony a7R III camera with a Sigma 1:1.4 DG
 macro lens. The box-houses were placed on a 360 electronic turntable, with two
 Elinchrom 1000 ELC Pro HD lights with Elinchrom Rotalux softboxes used to
-provide diffuse lighting. This setup ensured that the process had some degree of automation while ensuring
+provide diffuse lighting. This setup ensured that the process had some degree of automation while providing
 high quality results.
 
-Afterwards, we produced 3D models both by non-image 3D modelling and image based 3D modelling, also known as Structure from Motion (SfM). The latter process was deemed to be the most suitable for large-scale digitisation in such as way which maintains the visual quality of the narrative forms produced. These will be explained in the following subsections.
+Afterwards, we produced 3D models both by non-image 3D modelling and image-based 3D modelling, also known as Structure from Motion (SfM). The latter process was deemed to be the most suitable for large-scale digitisation in a way which maintains the visual quality of the narrative forms. Both methods will be explained in the following subsections.
 
 \subsection{Digitisation by 3D modelling}
 Given the fact that all crafted objects are based on a physical box
@@ -498,7 +468,7 @@ which can be represented by a cuboid (see Figure~\ref{fig:boxes}), the use of
 boxes using the modelling tool Blender\cite{blender}. 
 
 
-\begin{figure}[ht] \centering
+\begin{figure}[h] \centering
 \includegraphics[width=0.7\linewidth]{images/boxes.png} \caption{Example
 of physical model houses crafted by children depicting their own houses}
 \label{fig:boxes} \end{figure}
@@ -509,34 +479,33 @@ a simple cube, with additions such as balconies, porches or roofs being
 created through the addition of planes.
 
 
-The textures for each box-house were created from images taken with the digital
-camera. The number of photos required for each box-houses depended on its complexity. Some required only one image (of the fa\c{c}ade) with a simple
+The textures for each box-house were added from images taken with the digital
+camera. The number of photos required for each box-house depended on its complexity. Some required only one image (of the fa\c{c}ade) with a simple
  cardboard texture used for all other faces, while others needed up to four
  (one for each side). Many of the box-houses required additional images due to
  features such as roofs or gutters. The images were taken at an angle
  perpendicular to each face in order to avoid any perspective effect. 
 
- \begin{figure}[ht] \centering
-\includegraphics[width=0.49\linewidth]{images/za_tex_template.png}
-\includegraphics[width=0.49\linewidth]{images/za_tex.jpg}
-\caption{Example of unwrapped texture of house} \label{fig:pattern}
-\end{figure}
+%  \begin{figure}[ht] \centering
+% \includegraphics[width=0.49\linewidth]{images/za_tex_template.png}
+% \includegraphics[width=0.49\linewidth]{images/za_tex.jpg}
+% \caption{Example of unwrapped texture of house} \label{fig:pattern}
+% \end{figure}
 
 
 The next step was to create the
-texture for each 3D model. This was done using a texture blueprint of each box-house and fitting cropped images from each side of the boxes. The resulting
+texture for each 3D model. This was done using a texture blueprint for each box-house and fitting cropped images from each side of the box. The resulting
 textures were then imported into Blender. The 3D models were UV Unwrapped and
-aligned with the texture. The final 3D model is shown in
+aligned with the texture. The final 3D model of a house is shown in
 Figure~\ref{fig:3Dhouse}. 
 
-\begin{figure}[ht] \centering
+\begin{figure}[h] \centering
 \includegraphics[width=\linewidth]{images/models.PNG} \caption{3D model
-of houses with and without texture} \label{fig:3Dhouse} 
+of house with and without texture} \label{fig:3Dhouse} 
 \end{figure}
 
 A further modelling task was to produce an animation for each 3D model. This
-animation simulates the box-house `roof' opening and closing in a similar way
-which people can open and close the physical box. This takes advantage of the simplicity of the modelling approach and enable to create interesting effects during the AR experience.
+animation simulates the box-house roof opening and closing in a similar way people use to open and close the physical box. This takes advantage of the simplicity of the modelling approach and enables to create interesting effects during the AR experience.
 
 The animation was implemented using
 keyframes and transformations on the roof sub-objects, and each animation
@@ -561,14 +530,14 @@ and closed.
 % information, for example names and addresses. The images were applied as
 % textures to 3D planes so that they can be visualised as a 3D model.
 
-\begin{figure}[ht] \centering
-\includegraphics[width=0.6\linewidth]{images/lkp1.jpg}
-\includegraphics[width=0.6\linewidth]{images/mgp2.jpg}
-\includegraphics[width=0.6\linewidth]{images/fhp1.jpg} 
-\caption{Drawings
-of children detailing local geographies, journeys from home to school and
-objects in the environment.} \label{fig:drawingmaps} 
-\end{figure}
+% \begin{figure}[ht] \centering
+% \includegraphics[width=0.6\linewidth]{images/lkp1.jpg}
+% \includegraphics[width=0.6\linewidth]{images/mgp2.jpg}
+% \includegraphics[width=0.6\linewidth]{images/fhp1.jpg} 
+% \caption{Drawings
+% of children detailing local geographies, journeys from home to school and
+% objects in the environment.} \label{fig:drawingmaps} 
+% \end{figure}
 
 % Moreover, objects crafted in clay were 3D scanned using the Artec3D handheld
 % 3D scanner. Additional 3D models were accessed from a relevant project
@@ -579,27 +548,22 @@ objects in the environment.} \label{fig:drawingmaps}
 
 \subsection{Digitisation by image-based 3D modelling}
 In order to deal with a potentially large amount of crafted items, we
-experimented with a semi-automated image-based workflow. The main
-motivation for this is that it will allow us to process a wider variety
-of shapes without having to deal with modelling every customisation done
-to the crafted items. The main challenges which needed to be addressed
-was to ensure the visual quality of the items by capturing both the
+also experimented with a semi-automated image-based workflow. The main
+motivation behind this is that it allows us to process a wider variety
+of shapes, without having to deal with modelling every customised crafted item. The main challenge, that we had to address here, was to ensure the visual quality of the items by capturing both the
 shape and the colour accurately. 
 
 
-All box-houses were created from a similar cardboard box as a starting
-point, which were customised using paper of various colours and crayons.
-Although areas coloured using crayons displayed some shine when catching
-beams of light, most material was fairly non-reflective. We followed a
-similar process than \cite{Gaiani_2017} to ensure colour fidelity of the
-artefacts. This ensured that the 3D models which resulted from the
-process had a good and uniform quality in particular for the cardboard
+As mentioned before, all box-houses were created using a similar cardboard box as a starting
+point. Then each house was customised using coloured paper and crayons.
+Although the areas coloured with crayons displayed some shine when catching
+beams of light, most material was fairly non-reflective. To ensure colour fidelity of the
+artefacts, we followed a similar method to \cite{Gaiani_2017}. This ensured that the 3D models which resulted from the process had a good and uniform quality, particularly with regards to the cardboard
 textures.
 
 
-We made use of the X-Rite ColorChecker for the colour characterization
-process in the lighting environment in which we performed the
-digitisation process. The X-Rite ColorChecker automatically detects the
+For the colour characterization in the lighting environment in which we performed the
+digitisation, we made use of the X-Rite ColorChecker. The X-Rite ColorChecker automatically detects the
 colour checker and produces an ICC profile which is then applied to all
 images.
 
@@ -607,45 +571,51 @@ images.
 Thereafter, the workflow required of an operator taking a set of images
 using the automated setup. For this, each box-house was placed on a
 turntable with a white background and photographed every $20\degree$
-over three-full $360\degree$ rotations. For each rotation, the camera is
-rotated $90\degree$, generating in total between 54 - 60 images. We also
-made use of a measuring bar which uses circular cross-type targets. This
-allows to introduce scale to the 3D model when this is later processed.
+over three full $360\degree$ rotations. The camera is also 
+rotated $90\degree$ as shown in Figure~\ref{fig:camrot}, generating in total between 54 - 60 images. 
+During the photogrammetric acquisition, we also made use of a measuring bar with circular cross-type targets. This
+allows to introduce scale to the 3D model when it is later processed.
+
+\begin{figure}[h]
+\includegraphics[width=0.6\linewidth]{images/camerarot.png}
+\caption{Camera is rotated every $90\degree$ to capture 3 sets of $360\degree$ rotations} \label{fig:camrot} 
+\end{figure}
 
 The digital images were shot using ISO 100, and an aperture of F/11. The
 images were shot in RAW and later processed using the ICC profile before
-exporting them as a JPEG to be used during the image-based 3D modelling
-process. The sets of images are then automatically processed by a Python
-script which uses the Agisoft Metashape API  \cite{Metashapesite}. This
-script reads the images from a folder, processes a 3D model, detect the
+exporting them as JPEGs to be used during the image-based 3D modelling. The sets of images were then automatically processed by a Python
+script employing the Agisoft Metashape API \cite{Metashapesite}. This
+script reads the images from a folder, processes a 3D model, detects the
 targets captured in the image, scales and centres the model as shown in
-Figure \ref{fig:metashape}. All of this process is fully automatic.
+Figure \ref{fig:metashape}. All these steps are fully automated.
 
 
-\begin{figure}[ht] \centering
+\begin{figure}[h] \centering
 \includegraphics[width=1\linewidth]{images/metashape.png} 
-\caption{3D model of the box-house generated through a photogrammetry automated
+\caption{3D model of a box-house generated through a photogrammetry automated
 process} \label{fig:metashape}  
 \end{figure}
 
 
-Thereafter, a manual process is required to remove the excess geometry,
-including the measuring bar. Finally, the resulting 3D model is
+Next, a manual process was required to remove the excess geometry,
+including the measuring bar. Finally, the resulting 3D model was
 decimated to a size of 5,000 triangles and a texture with a reduced
 resolution. All content had to be post-processed in order to make it
 web-ready for the AR experience. This required developing workflows for
-the production of 3D meshes to be of suitable size/quality for
-distributing them over the web.  % Moreover, the textures had to be
-optimised for web delivery as the initial images were % produced with
-very high resolution and file size. This was done by running % them
-through the imageoptim web service \cite{ImageOptim}.   %Furthermore,
-all images had to be resized to dimensions which were powers of two
-(e.g. % 2048x2048, 512x1024) to facilitate loading.  The images produced
-used a final % resolution of 96dpi. For this, the glTF file format was
-used for encoding the 3D models and their animation for the AR
-experience. glTF (GL Transmission Format) is a common specification for
+the production of suitable 3D meshes (in terms of size/quality) for
+distribution over the web.  % Moreover, the textures had to be
+Textures were also optimised for web delivery as the initial images had % produced with
+very high resolution and large file size. This was done by deploying % them
+the ImageOptim web service \cite{ImageOptim}.   %Furthermore,
+All images were resized to dimensions which are powers of two
+% (e.g. % 2048x2048, 512x1024)
+to facilitate loading. 
+% The images produced
+%used a final % resolution of 96dpi. For this, the 
+The glTF file format was used to encode the 3D models and their animation for the AR
+experience. The glTF (GL Transmission Format) is a common specification for
 the efficient transmission and loading of 3D scenes and models,
-especially by web applications \cite{khronos}. It reduces both the size
+especially by web applications \cite{khronos}. This format reduces both the size
 of 3D resources and the execution processing required to decompress and
 use them. It stores a full scene description in JSON format, which
 includes node hierarchy, cameras, and materials and it also contains
@@ -655,36 +625,34 @@ descriptor information about animations and meshes.
 \subsection{Measuring colour fidelity} Ensuring and measuring colour
 fidelity of 3D models in an image-based 3D modelling process is still an
 open research matter. As such, we designed a method to evaluate the
-resulting colour fidelity of the 3D models being produced by the
-digitisation process. For this, we made the assumption that all areas of
-the 3D model which display a cardboard texture will have very similar
+resulting colour fidelity of the 3D models produced by the
+digitisation phase. For this, we made the assumption that all areas of
+the 3D model displaying a cardboard texture would have very similar
 colours.
 
-Our method uses small patches (80 by 80 pixels) which are extracted from
+Our method deploys small patches (80 by 80 pixels) extracted from
 textures of two different 3D models, as shown in Figure
-\ref{fig:texturepatches}. We select areas that correspond to the
-non-decorated areas of the cardboard boxes as we assume these two areas
+\ref{fig:texturepatches}. For this, we selected areas that correspond to the
+non-decorated areas of the cardboard boxes, assuming that these two areas
 must be similar in colour. 
 
 
-We make use of the $\Delta$E (Delta E) measurement to understand the
-differences perceived between colours from the two different textures.
-$\Delta$EE is a metric for understanding how the human eye perceives
+To understand the perceived differences between colours from the two different textures, we utilised the $\Delta$E (Delta E) measurement. $\Delta$EE is a metric for understanding how the human eye perceives
 colour difference, which was proposed by the International Commission on
-Illumination (CIE). On a typical scale, the Delta E value will range
+Illumination (CIE) \cite{cie2020}. On a typical scale, the Delta E value will range
 from 0 to 100. The difference of less than 1.0 between two colours means
 that the difference is not perceptible by human eyes. Any values above
 11 indicate colours are more similar than opposite, while a value of 100
-means that colours are exact opposite. We hypothesised that getting
-values between 1-10 meant the changes in texture colour will be
-perceptible only through close observation or at a glance in the worst
+means that colours are the exact opposite. We hypothesised that getting
+values below 11 meant the changes in texture colour would only be
+perceptible through close observation or at a glance in the worst
 case scenario.
 
-In order to calculate this metric, we firstly have to select the best
-colours in the texture patch to compare. For this, we look for the
+In order to calculate this metric, we firstly had to select the best
+colours in the texture patch to compare. For this, we looked for the
 dominant colours on a given patch using K-means cluster analysis. By
-using this method, we produce a distribution of the most 5 dominant
-colours as illustrated in Figure \ref{fig:distribution}. We then test
+using this method, we produced a distribution of the five (5) most dominant
+colours as illustrated in Figure \ref{fig:distribution}. We then tested
 the most dominant colours against the most dominant colours of the other
 texture.
 
@@ -699,20 +667,22 @@ texture.
    \includegraphics[width=0.45\linewidth]{images/domtex2.png}
   }\\[-0.5\baselineskip]
 
- \caption{Texture patches used for evaluation quality of colour fidelity across different 3D models resulting from the image-based 3D modelling process} 
+ \caption{Texture patches used to evaluate the quality of colour fidelity across different 3D models resulting from the image-based 3D modelling process} 
  \label{fig:texturepatches} 
 \end{figure} 
 
 
-To calculate $\Delta$E for the colour in the texture patches, we firstly take 
-the top 5 most dominant colours of a texture
-patch and convert them to the CIELAB colour space. CIELAB colour space,
-also known as CIE L*a*b* is the colour space defined by the International Commission on Illumination (CIE) in 1976. The colour space allows to express colour as
+To calculate $\Delta$E for the colour in the texture patches, we firstly took 
+the top five (5) most dominant colours of a texture
+patch and converted them to the CIELAB colour space. CIELAB colour space,
+also known as CIE L*a*b*, is the colour space defined by the International Commission on Illumination (CIE) in 1976. The colour space allows to express colour as
 three values: lightness, a* from green to red, and b* from blue to yellow. After 
-representing colour in the CIELAB space, we then apply the 
+representing colour in the CIELAB space, we then applied the 
 CIELAB 2000 $\Delta$E algorithm using Python colormath library. 
 
-Table presents a comparison across the five most dominant colours for the texture $ A $ and $ B $. Beside all colours present it a similarity of under 3.5, meaning there is only a perceptible difference amongst the textures when very closely inspected. It should also be noted that when comparing a colour to the colour with a similar percentile, this are very similar in their $\Delta$E value. 
+Table \ref{tab:delta} presents a comparison across the five (5) most dominant colours for textures $ A $ and $ B $. 
+%Beside
+All colours present a similarity of under 3.5, meaning there is only a perceptible difference amongst the textures when very closely inspected. It should also be noted that, when comparing a colour to another colour with a similar percentile, they are very similar in their $\Delta$E value. 
 
 \begin{table}[h]
 \begin{tabular}{ | l | c | c | c | c | c |}
@@ -726,82 +696,78 @@ Table presents a comparison across the five most dominant colours for the textur
  $ B_4 $ (6.84\%) & 2.845 & 3.408 & 2.254 & 4.032 & \textbf{1.528}  \\ 
 \bottomrule
 \end{tabular}
-\caption{$\Delta$E value comparison for the top 5 colour  values for each texture patch}
+\caption{$\Delta$E value comparison for the top five colour values for each texture patch}
+\label{tab:delta} 
 \end{table}
 
-The evaluation results demonstrate that our process for generating 
-low resolution textures for the 3D model produce good and uniform quality 
-in terms of colour. This allows us to
-produce a standardised process which can be deployed for the large-scale
+The evaluation results demonstrate that our method for generating 
+low resolution textures for the 3D models produces good and uniform quality 
+in terms of colour. This allows to
+follow a standardised process which can be deployed for large-scale
 content, while ensuring the visual quality of the outcomes.
 
 
 \section{Augmented Reality (AR) Map Development} \label{tech} 
 
 While the process for digitisation is better understood by the research
-community - in terms of deciding which technologies to use for which artefacts
-- the requirement to re-tell the narratives has not previously been fully
+community in terms of deciding which technologies are more appropriate for certain artefacts, the requirement to re-tell user-created narratives has not previously been fully
 explored. Thus, there are many potential digital experiences which could be
-used for this purpose. 
+deployed for this purpose. 
 
-A novel approach for re-telling these narratives is proposed. This approach
-combines elements of a physical and a digital experience. The digital element
+Here, we propose a novel approach for re-telling users' narratives. This approach
+combines both physical and digital elements of a CH experience. The digital element
 is intended to serve as a canvas for users to interact with the journeys and
-find more information relevant to the narratives through hyperlinks. 
+find more information about the narratives through hyperlinks. 
 
 From early on in the research, it was clear that communicating the
 geographical location was critical to re-telling the narratives. However,
 using precise geographical information, such as in a Geographical Information
-System (GIS), was not possible without having to reveal the exact location of
-the address of members of the community. Hence, the idea of providing the
+System (GIS), was not possible without having to reveal the exact address of the members of the community. Hence, the idea of providing the
 content geographically in-situ was discarded. Instead, the research
-incorporated an experience very familiar to people when visiting a new
+incorporated a means which is very familiar to people when visiting a new
 location. This is the communication of specific information through a printed
 map (e.g. a tourist map or a building map). Printed maps allow the
 abstraction of geographical/spatial information while enabling the reader to
-orient themselves in the space. Augmented Reality (AR) is then used to embed
-the digitised narratives without losing their geographical information. AR
-also has the advantage that multiple interpretations can be embedded in
-parallel to the same visual information. 
+orient themselves in space. Augmented Reality (AR) is then used to embed
+the digitised narratives without losing their geographical information. AR has also the advantage that multiple interpretations can be simultaneously embedded into the same visual information. 
 
-The research also considered the need to create physical media which is
+Furthermore, the research considered the need to create physical media which is
 cost-effective to produce and distribute to a large audience. As such, all
-physical elements of the experience can easily be reproduced by the user by
-printing a PDF map. Moreover, the digital element is easily accessible from a
-web browser on a PC, tablet or smartphone so that there is no need to install
-. 
+the physical elements of the experience can be easily reproduced by the user by
+printing a PDF map. Also, the digital element is easily accessible from a
+web browser on a PC, tablet or smartphone so that there is no need to install an application. 
 
 The Augmented Reality web-application renders a 3D scene with the crafted
 houses, which are positioned over the printed map in a similar way to the
 crafted artwork (see Figure~\ref{fig:ARexperience}). When the user clicks or
 taps on each of the houses, an animation is triggered to simulate the box
 being opened. The content inside the box is then rendered on a viewer for the
-viewer to inspect in more detail. 
+user to inspect the elements of narratives in more detail. 
 
 The following sub-sections will describe in detail how the different
 components of the Augmented Reality (AR) map were developed.
 
 \subsection{Development of printed graphical map} %talk about the development
-process for the printed map: mapnik, openstreetmap data, rendering of scene, 
-The development of a printed map addressed various requirements as described
+% process for the printed map: mapnik, openstreetmap data, rendering of scene, 
+The development of the printed map addressed various requirements as described
 below:
 
 \begin{itemize} 
-  \item Display information on the street layout in a way which is easy for the user to understand. 
-  \item Not reveal the precise geographical location of the houses. 
-  \item Be self-contained in terms of telling the user how to access 
+  \item The map should display information on the street layout in a way which is easily understood by the user. 
+  \item The map should not reveal the precise geographical location of the houses. 
+  \item The map should be self-contained in terms of telling the user how to access 
   the digital element of the experience. 
-  \item Include a marker for the Augmented Reality which is not too distracting. 
+  \item The map should include a marker for the Augmented Reality which is not too distracting. 
 \end{itemize}
 
 In order to address the first two requirements, a customised rendering of a
 map was created. This map displayed information, which is geographically
-accurate, but detailed information, such as street names, were omitted. The
+accurate, but detailed information, such as street names, was omitted. The
 open-source mapping toolkit Mapnik \cite{mapnik} was used to generate the map.
 This toolkit, with binding in Python, can programmatically generate rendering
 of geographical maps with the appearance the user wants. For this, an XML
-stylesheet is created which filters only the information of the streets for
-rendering and provides other information such as colour and line thickness.
+stylesheet is created filtering only the information about the streets for
+rendering, while providing other information, such as colour and line thickness.
 Thereafter, a Python script processed this stylesheet to produce the final
 rendering. Geographical data of Brighton and Hove (UK) was retrieved from OpenStreetMap
 \cite{OpenStreetMap} in the OSM data format. This data was then used as input
@@ -811,29 +777,29 @@ Figure~\ref{fig:map}).
 
 \begin{figure}[b]
 \includegraphics[width=\linewidth]{images/maprender.jpg}
-\caption{Rendering of map using Mapnik toolkit} \label{fig:map} 
+\caption{Rendering of map using the Mapnik toolkit} \label{fig:map} 
 \end{figure}
  
 The rendering of the map was further processed in the GIMP image processing
-tool \cite{gimp} to include as additional information the names of relevant
-geographical references. All references were extracted from the children's
+tool \cite{gimp} in order to include the names of relevant
+geographical references as additional information. All references were extracted from the children's
 narratives and included historic buildings, libraries, museums, parks,
-cemetery and sculptures. Instructions on how to access the website with the AR
+a cemetery and sculptures. Instructions on how to access the website with the AR
 experience were also included.
 
 Furthermore, a fiducial code or marker with the logo of the school was
 included as illustrated in Figure~\ref{fig:print}. The marker serves both as a
 way to identify the geographical location of the school as well as to enable
-the AR content. Other markerless solutions were considered. However, AR over
-the web does not yet have the performance required for marker-less AR, which
-is normally distributed via apps and often reliant on Google's ARCore
-software. Hence, not wanting to compromise in web-based delivery, the
+the AR content. Other marker-less solutions were considered. However, AR over
+the web does not have yet the performance required for marker-less AR, which
+is normally distributed via apps and is often reliant on Google's ARCore
+software. Hence, not wanting to compromise the web-based delivery, the
 logo-based marker was considered a suitable solution.
 
 
-Finally, general information about the project was included for printing as a
-double-sided page (see Figure~\ref{fig:print}). In this way, the double-sided
-page is a self-containing output of the project.
+Finally, general information about the project was included as a
+double-sided page (see Figure~\ref{fig:print}). In this way, the print out of the double-sided
+page is a self-contained output of the project.
 
 % The following subsection will describe how the 3D scene which is augmented
 % on the map was developed.
@@ -847,34 +813,32 @@ page is a self-containing output of the project.
 
 In order to make the AR maps easily
 accessible, the research makes use of an \emph{Immersive Web} approach, which
-refers to virtual world experiences hosted through the browser, covering both
+refers to virtual world experiences hosted through a browser, covering both
 Virtual Reality and Augmented Reality experiences developed for AR-enabled
 devices \cite{imweb}. The WebXR API is currently the experimental
 specification for both augmented reality and virtual reality devices
 \cite{webxr}.
 
-Currently, web-based AR technologies make use of API such as WebRTC and WebVR
-to enable to deliver AR through the web browser. Other frameworks which are
-available include Argon.js \cite{Argon.js}, AR.js based on A-Frame
-\cite{aframe}, Awe.js, \cite{Awe.js}, 8th Wall \cite{8th}. All of these
-frameworks make use of Javascript and some of them offer markerless
+Nowadays, web-based AR technologies make use of APIs, such as the WebRTC and WebVR
+to enable the delivery of AR through a web browser. Other available frameworks include Argon.js \cite{Argon.js}, AR.js based on A-Frame
+\cite{aframe}, Awe.js, \cite{Awe.js}, 8th Wall \cite{8th}. All these
+frameworks make use of Javascript and some of them offer marker-less
 capabilities (e.g. 8th Wall) through a paid service.
 
 Although AR installed as an application on a mobile device often offers better
-performance, it was deemed that a web-based approach will enable more people
+performance, it was deemed that a web-based approach would enable more people
 to access the experience from a diverse set of devices and platforms. For
 instance, frameworks such as Vuforia \cite{Vuforia} are not web based and
-require of payment to be used without watermarks. 
+require payment in order to remove watermarks. 
 % %However, they are
 % markerless and offer high stability and many extra features. Nevertheless,
 % they require to be installed as an app and the heritage sector is increasingly
 % reluctant to use this approach.
 
 Ar.js and A-Frame were used as a framework to develop the web-based experience
-as they are open source solutions. A-Frame is an open-source web framework for
+as they are both open-source. A-Frame is an open-source web framework for
 building both Virtual Reality (VR) and Augmented Reality (AR) experiences
-based on Three.js. A-Frame is an entity component system framework and it
-allows to create 3D scenes using HTML and Javascript. Most 3D operations are
+based on Three.js. A-Frame is an entity component system framework, allowing to create 3D scenes using HTML and Javascript. Most 3D operations are
 performed by A-Frame in memory with minimal overhead and are rendered with
 WebGL \cite{webgl}, which binds to OpenGL or Direct3D. A-Frame is meant to
 give suitable latency and framerate with browsers, such as Firefox with WebVR.
@@ -883,26 +847,25 @@ give suitable latency and framerate with browsers, such as Firefox with WebVR.
 \begin{figure}[ht] \centering
 \includegraphics[width=0.48\linewidth]{images/ARcontentw_sculpture.png}
 \includegraphics[width=0.48\linewidth]{images/animationARexperience_zoom.png}
-\caption{AR Map experience showing the different house models and a sculpture in the geographical area (left),
- animation to open the house is triggered when the user taps on a house model providing a visualisation
- of the child's map shown in Figure~\ref{fig:drawingmaps}  } \label{fig:ARexperience}
+\caption{AR Map experience showing the different house models and a sculpture in the geographical area (left); animation to open the house is triggered when the user taps on a house model revealing a visualisation
+ of the child's map (right)} \label{fig:ARexperience}
 \end{figure}
  
-In the project the Aframe raycaster is used, which is built
+In the project, the Aframe raycaster is used, which is built
 on the Three.js raycaster. On collision with an object, the raycaster triggers
 an event on said object. 
 
-The AR.js API is used to render all elements of the scene which includes the
+The AR.js API is employed to render all elements of the scene, including the
 houses and other additional 3D content. The marker on the printed map is used
 to position the 3D scene on the printed map (see
-Figure~\ref{fig:ARexperience}-top). In order to enable user interaction with
-the 3D models, the Three.js raycaster is used. The system triggers a different
+Figure~\ref{fig:ARexperience}-left). In order to enable user interaction with
+the 3D models, the Three.js raycaster is deployed. The system triggers a different
 behaviour according to the type of object that is clicked: 
 
 \begin{itemize}
 \item When the user taps on a house, the animation to open or close the house
-is triggered (see Figure~\ref{fig:ARexperience}-bottom). After playing the
-animation, the content which belong to each box is displayed on the Universal
+is triggered (see Figure~\ref{fig:ARexperience}-right). After playing the
+animation, the content which belongs to each box is displayed on the Universal
 Viewer \cite{uv}. The implementation includes the capability to add hyperlinks
 to direct the user to explore further information on the web. 
 \item When the
@@ -927,43 +890,52 @@ expression of how much time it takes for a packet of data to get from one
 designated point to another. As expected, the framerates vary with the
 processing power and graphics card capabilities. The highest framerate
 achieved is of 60 frames per second (fps) on a mobile phone (see row 2 in
-Table~\ref{table:framerates}). Although the responsiveness on mobile phone for
-racytracing performed worse on a mobile device than on a laptop or PC.
+Table~\ref{table:framerates}). However, the responsiveness on a mobile phone for
+racytracing performed worse on the mobile device than on a laptop or PC.
 
 High framerate and low latency is the ideal and these seem to have a direct
 correlation to the CPU/GPU for mobile devices. 60fps/16ping seems to be the
-best across all devices. However, the fact that a Google Pixel 2 and 3 both
-have the same despite differences in CPU/GPU suggest improvements are minor
-for these newer models. The lower framerate shown by the MacBookPro
-and ASUS Zenbook indicate that the APIs are well optimised for mobile
+best across all devices. Nevertheless, the fact that a Google Pixel 2 and 3 both
+have the same, despite differences in CPU/GPU, suggests that improvements are minor
+for newer mobile phone models. The lower framerate shown by a MacBookPro
+and an ASUS Zenbook indicate that the APIs are well optimised for mobile
 architectures.
 
 %One possible reason for this could be due to the framerate of the camera
 %(newer phones have a high quality, high framerate camera which is better than
 %laptop webcams or tablets).
 
-% \begin{table}[h] \centering 
-% \begin{tabular}{|p{90px}|c|c|} \hline Device & 
-% Framerate (fps) & Latency (ping)\\  \hline \hline 
-% Google Pixel 3 (Octa-Core,
-% Adreno 630 1 MB, 4 GB LPDDR4X) &  60 & 16\\ \hline
-%  Google Pixel 2 (Octa-core,
-% Adreno 540 1 MB, 4 GB LPDDR4X)  &  60 & 16\\ \hline
-% Pocophone F1 (Octa-Core, Adreno 630, 6 GB) & 60 & 16 \\ \hline 
-% MacBook Pro
-% (Intel Core i9, Radeon Pro Vega 20 4 GB, 32 GB DDR4, 720p camera - 30 fps)  &
-% 50 & 17\\ \hline 
-% Nexus 5X (Hexa-Core, Adreno 418 512 KB, 2 GB LPDDR3) & 32 &
-% 42 \\ \hline  
-% Nexus 5X (Hexa-Core, Adreno 418 512 KB, 2 GB LPDDR3) & 32 & 42
-% \\ \hline 
-% ASUS ZenBook UX330UA (Intel(R) Core(TM) i5-7200U CPU, RAM 8 Go) & 30
-% & 20\\ \hline 
-% Galaxy Tab S3 (Quad-core, Adreno 530, 4GB of RAM) & 18 & 50\\
-% \hline \end{tabular} 
-% \caption{Testing web-based AR application in various
-% devices of scene containing 1,176 triangles} \label{table:framerates} 
-% \end{table}
+\begin{table}[h] \centering 
+\begin{tabular}{|>{\centering\arraybackslash}p{8cm}|c|c|} 
+\hline 
+Device & Framerate (fps) & Latency (ping)\\  
+\hline \hline 
+Google Pixel 3 (Octa-Core, Adreno 630 1 MB, 4 GB LPDDR4X) &  60 & 16\\ 
+\hline
+ Google Pixel 2 (Octa-core,
+Adreno 540 1 MB, 4 GB LPDDR4X)  &  60 & 16\\ 
+\hline
+Pocophone F1 (Octa-Core, Adreno 630, 6 GB) & 60 & 16 \\ 
+\hline 
+MacBook Pro
+(Intel Core i9, Radeon Pro Vega 20 4 GB, 32 GB DDR4, 720p camera - 30 fps)  &
+50 & 17\\ 
+\hline 
+Nexus 5X (Hexa-Core, Adreno 418 512 KB, 2 GB LPDDR3) & 32 &
+42 \\ 
+\hline  
+Nexus 5X (Hexa-Core, Adreno 418 512 KB, 2 GB LPDDR3) & 32 & 42
+\\ 
+\hline 
+ASUS ZenBook UX330UA (Intel(R) Core(TM) i5-7200U CPU, RAM 8 Go) & 30
+& 20\\ 
+\hline 
+Galaxy Tab S3 (Quad-core, Adreno 530, 4GB of RAM) & 18 & 50\\
+\hline 
+\end{tabular} 
+ \caption{Testing web-based AR application in various
+devices of scene containing 1,176 triangles} \label{table:framerates} 
+\end{table}
 
 
 % \subsection{Link to additional information on objects}
@@ -971,109 +943,95 @@ architectures.
 
 %-------------------------------------------------------------------------
 \section{Preliminary evaluation} \label{eval} An evaluation took place before
-the start of the project to provide a baseline from which to measure the
+the start of the project in order to provide a baseline to measure the
 project outcomes. During this survey, children were asked about their
 well-being, confidence and overall resilience in life. Another evaluation took
-place after the school workshops, which showed that the proposed process can
-lead to children reporting feeling better about themselves and their mood. For
+place after the school workshops. The collected feedback showed that the proposed creative process made children feel better about themselves and improved their overall mood. For
 instance, there was a 45\% increase in children reporting feeling very happy,
 18\% increase in children reporting liking themselves, a 15\% increase in
 children reporting that they coped with difficult situations happily or very
 happily, and a 15\% increase in children feeling liked by other people. During
-this evaluation, the AR Maps were not evaluated as these were not yet
-developed.
+this evaluation, the AR Maps were not evaluated as these had not been developed yet.
 
-In July 2019, a 'celebration' of the artwork and the children's journey took
-place at the Hove museum (UK). During this day, all children were invited to
-bring their families and friends to show the artwork and talk to the
-researchers developing the AR application. The setup in the museum included
-three areas: 1) an area to display the artwork and to engage with the AR
-experience (see Figure \ref{fig:museum}-top), 2) an area for visitors to
-engage in the creative process for creating their own journeys (see Figure
-\ref{fig:museum}-bottom), and 3) an area for visitors to experience a creative
+In July 2019, a ``celebration'' of the artwork and the children's journeys took
+place at the Hove museum (UK). On this day, all children were invited to
+bring their families and friends to the museum to show them their artwork and talk to the
+researchers who developed the AR application. The setup in the museum included
+three areas: 1) an area to display the artwork and engage with the AR
+experience (see Figure \ref{fig:museum}-left), 2) an area where the visitors could engage with the creative process and create their own journeys (see Figure
+\ref{fig:museum}-right), and 3) an area for visitors to experience a creative
 application in Virtual Reality. It was considered that this provided a good mixture
 of hands-on and creative digital activities to engage visitors.
 
-It was the first time the families and friends had seen the artwork and the
-first time the children had seen the AR Map experience. Hence, we printed a
-large amount in 80 gsm recycled paper and we distributed them amongst the
-visitors of the museum and sent extra copies to the school.
+On the ``celebration'' day, families and friends saw the artwork for the first time. That day was also the first time the children experienced the AR Map. Hence, a
+large amount maps were printed in 80 gsm recycled paper and distributed amongst the
+visitors of the museum, while extra copies were sent to school.
 
 \begin{figure}[ht] \centering
 \includegraphics[width=0.48\linewidth]{images/IMG_20190720_103105.jpg}
 \includegraphics[width=0.48\linewidth]{images/IMG_20190720_151644.jpg}
 \caption{Setup at the Hove museum for the celebration of the artwork and
-release of the AR application, top) area with the original map, bottom) area
-where people can engage in the creative process} \label{fig:museum}
+release of the AR application and area with the original map (left); area
+where people could engage with the creative process (right)} \label{fig:museum}
 \end{figure}
  
 Initial feedback from the children provided evidence that the experience was
-engaging because of the Augmented Reality aspect. Children were keen to test
-the printed map on their phones and look for their house and their stories.
+particularly engaging because of the Augmented Reality aspect. Children were keen to test
+the printed map on their or their carers' phones and were eagerly looking for their house and their stories on the map.
 Most children were very proud to see the content they had produced being
-rendered on the screen when they touched on the house and were happy to tell
-others about the journeys that they made every day. For others who had no
-direct connection to the children, the AR experience was very interesting.
-They would randomly tap on houses and inspect the content others had created.
+rendered on the screen, after touching on their house. Moreover, they were happy to tell
+others about their narratives and share information about the journeys they make every day. Others, who had no
+direct connection to the children, found the AR experience very interesting too.
+hence, they would randomly tap on houses and inspect the content that children had created.
  
- During the testing, we also found technical issues with the AR aspect. The
- most common issues were related to size of the screen to experience a large
- amount of visual content and the responsiveness of smart devices with less
+ During the testing, we also noticed some technical issues with respect to the AR aspect. The
+ most common amongst these were related to the size of the screen to experience a large
+ amount of visual content, as well as the responsiveness of smart devices with less
  powerful CPU/GPU. Despite the cross-compatibility of the AR framework, there
  were also issues with iOS devices including iPhones and iPads. Furthermore,
- the testing also made evident that clearer instructions on the printed map
- were needed. Some people will immediately switch their cameras on (without
- going first to the website) and be surprised that there was no content
- displayed.  All of this feedback is currently being incorporated into a
- second release of the AR Map experience. 
+ the testing made evident that clearer instructions on the printed map
+ were needed. Some people would immediately switch their cameras on (without
+ going first to the website) and be surprised that there was no displayed content. All this feedback is currently being incorporated into a second release of the AR Map experience. 
 
 
 %-------------------------------------------------------------------------
 \section{Conclusions} \label{conc} This paper presented novel research for the
-development of approaches and technologies which enable communities to
+development of approaches and technologies enabling communities to
 meaningfully engage with their cultural environment in creative ways. Thus,
-the paper describes the methodology for deploying the approach which is tested
+the paper described the methodology for deploying the proposed approach which was then tested
 with a local community in Brighton and Hove (UK). As a result, children
-engaged in a creative process to look at their community in new ways and
-produce narratives.
+engaged in a process which included the exploration of their community; the conception of narratives evidencing their daily journeys from home to school; the production of these narratives by using creative means; and the experience and sharing of these narratives through the AR map with members of their communities and beyond.
 
-The paper demonstrates how mobile and augmented reality technologies provide a
-novel element for re-telling these narratives to wider audiences. These
+The paper demonstrated how mobile and augmented reality technologies provide a
+novel element for re-telling communities' narratives to wider audiences. These
 experiences combine physical maps, such as those widely used for tourists,
 with augmented 3D using Immersive Web technology. 
 
-Feedback from users demonstrate the potential of these approaches to raise
-awareness of the cultural elements of the local area as well as to improve the
-well-being and happiness of children who engage in the process. In addition,
-the AR elements triggered the curiosity of users to explore the different
-narratives, while becoming aware about other people's viewpoints of their local
-environment.
+Feedback from users demonstrates the potential of these approaches to raise
+awareness about the cultural elements of the areas where communities live. Moreover, the proposed framework can positively affect participants, in this instance children, while enhancing their sense of belonging, well-being and happiness. Particularly, the AR elements seem to have triggered the curiosity of users to explore different narratives, while becoming aware about other people's viewpoints with regards to their local environment.
 
-Further work involves the usability evaluation of the Augmented Reality aspect
+Future work for the research involves the usability evaluation of the Augmented Reality aspect
 in order to understand how to overcome issues such as latency and
 user-friendly access to the content when this is viewed from a mobile device.
-Another area to explore is how to ease the digitisation of the material
-created, including those objects created in different materials. Children should
-become involved in this process as it will enable them to enhance their digital
-skills as well as to find novel ways to create links between the material created and
-content on the web which is curated by heritage experts. 
+Another area to explore is how to ease the digitisation of the material which is difficult to capture; especially crafted objects which are made of feathers, wire and generally objects that present certain complexities. Children could also
+become involved in the digitisation process. This not only would enhance their digital
+skills, but would also support the emergence of new links between the crafted materials and
+CH content that could be curated by heritage experts. 
 
 %type of experiences can allow community members to experience narratives
 %relating to people, objects, sites and events which are of importance to the
 %communities that live amongst them.
-
+   
 
 Ultimately, the research contributes towards enabling communities to
-participate in the identification and preservation of cultural heritage. This will 
- facilitate the democratisation and promotion of a better understanding
-of the multiple meanings of heritage.
+participate in the identification, preservation and dissemination of cultural heritage content. Such active community involvement contributes towards the democratisation of CH, while supporting at the same time the emergence, exploration and understanding of the multiple and diverse meanings of heritage information.
 
 
 \section{Acknowledgements} We would like to thank Bec Britain and Jo Coles
-from Our Future City who co-designed, developed and delivered the workshops as
+from Our Future City who co-designed, developed and delivered the workshops, as
 well as Peter Chivers for supporting the activity. We also thank Karin Janzon,
 from Hove Civic Society, for her continuous support in engaging communities in
-Hove as well as Kate Howland, who contribute to ideas for the community engagement. 
+Hove, as well as Kate Howland who contributed to ideas for the community engagement. 
 Finally, we would like to acknowledge the teachers and children of the
 school in Hove for participating with so much enthusiasm in the research. 
 The project has received support from the Santander Undergraduate Research Scheme
@@ -1087,12 +1045,12 @@ at the University of Brighton.
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{egbibsample} 
 
-% \newpage \begin{figure*}[ht] \centering
-% \includegraphics[width=0.49\linewidth]{images/side.png}
-% \includegraphics[width=0.49\linewidth]{images/side1_cropped.png}
-% \caption{Printed graphic for AR experience containing: left) rendered map by
-% mapnik, AR pattern and instructions for access, and right) general information
-% about the project} \label{fig:print} \end{figure*}
+\newpage \begin{figure*}[ht] \centering
+\includegraphics[width=0.49\linewidth]{images/side.png}
+\includegraphics[width=0.49\linewidth]{images/side1_cropped.png}
+\caption{Printed graphic for AR experience containing: left) rendered map by
+mapnik, AR pattern and instructions for access, and right) general information
+about the project} \label{fig:print} \end{figure*}
 
 
 
